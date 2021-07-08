@@ -1,2 +1,3 @@
 # math-202
- math=202 fall 2021
+
+Some fall 2021 course materials for MATH 202.
