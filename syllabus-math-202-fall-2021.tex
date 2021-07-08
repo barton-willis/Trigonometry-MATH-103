@@ -1,16 +1,19 @@
-
 \documentclass[12pt,fullpage]{article}
 
 
 %\usepackage[letterpaper, landscape, margin=1.5in]{geometry}
+\usepackage{wasysym}
 
+\usepackage{phonenumbers}
 \usepackage[paperwidth=8.5in, paperheight=11in,margin=1.0in]{geometry} 
 
 %\usepackage[letterpaper,margin=1.0in]{geometry}
 \usepackage[english]{babel}
+\usepackage{hyperref}
 \usepackage[final,babel]{microtype}
 \frenchspacing
- 
+%\usepackage[USenglish,UKenglish,french,spanish,italian]{babel}
+\usepackage[nodayofweek,level]{datetime}
 \usepackage{calc,url}
 \newcounter{qz}\setcounter{qz}{0}
 \newcommand{\qz}{%\
@@ -57,8 +60,8 @@ Exam \theex}
 \begin{description}
     \item[Instructor:] Dr.\  Willis, Professor of Mathematics
     \item[Office:]  Discovery Hall,  \textbf{ Room 368}
-    \item[Telephone:] 308 865-8868 or 308 865-8531 (Department Office)
-   \item[Email:] willisb@unk.edu
+    \item[\phone:]  \phonenumber[country=US]{3088658868}
+   \item[Email:] \href{mailto:willisb@unk.edu}{willisb@unk.edu}
   %  \item[Fax:] 308 865-1540
    \item[Office Hours:] Monday, Wednesday, and  Friday, \mbox{9:30 -- 11:00}; Tuesday and Thursday 13:00 -- 14:00; Monday and Wednesday 13:30 -- 15:00;  and by appointment.
 
