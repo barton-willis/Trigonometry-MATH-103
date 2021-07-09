@@ -3,8 +3,9 @@
 
 %\usepackage[letterpaper, landscape, margin=1.5in]{geometry}
 \usepackage{wasysym}
-
 \usepackage{phonenumbers}
+\usepackage{xcolor}
+\usepackage[UKenglish]{isodate}% http://ctan.org/pkg/isodate
 \usepackage[paperwidth=8.5in, paperheight=11in,margin=1.0in]{geometry} 
 
 %\usepackage[letterpaper,margin=1.0in]{geometry}
@@ -18,7 +19,7 @@
 \newcounter{qz}\setcounter{qz}{0}
 \newcommand{\qz}{%\
 \setcounter{qz}{\value{qz}+1}
-\theqz \,\,}
+\textbf{CW  \theqz} \,\,}
 \newcounter{ex}\setcounter{ex}{0}
 \newcommand{\ex}{%\
 \setcounter{ex}{\value{ex}+1}
@@ -55,6 +56,7 @@ Exam \theex}
 \vskip0.25in
 \normalsize
 
+\cleanlookdateon% Remove ordinal day reference
 \begin{center}
 %\begin{minipage}{5.0in}
 \begin{description}
@@ -213,11 +215,11 @@ life experiences is essential to learning from our similarities as well as our d
 
 \paragraph{Reporting Student Sexual Harassment, Sexual Violence or Sexual Assault} Reporting allegations of rape, domestic violence, dating violence, sexual assault, sexual harassment, and stalking enables the University to promptly provide support to the impacted student(s), and to take appropriate action to prevent a recurrence of such sexual misconduct and protect the campus community. Confidentiality will be respected to the greatest degree possible. Any student who believes she or he may be the victim of sexual misconduct is encouraged to report to one or more of the following resources:
 \begin{alphalist}
-\item Local Domestic Violence, Sexual Assault Advocacy Agency 308-237-2599
+\item Local Domestic Violence, Sexual Assault Advocacy Agency \phonenumber[country=US]{3082372599}
 
-\item Campus Police (or Security) 308-865-8911
+\item Campus Police (or Security) \phonenumber[country=US]{3088658911}
 
-\item Title IX Coordinator 308-865-8655
+\item Title IX Coordinator \phonenumber[country=US]{3088658655}
 
 \end{alphalist}
 Retaliation against the student making the report, whether by students or University employees, will not be tolerated.If you have questions regarding the information in this email please 
@@ -231,32 +233,29 @@ Generally, we'll adhere to the scheduled exam dates even if we are ahead or behi
 topics on the exams will be appropriately adjusted.  There is no new topics scheduled for dead week, if we adhere to the schedule, we'll review during dead week, but
 if we fall behind, we'll cover new topics during dead week.
 
-
-
-
 \vspace{0.1in}
 
 \begin{center}
 
 \begin{tabular}  {|l|l|l|l|}
 \hline
-{\bf Week}  & {\bf Week} &  {\bf Section(s)} & {\bf Topic(s)} \\
+{\bf Week}  & \textbf{Monday} &  {\bf Section(s)} & {\bf Topic(s)} \\
 \hline \hline 
 \wk    & 8/23 &    \S6.1 -- \S6.3   & volumes using cross-sections and shells, arclength \\
 \wk    & 8/30  &  \S6.4 -- \S6.5   &  areas and work \\
 \wk    & 9/6 &     \S6.6 --\S7.1  &  center of mass and logarithms  \\
 \wk    & 9/13  &     \S7.2 -- \S7.3  & separable DEs   and hyperbolic functions                     \\
-\wk    & 9/20 &  \S8.1--\S8.2    &  integration by parts and trigonometric integrals    \hfill \textbf{\ex\-\-, 21 September}  \\
+\wk    & 9/20 &  \S8.1--\S8.2    &  integration by parts and trigonometric integrals    \hfill \textbf{\ex\-\-, 21 September}  \\ \hline
 \wk    & 9/27   & \S8.3 -- \S8.5   & trigonometric substitutions, integration of rational functions, and tables   \\
 \wk    & 10/4     & \S8.6 -- \S8.7  & numerical integration and improper integrals  \\
 \wk   & 10/11   & \S9.1 -- \S9.2  &   sequences, infinite series\\
 \wk  &  10/18   & \S9.3 -- \S9.4 &  integral test, comparison \\ 
-\wk &  10/25     &   \S9.5 -- \S9.6 &  absolute convergence, alternating series \hfill  \textbf{ \ex, 26 September}  \\
+\wk &  10/25     &   \S9.5 -- \S9.6 &  absolute convergence, alternating series \hfill  \textbf{ \ex, 26 October}  \\ \hline
 \wk  & 11/1  &   \S9.7 --\S9.8 & Power series, Taylor series \\
 \wk   & 11/8  & \S9.9--\S9.10  &  Taylor series \\
 \wk   & 11/15& \S10.1  -- \S10.2   & plane curves, calculus with plain curves   \\
 \wk   & 11/22   &  \S10.3 -- \S10.4   & polar coordinates, polar equations \\
-\wk   & 11/29    &  \S10.5     &  area and length in polar coordinates  \hfill \textbf{ \ex, 30 November }  \\ 
+\wk   & 11/29    &  \S10.5     &  area and length in polar coordinates  \hfill \textbf{ \ex, 30 November }  \\ \hline
 \wk   & 12/6      &         &  catch up or review \\  
 \wk   & 12/13      &  &     \textbf{\ex,  13 December, 13:00--15:00} \\ 
          &               & &    \textbf{ Final Exam, 16 December  10:30 -- 12:30} \\ \hline
