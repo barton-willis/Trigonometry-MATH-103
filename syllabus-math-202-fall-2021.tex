@@ -1,7 +1,6 @@
 \documentclass[12pt,fullpage]{article}
 
 
-%\usepackage[letterpaper, landscape, margin=1.5in]{geometry}
 \usepackage{wasysym}
 \usepackage{phonenumbers}
 \usepackage{xcolor}
@@ -9,11 +8,10 @@
 \usepackage[paperwidth=8.5in, paperheight=11in,margin=1.0in]{geometry} 
 
 %\usepackage[letterpaper,margin=1.0in]{geometry}
-\usepackage[english]{babel}
+\usepackage[USenglish]{babel}
 \usepackage{hyperref}
 \usepackage[final,babel]{microtype}
 \frenchspacing
-%\usepackage[USenglish,UKenglish,french,spanish,italian]{babel}
 \usepackage[nodayofweek,level]{datetime}
 \usepackage{calc,url}
 \newcounter{qz}\setcounter{qz}{0}
@@ -45,18 +43,21 @@ Exam \theex}
   \begin{enumerate}[(a)]
     \addtolength{\itemsep}{-0.5\itemsep}}
   {\end{enumerate}}
+  \cleanlookdateon% Remove ordinal day reference
+  \newcommand{\RomanNumeralCaps}[1]
+      {\MakeUppercase{\romannumeral #1}}
 
 \begin{document}
 \large
 \begin{center}
-    \textbf{Calculus II with Analytic Geometry}  \\
+    \textbf{Calculus \RomanNumeralCaps{2} with Analytic Geometry}  \\
     {MATH 202--01,  \term \the\year} \\
 \end{center}
 
 \vskip0.25in
 \normalsize
 
-\cleanlookdateon% Remove ordinal day reference
+
 \begin{center}
 %\begin{minipage}{5.0in}
 \begin{description}
@@ -65,7 +66,7 @@ Exam \theex}
     \item[\phone:]  \phonenumber[country=US]{3088658868}
    \item[Email:] \href{mailto:willisb@unk.edu}{willisb@unk.edu}
   %  \item[Fax:] 308 865-1540
-   \item[Office Hours:] Monday, Wednesday, and  Friday, \mbox{9:30 -- 11:00}; Tuesday and Thursday 13:00 -- 14:00; Monday and Wednesday 13:30 -- 15:00;  and by appointment.
+   \item[Office Hours:] Either in person or by Zoom: Monday, Wednesday, and  Friday, \mbox{9:30 -- 11:00}; Tuesday and Thursday 13:00 -- 14:00; Monday and Wednesday 13:30 -- 15:00;  and by appointment.
 
  \item[Zoom] For both Zoom office hours or class meetings, use the \textbf{Meeting ID: 616 568 5706}.
  \end{description}
@@ -121,8 +122,8 @@ either Tuesday or Thursday. Additionally we will meet for 75 minutes for each mi
 
 \subsubsection*{Grading}
 
-Your course grade will be based on \emph{online homework assignments} (worth at least 150 points), \emph{in-class work} (worth  150 points),  four exams, and a final
-exam (scaled to 150 points).   Exams 1,2, and 3 will be worth 100 points each, but Exam 4, given during final exam week, is worth 250 points.
+Your course grade will be based on \emph{online homework assignments} (worth at least 150 points), \emph{in-class work} (twelve ten point assignments for 120 points),  four exams, and a final
+exam (scaled to 150 points).   Exams 1, 2, and 3 will be worth 100 points each, but Exam 4, given during final exam week, is worth 250 points.
 
 Your course grade will be based on the percent of the available points. Course letter grades will be based on a ten point scale. Except for the grade of A+, grades in the lower third of each decade will be a minus grade and grades in the upper third of each decade will be a plus grade. For example, the B- range is $[80, 83 + 1/3)$, and the B+ range is $[86 + 2/3, 90)$. To earn a grade of A+ requires a course average that exceeds 98\%.
 
@@ -205,7 +206,14 @@ I'll grade it.
 
 \subsubsection*{Students with Disabilities or Those Who are Pregnant}
 
-\paragraph{Students with Disabilities} It is the policy of the University of Nebraska at Kearney to provide flexible and individualized reasonable accommodation to students with documented disabilities. To receive accommodation services for a disability, students must be registered with the UNK Disabilities Services for Students (DSS) office, 175 Memorial Student Affairs Building, 308-865-8214 or by email unkdso@unk.edu
+\paragraph{Students with Disabilities} It is the policy of the University of Nebraska 
+at Kearney to provide flexible and individualized reasonable 
+accommodation to students with documented disabilities. To receive 
+accommodation services for a disability, students must be
+registered with the UNK Disabilities Services for Students (DSS) 
+office, 175 Memorial Student Affairs Building, 
+\phonenumber[country=US]{3088658214} or 
+by email \href{mailto:unkdso@unk.edu}{unkdso@unk.edu}
 
 \paragraph{UNK Statement of Diversity \& Inclusion:} UNK stands in solidarity and unity with our students of color, our Latinx and international students, our LGBTQIA+ students and students from other marginalized groups in opposition to racism and prejudice in any form, wherever it may exist. It is the job of institutions of higher education, indeed their duty, to provide a haven for the safe and meaningful exchange of ideas and to support peaceful disagreement and discussion. In our classes, we strive to maintain a positive learning environment based upon open communication and mutual respect. UNK does not discriminate on the basis of race, color, national origin, age, religion, sex, gender, sexual orientation, disability or political affiliation. Respect for the diversity of our backgrounds and varied 
 life experiences is essential to learning from our similarities as well as our differences. The following link provides resources and other information regarding D\&I: 
@@ -219,11 +227,13 @@ life experiences is essential to learning from our similarities as well as our d
 
 \item Campus Police (or Security) \phonenumber[country=US]{3088658911}
 
-\item Title IX Coordinator \phonenumber[country=US]{3088658655}
+\item Title \RomanNumeralCaps{9} Coordinator \phonenumber[country=US]{3088658655}
 
 \end{alphalist}
 Retaliation against the student making the report, whether by students or University employees, will not be tolerated.If you have questions regarding the information in this email please 
-contact Mary Chinnock Petroski, Chief Compliance Officer (petroskimj@unk.eduor phone 8400).
+contact Mary Chinnock Petroski, Chief Compliance Officer (
+   \href{mailto:petroskimj@unk.edu}{petroskimj@unk.edu} 
+    or phone \phonenumber[country=US]{3088658400}.
 
 
 
@@ -239,26 +249,26 @@ if we fall behind, we'll cover new topics during dead week.
 
 \begin{tabular}  {|l|l|l|l|}
 \hline
-{\bf Week}  & \textbf{Monday} &  {\bf Section(s)} & {\bf Topic(s)} \\
+{\bf Week}  & \textbf{Monday} &  {\bf Section(s)} & {\bf Topic(s) } \\
 \hline \hline 
-\wk    & 8/23 &    \S6.1 -- \S6.3   & volumes using cross-sections and shells, arclength \\
-\wk    & 8/30  &  \S6.4 -- \S6.5   &  areas and work \\
-\wk    & 9/6 &     \S6.6 --\S7.1  &  center of mass and logarithms  \\
-\wk    & 9/13  &     \S7.2 -- \S7.3  & separable DEs   and hyperbolic functions                     \\
+\wk    & 8/23 &    \S6.1 -- \S6.3   & volumes using cross-sections and shells, arclength, \hfill \qz \\
+\wk    & 8/30  &  \S6.4 -- \S6.5   &  areas and work  \hfill \qz  \\
+\wk    & 9/6 &     \S6.6 --\S7.1  &  center of mass and logarithms \hfill \qz \\
+\wk    & 9/13  &     \S7.2 -- \S7.3  & separable DEs   and hyperbolic functions  \hfill \qz             \\
 \wk    & 9/20 &  \S8.1--\S8.2    &  integration by parts and trigonometric integrals    \hfill \textbf{\ex\-\-, 21 September}  \\ \hline
-\wk    & 9/27   & \S8.3 -- \S8.5   & trigonometric substitutions, integration of rational functions, and tables   \\
-\wk    & 10/4     & \S8.6 -- \S8.7  & numerical integration and improper integrals  \\
-\wk   & 10/11   & \S9.1 -- \S9.2  &   sequences, infinite series\\
-\wk  &  10/18   & \S9.3 -- \S9.4 &  integral test, comparison \\ 
+\wk    & 9/27   & \S8.3 -- \S8.5   & trigonometric substitutions, rational functions, tables  \hfill \qz   \\
+\wk    & 10/4     & \S8.6 -- \S8.7  & numerical integration and improper integrals  \hfill \qz   \\
+\wk   & 10/11   & \S9.1 -- \S9.2  &   sequences, infinite series  \hfill \qz   \\
+\wk  &  10/18   & \S9.3 -- \S9.4 &  integral test, comparison   \hfill \qz   \\ 
 \wk &  10/25     &   \S9.5 -- \S9.6 &  absolute convergence, alternating series \hfill  \textbf{ \ex, 26 October}  \\ \hline
-\wk  & 11/1  &   \S9.7 --\S9.8 & Power series, Taylor series \\
-\wk   & 11/8  & \S9.9--\S9.10  &  Taylor series \\
-\wk   & 11/15& \S10.1  -- \S10.2   & plane curves, calculus with plain curves   \\
-\wk   & 11/22   &  \S10.3 -- \S10.4   & polar coordinates, polar equations \\
+\wk  & 11/1  &   \S9.7 --\S9.8 & Power series, Taylor series \hfill \qz   \\
+\wk   & 11/8  & \S9.9--\S9.10  &  Taylor series \hfill \qz \\
+\wk   & 11/15& \S10.1  -- \S10.2   & plane curves, calculus with plain curves   \hfill \qz   \\
+\wk   & 11/22   &  \S10.3 -- \S10.4   & polar coordinates, polar equations  \hfill \qz   \\
 \wk   & 11/29    &  \S10.5     &  area and length in polar coordinates  \hfill \textbf{ \ex, 30 November }  \\ \hline
 \wk   & 12/6      &         &  catch up or review \\  
-\wk   & 12/13      &  &     \textbf{\ex,  13 December, 13:00--15:00} \\ 
-         &               & &    \textbf{ Final Exam, 16 December  10:30 -- 12:30} \\ \hline
+\wk   & 12/13      &  &     \hfill \textbf{\ex,  13 December, 13:00--15:00} \\ 
+         &               & &   \hfill  \textbf{ Final Exam, 16 December  10:30 -- 12:30} \\ \hline
 \end{tabular}
 \end{center}
 
