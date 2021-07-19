@@ -1,23 +1,25 @@
-\documentclass[12pt,fullpage]{article}
-
-
+\documentclass[12pt]{article}
 \usepackage{wasysym}
 \usepackage{phonenumbers}
 \usepackage{xcolor}
 \usepackage[UKenglish]{isodate}% http://ctan.org/pkg/isodate
 \usepackage[paperwidth=8.5in, paperheight=11in,margin=1.0in]{geometry} 
-
-%\usepackage[letterpaper,margin=1.0in]{geometry}
 \usepackage[USenglish]{babel}
 \usepackage{hyperref}
-\usepackage[final,babel]{microtype}
+\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
 \frenchspacing
 \usepackage[nodayofweek,level]{datetime}
 \usepackage{calc,url}
 \newcounter{qz}\setcounter{qz}{0}
 \newcommand{\qz}{%\
 \setcounter{qz}{\value{qz}+1}
-\textbf{CW  \theqz} \,\,}
+\textbf{ICW  \theqz} \,\,}
+
+\newcounter{hw}\setcounter{hw}{0}
+\newcommand{\hw}{%\
+\setcounter{hw}{\value{hw}+1}
+\textbf{HW \thehw} \,\,}
+
 \newcounter{ex}\setcounter{ex}{0}
 \newcommand{\ex}{%\
 \setcounter{ex}{\value{ex}+1}
@@ -25,6 +27,13 @@ Exam \theex}
 
 \usepackage[T1]{fontenc} 
 \usepackage{fourier}
+
+\newenvironment{mypar}[2]
+  {\begin{list}{}%
+    {\setlength\leftmargin{#1}
+    \setlength\rightmargin{#2}}
+    \item[]}
+  {\end{list}}
 
 
 \newcounter{wk}\setcounter{wk}{0}
@@ -35,8 +44,6 @@ Exam \theex}
 \newcommand{\term}{Fall }
 
 \usepackage{enumerate}
-%\usepackage[letterpaper, landscape, margin=1.00in]{geometry}
-
 \usepackage{graphicx}
 
 \newenvironment{alphalist}{
@@ -64,42 +71,29 @@ Exam \theex}
     \item[Instructor:] Dr.\  Willis, Professor of Mathematics
     \item[Office:]  Discovery Hall,  \textbf{ Room 368}
     \item[\phone:]  \phonenumber[country=US]{3088658868}
-   \item[Email:] \href{mailto:willisb@unk.edu}{willisb@unk.edu}
-  %  \item[Fax:] 308 865-1540
-   \item[Office Hours:] Either in person or by Zoom: Monday, Wednesday, and  Friday, \mbox{9:30 -- 11:00}; Tuesday and Thursday 13:00 -- 14:00; Monday and Wednesday 13:30 -- 15:00;  and by appointment.
-
- \item[Zoom] For both Zoom office hours or class meetings, use the \textbf{Meeting ID: 616 568 5706}.
+    \item[Email:] \href{mailto:willisb@unk.edu}{willisb@unk.edu}
+    \item[Office Hours:] Either in person or by Zoom: Monday, Wednesday, and  Friday, \mbox{9:30 -- 11:00}; Tuesday and Thursday 13:00 -- 14:00; Monday and Wednesday 13:30 -- 15:00;  and by appointment.
+    \item[Zoom] For both Zoom office hours or class meetings, use the \textbf{Meeting ID: 616 568 5706}.
  \end{description}
 %\end{minipage}}
 \end{center}
 
-
-
-
-
-
-
-
 \subsubsection*{Course objectives}
-
 
 Students will learn: applications of the antiderivative, methods for finding antiderivatives, the definitions and properties of the logarithm, exponential, and related functions,
 the concepts, theorems, and proofs relating to sequences and infinite series, and the properties of the polar coordinate system.
-
 
 \subsubsection*{Prerequisite}
 
 To be in this class, you must have already earned a grade of D- or  greater  in  Calculus I (UNK's MATH 115).
 
-
 \subsubsection*{Course Resources}
 
 \begin{alphalist}
 
-\item \emph{University Calculus: early transcendentals}, fourth edition, by Hass,  Heil, Weir, and Bogacki.
+\item \emph{University Calculus: early transcendentals}, fourth edition (required), by Hass,  Heil, Weir, and Bogacki.
 
-
-\item You \textbf{must} register for an account for MyMathLab  (required).  The Course ID is willis91782 
+\item MyMathLab (required).  The Course ID is willis91782 
 
 \item Reliable Internet access.
 
@@ -117,61 +111,85 @@ To be in this class, you must have already earned a grade of D- or  greater  in 
 
 \subsubsection*{Class meeting times}
 
-Generally this  class meets for 50 minutes Monday through Friday. Occasionally, to make up for a snow day or for days that I have to be absent,  we will meet for 75 minutes on 
-either Tuesday or Thursday. Additionally we will meet for 75 minutes for each mid-term exam. 
+Generally, this  class meets for 50 minutes Monday through Friday. 
+Occasionally, to make up for a snow day or for days that I have to 
+be absent,  we will meet for 75 minutes on 
+either Tuesday or Thursday. Additionally we will meet for 
+75 minutes for each mid-term exam. 
 
 \subsubsection*{Grading}
 
-Your course grade will be based on \emph{online homework assignments} (worth at least 150 points), \emph{in-class work} (twelve ten point assignments for 120 points),  four exams, and a final
-exam (scaled to 150 points).   Exams 1, 2, and 3 will be worth 100 points each, but Exam 4, given during final exam week, is worth 250 points.
-
-Your course grade will be based on the percent of the available points. Course letter grades will be based on a ten point scale. Except for the grade of A+, grades in the lower third of each decade will be a minus grade and grades in the upper third of each decade will be a plus grade. For example, the B- range is $[80, 83 + 1/3)$, and the B+ range is $[86 + 2/3, 90)$. To earn a grade of A+ requires a course average that exceeds 98\%.
-
-Course grades will be based on a ten point scale; grades in the lower third of each decade will be a minus grade and grades in the upper third of each decade will be a plus grade. \emph{There is no possibility of earning extra credit in this class.}
-
+Your course grade will be based on online homework, in class work, midterm exams, and a comprehensive 
+final exam; specifically:
+\begin{mypar}{0.25in}{0.25in}
+    \textbf{Online homework} (31 five point assignments) \dotfill 155 (total)\\
+    \textbf{In class work}  (12 ten point assignments)  \dotfill 120 (total) \\
+    \textbf{Mid-term exams 1,2, and 3} (100 points each) \dotfill 300 (total)\\
+    \textbf{Exam 4} \dotfill 50 (total)\\
+    \textbf{Comprehensive Final exam} \dotfill 150 (total)\\
+\end{mypar}
+\noindent Your course grade will be based on the percent of the available 
+points. Course letter grades will be based on a ten point scale. 
+Except for the grade of A+, grades in the lower third of each decade 
+will be a minus grade and grades in the upper third of each decade 
+will be a plus grade. For example, the B- range is 
+$[80, 83 + 1/3)$, and the B+ range is $[86 + 2/3, 90)$. To earn a 
+grade of A+ requires a course average that exceeds 98\%.
 
 \subsubsection*{In-class work \& online homework}
 
-Except for examination days, for a portion of each class on Tuesday, we will do in-class work.  In-class work must be turned in electronically by midnight on Tuesday to Canvas (not emailed to me).  Generally if you are ill or absence for any reason (including athletics), you will still need to turned in your in-class work on time. Exceptions for serious illness or other such considerations will need to be made in advance. \emph{Late work without a prior exception will count zero points}.
-
-You will have online Homework due each Friday at midnight. Since these assignments are made well in advance, except for extraordinary situations, you must turn this work on time.   \emph{Late work without a prior exception will count zero points}.
-
+Except for examination days, we will do in class work for a portion 
+of each class on Tuesday. In class work must be turned in 
+electronically to Canvas (not emailed to me) by midnight the day we 
+do it. Online homework is due each Friday at midnight. 
 
 \subsubsection*{Online classes}
 
-If you are ill, please let me know and join class via Zoom. If you choose to join class regularly by Zoom, it's your choice, but I do not recommend it.
-
+If you are ill, please let me know and join class via Zoom. But technology doesn't 
+always work, sometimes I forget to click all the buttons to make it work,
+and the readability of class materials over Zoom is sometimes poor. So if you 
+join class regularly by Zoom, it's your choice, but I do not recommend it. 
 
 \subsubsection* {Policies}
 
-For online homework, you may work in groups and you may seek help from the Learning Commons. For examinations, you make use a teacher provided crib sheet, but no other 
-tools. Using unauthorized materials while taking a test will earn you a failing course grade.   Our course management polices are:
-
 \begin{enumerate}
-      
-\item If you are involved with an university event (athletics or student government sponsored event, for example) that
-conflicts with an examination, you will be allowed to make up the  work provided you make arrangements at least three days in
-advance.
- 
-\item If you are ill and unable to attend class on an exam day, phone or email me \textbf{before, not after class} to make
-arrangements to make up the work. If you contact me \emph{after} class, it's unlikely that I will allow you to make up the work.
 
-\item During class time, please refrain from playing with electronic devices. If your device usage distracts your classmates, I will ask you to put it away. If it's my impression that you are not paying attention in class, I reserve the right to decline to help you during office hours.
+    \item For online homework, you may work in groups and you may 
+    seek help from the Learning Commons. 
+
+\item For examinations, you make use a teacher provided crib sheet, but no other 
+tools. Using unauthorized materials while taking a test will earn you a failing 
+course grade. 
+
+    \item Generally, if you are ill or absent for any reason (including 
+    athletics), you must turn in your in class work on time. Permission to
+    turn in work late must be made in advance, otherwise late in class work 
+    will count zero points.
+
+    \item Generally,  if you are ill or absent for any reason (including 
+    athletics), you must turn in your online homework on time. Permission to
+    turn in work online homework late must be made in advance, otherwise it will
+    count zero points.
+ 
+
+\item During class time, please refrain from playing with electronic devices. If your 
+device usage distracts your classmates, I will ask you to put it away. If it's my 
+impression that you are often not paying attention in class, I reserve the right to 
+decline to help you during office hours.
 
 \item The final examination will be \emph{comprehensive} and it will be given during the time scheduled by the University. Except for \emph{extraordinary circumstances}
 you must take the exam at this time.
 
+\item Class cancellations due to weather or illness or other 
+unplanned circumstances may require that we make minor adjustments
+to the course calendar, exam dates, and due dates or specifics for 
+course assessments.
 
-\item The course calendar may change. Changes to the schedule can announced in class, but not noted anywhere else. It is your responsibility to
-learn of changes to the schedule.
  
-\item Generally phones and other such devices must be turned off and \emph{out of sight} during class.
-
-\item Unless I have given you permission to turn in the homework for a classmate, do not agree to do so.
-
 \item If you have questions about how your work has been graded, make an appointment with me immediately.
 
-\item All printed materials, in either paper or digital form, that I provide for you in this class, are for your own use. Re-posting or sharing these materials with other persons is prohibited. 
+\item All printed materials, in either paper or digital form, that I provide for you in this class, are for your own use. Re-posting or sharing these 
+materials with other persons is prohibited. 
 
 \item Please regularly check Canvas  to verify that your scores have been recorded correctly.  If I made a mistake in recording one of
 your grades, I'll correct it provided you saved your paper.
@@ -247,26 +265,27 @@ if we fall behind, we'll cover new topics during dead week.
 
 \begin{center}
 
+    \small
 \begin{tabular}  {|l|l|l|l|}
 \hline
-{\bf Week}  & \textbf{Monday} &  {\bf Section(s)} & {\bf Topic(s) } \\
+{\bf Week}  & \textbf{Monday} &  {\bf Section(s)} & {\bf Topic(s) \& Assessments} \\
 \hline \hline 
-\wk    & 8/23 &    \S6.1 -- \S6.3   & volumes using cross-sections and shells, arclength, \hfill \qz \\
-\wk    & 8/30  &  \S6.4 -- \S6.5   &  areas and work  \hfill \qz  \\
-\wk    & 9/6 &     \S6.6 --\S7.1  &  center of mass and logarithms \hfill \qz \\
-\wk    & 9/13  &     \S7.2 -- \S7.3  & separable DEs   and hyperbolic functions  \hfill \qz             \\
-\wk    & 9/20 &  \S8.1--\S8.2    &  integration by parts and trigonometric integrals    \hfill \textbf{\ex\-\-, 21 September}  \\ \hline
-\wk    & 9/27   & \S8.3 -- \S8.5   & trigonometric substitutions, rational functions, tables  \hfill \qz   \\
-\wk    & 10/4     & \S8.6 -- \S8.7  & numerical integration and improper integrals  \hfill \qz   \\
-\wk   & 10/11   & \S9.1 -- \S9.2  &   sequences, infinite series  \hfill \qz   \\
-\wk  &  10/18   & \S9.3 -- \S9.4 &  integral test, comparison   \hfill \qz   \\ 
-\wk &  10/25     &   \S9.5 -- \S9.6 &  absolute convergence, alternating series \hfill  \textbf{ \ex, 26 October}  \\ \hline
-\wk  & 11/1  &   \S9.7 --\S9.8 & Power series, Taylor series \hfill \qz   \\
-\wk   & 11/8  & \S9.9--\S9.10  &  Taylor series \hfill \qz \\
-\wk   & 11/15& \S10.1  -- \S10.2   & plane curves, calculus with plain curves   \hfill \qz   \\
-\wk   & 11/22   &  \S10.3 -- \S10.4   & polar coordinates, polar equations  \hfill \qz   \\
-\wk   & 11/29    &  \S10.5     &  area and length in polar coordinates  \hfill \textbf{ \ex, 30 November }  \\ \hline
-\wk   & 12/6      &         &  catch up or review \\  
+\wk    & 8/23 &    \S6.1 -- \S6.3   & volumes using cross-sections and shells, arclength, \hfill \qz  \\
+\wk    & 8/30  &  \S6.4 -- \S6.5   &  areas and work  \hfill \qz \hw  \\
+\wk    & 9/6 &     \S6.6 --\S7.1  &  center of mass and logarithms \hfill \qz \hw \\
+\wk    & 9/13  &     \S7.2 -- \S7.3  & separable DEs   and hyperbolic functions  \hfill \qz \hw            \\
+\wk    & 9/20 &  \S8.1--\S8.2    &  integration by parts and trigonometric integrals    \hfill \textbf{\ex\-\-, 21 September} \hw \\ \hline
+\wk    & 9/27   & \S8.3 -- \S8.5   & trigonometric substitutions, rational functions, tables  \hfill \qz \hw  \\
+\wk    & 10/4     & \S8.6 -- \S8.7  & numerical integration and improper integrals  \hfill \qz \hw  \\
+\wk   & 10/11   & \S9.1 -- \S9.2  &   sequences, infinite series  \hfill \qz \hw  \\
+\wk  &  10/18   & \S9.3 -- \S9.4 &  integral test, comparison   \hfill \qz  \hw \\ 
+\wk &  10/25     &   \S9.5 -- \S9.6 &  absolute convergence, alternating series \hfill  \textbf{ \ex, 26 October} \hw \\ \hline
+\wk  & 11/1  &   \S9.7 --\S9.8 & Power series, Taylor series \hfill \qz  \hw  \\
+\wk   & 11/8  & \S9.9--\S9.10  &  Taylor series \hfill \qz \hw \\
+\wk   & 11/15& \S10.1  -- \S10.2   & plane curves, calculus with plain curves   \hfill \qz \hw  \\
+\wk   & 11/22   &  \S10.3 -- \S10.4   & polar coordinates, polar equations  \hfill \qz \hw  \\
+\wk   & 11/29    &  \S10.5     &  area and length in polar coordinates  \hfill \textbf{ \ex, 30 November }  \hw \\ \hline
+\wk   & 12/6      &         &  catch up or review  \\  
 \wk   & 12/13      &  &     \hfill \textbf{\ex,  13 December, 13:00--15:00} \\ 
          &               & &   \hfill  \textbf{ Final Exam, 16 December  10:30 -- 12:30} \\ \hline
 \end{tabular}
