@@ -3,7 +3,7 @@
 \usepackage{phonenumbers}
 \usepackage{xcolor}
 \usepackage[UKenglish]{isodate}% http://ctan.org/pkg/isodate
-\usepackage[paperwidth=8.5in, paperheight=11in,margin=1.0in]{geometry} 
+\usepackage[paperwidth=8.5in,paperheight=11in,margin=0.75in]{geometry} 
 \usepackage[USenglish]{babel}
 \usepackage{hyperref}
 \usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
@@ -27,7 +27,7 @@ Exam \theex}
 
 \usepackage[T1]{fontenc} 
 \usepackage{fourier}
-
+%\usepackage{tgschola} %to look retro
 \newenvironment{mypar}[2]
   {\begin{list}{}%
     {\setlength\leftmargin{#1}
@@ -73,12 +73,12 @@ Exam \theex}
 \begin{center}
 \begin{description}
     \item[Instructor:] Dr.\  Willis, Professor of Mathematics
-    \item[Office:]  Discovery Hall,  Room 368
+    \item[Office:]  Discovery Hall, Room 368
     \item[\phone:]  \phonenumber[country=US]{3088658868}
     \item[Email:] \href{mailto:willisb@unk.edu}{willisb@unk.edu}
+    \item[Zoom:] For both Zoom office hours or class meetings, use the Meeting ID: 616 568 5706. 
     \item[Office Hours:] Either in person or by Zoom: Monday, Wednesday, and  Friday, \mbox{9:30 -- 11:00}; Tuesday and Thursday 13:00 -- 14:00; Monday and Wednesday 13:30 -- 15:00;  and by appointment.
-    \item[Zoom] For both Zoom office hours or class meetings, use the \textbf{Meeting ID: 616 568 5706}.
- \end{description}
+  \end{description}
 \end{center}
 
 \subsubsection*{Course objectives}
@@ -89,7 +89,8 @@ the concepts, theorems, and proofs relating to sequences and infinite series, an
 \subsubsection*{Prerequisite}
 
 To be in this class, you must have earned a grade of D- or higher in 
-MATH 115 or you must have a Math ACT score of 25 or greater and one year of high school calculus.
+MATH 115 or you must have a Math ACT score of 25 or greater and 
+one year of high school calculus.
 
 
 \subsubsection*{Course Resources}
@@ -116,11 +117,10 @@ MATH 115 or you must have a Math ACT score of 25 or greater and one year of high
 
 \subsubsection*{Class meeting times}
 
-Generally, this  class meets for 50 minutes Monday through Friday. 
-Occasionally, to make up for a snow day or for days that I have to 
-be absent,  we will meet for 75 minutes on 
-either Tuesday or Thursday. Additionally we will meet for 
-75 minutes for each mid-term exam. 
+Generally, this  class meets for 50 minutes \emph{five} times per week 
+(Monday through Friday). Occasionally, to make up for a snow day or for days that I have to 
+be absent,  we will meet for 75 minutes on either Tuesday or Thursday.
+ Additionally we will meet for 75 minutes for each mid-term exam. 
 
 \subsubsection*{Grading}
 
@@ -134,8 +134,8 @@ final exam; specifically:
     \textbf{Comprehensive Final exam} \dotfill 150 (total)\\
 \end{mypar}
 \noindent The following table shows the \emph{minimum} number of points (out of 775) that
-is required for each of the twelve letter grades D- through A+. For
-example, a point total of 672 points will earn you a grade of B+, but
+are required for each of the twelve letter grades D- through A+. For
+example, a point total of 672 points will earn you a grade of B+ and 
 a point total of 671 points will earn you a grade of B. A point
 total of 464 or less earns a failing course grade.
 
@@ -168,31 +168,35 @@ do it. Online homework is due each Friday at midnight.
 
 \subsubsection*{Online classes}
 
-If you are ill, please let me know and join class via Zoom. But technology doesn't 
-always work, sometimes I forget to click all the buttons to make it work,
-and the readability of class materials over Zoom is sometimes poor. So if you 
-join class regularly by Zoom, it's your choice, but I do not recommend it. 
+If you are ill, please let me know and join class via Zoom. But 
+be aware that technology doesn't always work, sometimes I forget to 
+click all the buttons to make it work, and the readability of class 
+materials over Zoom is sometimes poor. So if you join class regularly 
+by Zoom, it's your choice, but I do not recommend it. 
 
 \subsubsection* {Policies}
 
 \begin{enumerate}
 
-    \item For online homework, you may work in groups and you may 
-    seek help from the Learning Commons. 
+\item For online homework, you may work in groups and you may 
+seek help from the Learning Commons. 
 
-\item For examinations, you make use a teacher provided crib sheet, but no other 
-tools. Using unauthorized materials while taking a test will earn you a failing 
-course grade. 
+\item For examinations, you make use a teacher provided crib sheet, 
+but no other reference materials. You may also use a pencil, eraser, 
+and a scientific calculator. For examinations, your phone and all such
+devices must be turned off and \emph{out of sight}. Checking your phone
+to look at the time is \emph{not} allowed. Using unauthorized 
+materials during an examination will earn you a failing course grade.
 
-    \item Generally, if you are ill or absent for any reason (including 
-    athletics), you must turn in your in class work on time. Permission to
-    turn in work late must be made in advance, otherwise late in class work 
-    will count zero points.
+\item Generally, if you are ill or absent for any reason (including 
+athletics), you must turn in your in class work on time. Permission to
+turn in work late must be made in advance, otherwise late in class work 
+will count zero points.
 
-    \item Generally,  if you are ill or absent for any reason (including 
-    athletics), you must turn in your online homework on time. Permission to
-    turn in work online homework late must be made in advance, otherwise it will
-    count zero points.
+\item Generally,  if you are ill or absent for any reason (including 
+athletics), you must turn in your online homework on time. Permission to
+turn in work online homework late must be made in advance, otherwise it will
+count zero points.
  
 
 \item During class time, please refrain from playing with electronic devices. If your 
@@ -200,43 +204,29 @@ device usage distracts your classmates, I will ask you to put it away. If it's m
 impression that you are often not paying attention in class, I reserve the right to 
 decline to help you during office hours.
 
-\item The final examination will be \emph{comprehensive} and it will be given during the time scheduled by the University. Except for \emph{extraordinary circumstances}
+\item The final examination will be \emph{comprehensive} and it will be given during the 
+time scheduled by the University. Except for \emph{extraordinary circumstances}
 you must take the exam at this time.
 
 \item Class cancellations due to weather or illness or other 
 unplanned circumstances may require that we make minor adjustments
 to the course calendar, exam dates, and due dates or specifics for 
 course assessments.
-
  
 \item If you have questions about how your work has been graded, make an appointment with me immediately.
 
-\item All printed materials, in either paper or digital form, that I provide for you in this class, are for your own use. Re-posting or sharing these 
-materials with other persons is prohibited. 
+\item All printed materials, in either paper or digital form, that I 
+provide for you in this class, are for your own use. Re-posting or 
+sharing these materials with other persons is prohibited. 
 
-\item Please regularly check Canvas  to verify that your scores have been recorded correctly.  If I made a mistake in recording one of
+\item Please regularly check Canvas  to verify that your scores have 
+been recorded correctly.  If I made a mistake in recording one of
 your grades, I'll correct it provided you saved your paper.
 
-\end{enumerate}
-
-\subsubsection*{Examinations and Homework}
-
-Follow these guidelines while taking an examination or writing a solution to a homework question.
-
-\begin{enumerate}
-
-\item The work you turn in is expected to be \emph{accurate, complete, concise, neat}, and \emph{well-organized}.  \emph{You will not earn
-full credit on work that falls short of these expectations.}
-
-
-
-
-\item While writing an examination, you may use a pencil, eraser, a scientific calculator, and a teacher provided crib sheet. If you are a non-native speaker of English,
-you may use a \emph{paper} translation dictionary.  
-
-\item  You may \emph{not} use a phone or other such device during an examination--this includes checking the time on a phone. Phones and all such devices must be turned off and be out of sight while taking an exam. 
-
-
+\item The work you turn in is expected to be \emph{accurate, 
+complete, concise, neat}, and \emph{well-organized}.  
+\emph{You will not earn full credit on work that falls short of 
+these expectations.}
 
 \item For examinations, show your work.  No credit will be given for multi-step problems without the necessary work. Your solution must contain enough detail
 so that I am convinced that you could correctly work any similar problem. Also erase or clearly mark any work you want me to ignore; otherwise,
@@ -282,6 +272,8 @@ Generally, we'll adhere to the scheduled exam dates even if we are ahead or behi
 topics on the exams will be appropriately adjusted.  There is no new topics scheduled for dead week, if we adhere to the schedule, we'll review during dead week, but
 if we fall behind, we'll cover new topics during dead week.
 
+\newpage
+%\vspace{0.1in}
 \noindent \textbf{Notices:}
 
 
