@@ -46,6 +46,9 @@ Exam \theex}
 \usepackage{enumerate}
 \usepackage{graphicx}
 
+\usepackage{paralist}
+\renewenvironment{description}[0]{\begin{compactdesc}}{\end{compactdesc}}
+
 \newenvironment{alphalist}{
   \begin{enumerate}[(a)]
     \addtolength{\itemsep}{-0.5\itemsep}}
