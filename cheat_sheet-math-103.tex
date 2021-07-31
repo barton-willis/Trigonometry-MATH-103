@@ -48,7 +48,7 @@
 
 
 \usepackage{geometry}
-\geometry{a4paper,left=10mm,right=10mm,top=10mm,bottom=15mm}
+\geometry{letterpaper,left=5mm,right=5mm,top=5mm,bottom=5mm}
 
 \linespread{1.3}
 
@@ -122,15 +122,15 @@
 
 \begin{tabular}{|L | L| L|} \hline
 \mbox{Name} & \mbox{Symbol} & \mbox{Typical use(s)} \\ \hline
-\mathrm{alpha} & \alpha  & \mbox{ angle, constant} \\
-\mathrm{beta} & \beta  & \mbox{ angle, constant}  \\ 
+\mathrm{alpha} & \alpha  & \mbox{angle, constant} \\
+\mathrm{beta} & \beta  & \mbox{angle, constant}  \\ 
 \mathrm{gamma} & \gamma & \mbox{angle, constant} \\
 %\mathrm{delta} & \delta  & \mbox{ limit definition}\\
 \mathrm{epsilon} & \epsilon  \mbox{ or } \varepsilon & \mbox{angle, constant} \\
-\mathrm{theta}  & \theta  \mbox{ or } \vartheta & \mbox{ angle}\\ 
+\mathrm{theta}  & \theta  \mbox{ or } \vartheta & \mbox{angle, constant}\\ 
 %\mathrm{lambda} & \lambda & \mbox{Lagrange multiplier} \\
 \mathrm{pi} & \pi \mbox{ or } \uppi & \mbox{circular constant} \\
-\mathrm{phi} & \phi \mbox{ or } \varphi  & \mbox{ angle} \\
+\mathrm{phi} & \phi \mbox{ or } \varphi  & \mbox{angle,constant} \\
 
 \hline
 \end{tabular}
@@ -143,7 +143,7 @@
 \begin{tabular}{|L | L |} \hline 
 \mathrm{empty\,\, set} & \varnothing \\ 
  \mathrm{real\,\, numbers} & \mathbf{R} \\
-  \mathrm{ordered \, \, pairs }  & \mathbf{R}^2 \\
+  \mathrm{ordered \, \, pairs \,\,  of \,\, reals}  & \mathbf{R}^2 \\
   %\mathrm{ordered \, \, triples }  & \mathbf{R}^3 \\
   \mathrm{integers } & \mathbf{Z} \\
   \mathrm{positive \,\,  integers } & \mathbf{Z}_{>0} \\ 
@@ -206,6 +206,9 @@ For numbers \(a\) and \(b\), we define the intervals:
 For \(a,b > 0\) and \(m,n\) real:
 \vspace{-0.05in}
 \begin{align*}
+a^0 &= 1 \\
+0^a &= 0\\
+1^a &= 1\\   
 a^n a^m &= a^{n+m}  \\
 \nicefrac{a^n}{a^m} &= a^{n-m} \\
 (a^n)^m &= a^{n \cdot m} \\
@@ -222,8 +225,8 @@ a^{-m} &= \nicefrac{1}{a^m}\\
 \vspace{-0.335in}
 \begin{align*}
 &\sin(x)^2 + \cos(x)^2 =1 \\
-&\cos(x)^2 =  \frac{1}{2} \left(1 + \cos(2 x) \right)\\
-&\sin(x)^2 = \frac{1}{2} \left(1 - \cos(2 x) \right)\\
+&2 \cos(x)^2 =  1 + \cos(2 x)\\
+&2 \sin(x)^2 = 1 - \cos(2 x)\\
  &\sin\left(x +  y\right) =\sin (x) \cos (y) + \cos (x) \sin (y) \\
 &\cos\left(x+y\right)=\cos (x) \cos (y) - \sin (x) \sin (y)    
 \end{align*}
@@ -327,7 +330,7 @@ opacity=.4](O,B,A)
     \frac{\sin{\alpha}}{A} =  \frac{\sin{\beta}}{B} =  \frac{\sin{\gamma}}{C}
 \]
 
-\subsection*{Areas and volumes}
+\subsection*{Area}
 
 \[
     \mbox{Area} = \frac{1}{2} hB =   \frac{1}{2} A B \sin(\gamma)
@@ -422,23 +425,25 @@ Volume
 \section*{Solution of equations}
 
 \subsubsection*{Algebraic}
+\vspace{-0.2in}
 \begin{minipage}[c]{0.1666666666667\textwidth}
 \begin{align*}
-& (a b = 0) \equiv ( a = 0 \lor b = 0)\\
-& (a^2 = b^2) \equiv ( a = b \lor a = -b)\\
-&\left(\frac{a}{b} = 0 \right) \equiv \left(a = 0 \land b \neq 0 \right) \\
-&\left(\frac{a}{b} = \frac{c}{d}  \right) \equiv \left(ad  = bc \land b \neq 0  \land  d \neq 0 \right) \\
-&\left(|a| = |b|  \right) \equiv \left(a =b \lor a = -b \right)\\
-&\left(\sqrt{a}  = b \right) \equiv \left(a = b^2 \land b \ge 0 \right) \\
+& \big [a b = 0 \big ] \equiv \big [ a = 0 \mbox{ \textbf{or} } b = 0 \big ]\\
+& \big [ a^2 = b^2 \big ] \equiv \big [ a = b \mbox{ \textbf{or} } a = -b \big ]\\
+&\big [ \frac{a}{b} = 0 \big ] \equiv \big [ a = 0 \mbox{ \textbf{and} } b \neq 0 \big ] \\
+&\big [\frac{a}{b} = \frac{c}{d}  \big ] \equiv \big [ad  = bc \mbox{ \textbf{and}  } b \neq 0  \mbox{ \textbf{and}  }  d \neq 0 \big ] \\
+&\big [|a| = |b|  \big ] \equiv \big [a =b \mbox{ \textbf{or} } a = -b \big ]\\
+&\big [ \sqrt{a}  = b \big ] \equiv \big [a = b^2 \mbox{ \textbf{and}  } b \ge 0 \big ] \\
 \end{align*}
 \end{minipage}
 
 \subsubsection*{Trig}
+\vspace{-0.2in}
 \begin{minipage}[c]{0.1666666666667\textwidth}
 \begin{align*}
-&\left(\cos(a) = 0 \right)  \equiv  \left( a =  (k - 1/2)  \uppi, k \in \integers \right)\\
-&\left(\sin(a) = 0 \right)  \equiv  \left( a = k \uppi, k \in \integers \right) \\
-&\left(\tan(a) = 0 \right)  \equiv  \left( a = k \uppi, k \in \integers \right)
+&\big [\cos(a) = 0 \big ]  \equiv  \big [a =  (k - 1/2)  \uppi, k \in \integers \big ]\\
+&\big [\sin(a) = 0 \big ]  \equiv  \big [ a = k \uppi, k \in \integers \big ] \\
+&\big [\tan(a) = 0 \big ]  \equiv  \big [ a = k \uppi, k \in \integers \big ]
 \end{align*}
 \end{minipage}
 
