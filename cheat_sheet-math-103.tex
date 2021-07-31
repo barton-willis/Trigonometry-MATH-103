@@ -102,7 +102,7 @@
 
 \newcommand{\myclass}{ MATH 103}
 \title{\myclass, \term \the\year}
-%\author{Barton Willis, PhD, Professor of Mathematics}
+\author{Barton Willis, PhD, Professor of Mathematics}
 
 
 
@@ -216,7 +216,22 @@ a^{-m} &= \nicefrac{1}{a^m}\\
 \left(\nicefrac{a}{b}\right)^m &= \nicefrac{a^m}{b^m}
 \end{align*}
 
-
+\section*{Right triangle trigonometry}
+\begin{tikzpicture}[scale=5]
+   \draw[thick,color=black] (0,0) -- node[below] {$b$} (1,0);
+   \draw[thick,color=black] (1,0) -- node[right] {$a$} (1,0.57735);
+   \draw[thick,color=black] (1,0.57735) -- node[above] {$c$} (0,0);
+   \filldraw[fill=blue!20!white,draw=blue] (0,0) -- (0.3,0) arc (0:30:0.3); 
+   \node[color=blue] at (0.33,0.1) {$\alpha$};
+   \draw (0.95,0) -- (0.95,0.05) -- (1,0.05);
+   \end{tikzpicture}
+   
+   \medskip
+   
+   \begin{tabular}{ll}
+   $\sin\alpha = \nicefrac{a}{c}$ & $\cos\alpha = \nicefrac{b}{c}$ \\[1ex]
+   $\tan\alpha = \nicefrac{a}{b}$ & $\cot\alpha = \nicefrac{b}{a}$ \\
+   \end{tabular}
 
 \section*{Trigonometric identities}
 \vspace{-0.05in}
@@ -337,91 +352,6 @@ opacity=.4](O,B,A)
 \]
 
 
-\section*{Volumes}
-
-\begin{comment}
-\subsection*{Rectangle}
-\begin{minipage}[c]{0.333\textwidth}
-\begin{tikzpicture}[thick]
-\coordinate (O) at (0,0);
-\coordinate (A) at (2,0);
-\coordinate (B) at (2,1);
-\coordinate (C) at (0,1);
-\draw (O)--(A)--(B)--(C)--cycle;
-
-\tkzLabelSegment[below=2pt](O,A){$\ell$}
-\tkzLabelSegment[above right=2pt](A,B){$w$}
-
-
-\end{tikzpicture}
-
-\[
-   \mbox{Area} = \ell \times w
-\]
-\[
-   \mbox{Perimeter} = 2 \ell  +  2 w
-\]
-
-\end{minipage}
-\subsection*{Circle}
-
-\[
-   \mbox{Area} = \uppi  \times \mbox{radius}^2
-\]
-\[
-   \mbox{Circumference} = 2 \uppi  \times \mbox{radius}
-\]
-\end{comment}
-\subsection*{Right Circular Cylinder}
-
-\begin{minipage}[c]{0.1666666666667\textwidth}
-\begin{tikzpicture}[thick]
-  \node (a) [cylinder, shape border rotate=90, draw, minimum height=15mm, minimum width=7.5mm] {};
-  \draw [<->] ([xshift=5pt]a.before bottom) -- ([xshift=5pt]a.after top) node [midway, right] {$h$};
-  \draw [<->] ([yshift=-5pt]a.bottom) -- ([yshift=-5pt]a.bottom -| a.before bottom) node [midway, below] {$r$};
-\end{tikzpicture}
-\end{minipage}
-\begin{minipage}[l]{0.1666666666667\textwidth}
-Volume
-\[
-    \mbox{V} = \uppi r^2 h
-\]
-\noindent Area, not including areas of circular ends
-\[
-   \mbox{A} = 2 \uppi r  h
-\]
-\end{minipage}
-
-
-
-\subsection*{Cone} 
-  \begin{minipage}[c]{0.1666666666667\textwidth}
-   \begin{tikzpicture}[thick, scale=0.5]
-      \begin{scope}
-     \clip (-2,0) rectangle (2,1cm);
-    \draw[dashed] (0,0) circle(2cm and 0.35cm);
-    \end{scope}
-    \begin{scope}
-     \clip (-2,0) rectangle (2,-1cm);
-    \draw (0,0) circle(2cm and 0.35cm);
-    \end{scope}
-    \draw[densely dashed] (0,4) -- node[right,font=\footnotesize] {$h$}coordinate[pos=0.95] (aa)(0,0)
-                            -- node[above,font=\footnotesize] {$r$}coordinate[pos=0.1] (bb) (2,0);
-    \draw (aa) -| (bb);
-    \draw (-2,0) -- (0,4) -- (2,0);
-  \end{tikzpicture}
-  \end{minipage}
-  \begin{minipage}[c]{0.1666666666667\textwidth}
-  Volume
-  \[
-     \mbox{V} = \frac{1}{3} \uppi r^2 h
-  \]
-\noindent Area, not including area of circular base:
-\[
-   \mbox{A} =  \uppi r  \left (r + \sqrt{r^2+h^2} \right)
-\]
-\end{minipage}
-
 \section*{Solution of equations}
 
 \subsubsection*{Algebraic}
@@ -446,6 +376,7 @@ Volume
 &\big [\tan(a) = 0 \big ]  \equiv  \big [ a = k \uppi, k \in \integers \big ]
 \end{align*}
 \end{minipage}
+
 
 \end{multicols*}
 
