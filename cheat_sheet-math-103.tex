@@ -6,6 +6,8 @@
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{width=5cm,compat=1.9}
 \usepackage{url}
 \usetikzlibrary{shapes.geometric}
 \usetikzlibrary{calc}
@@ -377,10 +379,62 @@ opacity=.4](O,B,A)
 \end{align*}
 \end{minipage}
 
-
 \end{multicols*}
 
+\newpage
+
+
 \begin{multicols*}{1}
+
+\section*{Graphs}
+
+\begin{tikzpicture}[>=stealth]
+  \begin{axis}[
+      xmin=-4,xmax=4,
+      ymin=-1.5,ymax=1.5,
+      axis x line=middle,
+      axis y line=middle,
+      axis line style=<->,
+      xlabel={$x$},
+      ylabel={$y$},
+      ]
+      \addplot[no marks,blue,<->] expression[domain=-pi:pi,samples=100]{cos(deg(x))} 
+                  node[pos=0.65,anchor=south west]{$y=\cos(x)$}; 
+  \end{axis}
+\end{tikzpicture}
+\hspace{0.1in}
+\begin{tikzpicture}[>=stealth]
+  \begin{axis}[
+      xmin=-4,xmax=4,
+      ymin=-1.5,ymax=1.5,
+      axis x line=middle,
+      axis y line=middle,
+      axis line style=<->,
+      xlabel={$x$},
+      ylabel={$y$},
+      ]
+      \addplot[no marks,blue,<->] expression[domain=-pi:pi,samples=100]{sin(deg(x))} 
+                  node[pos=0.65,anchor=south west]{$y=\sin(x)$}; 
+  \end{axis}
+\end{tikzpicture}
+\hspace{0.1in}
+\begin{tikzpicture}[>=stealth]
+  \begin{axis}[
+      xmin=-4,xmax=4,
+      ymin=-1.5,ymax=1.5,
+      axis x line=middle,
+      axis y line=middle,
+      axis line style=<->,
+      xlabel={$x$},
+      ylabel={$y$},
+      ]
+      \addplot[no marks,blue,<->] expression[domain=-pi:pi,samples=100]{tan(deg(x))} 
+                  node[pos=0.15,anchor=south west]{$y=\tan(x)$}; 
+  \end{axis}
+\end{tikzpicture}
+
+
+
 \section*{Unit Circle}
 
 \begin{tikzpicture}[scale=5.3,cap=round,>=latex]
@@ -451,6 +505,8 @@ opacity=.4](O,B,A)
 
 
 
+
+
 \vfill
 %\tiny
 \noindent Barton Willis is the author of this work. It 
@@ -460,6 +516,26 @@ licensed under CC0 1.0.
 \end{multicols*}
   
 \end{document}
+\begin{tabular}{|l|l|l|l|l|}
+  \hline
+  \textbf{Function} & \textbf{Domain} & \textbf{ Range } & \textbf{Zeros} & \textbf{Graph} \\ \hline \hline
+  $\cos$           & $\reals$       & $[-1,1] $ &   $\{ (k-1/2) \,  \uppi \mid k \in \integers \} $     &  \begin{tikzpicture}[>=stealth]
+   \begin{axis}[
+       xmin=-4,xmax=4,
+       ymin=-1.5,ymax=1.5,
+       axis x line=middle,
+       axis y line=middle,
+       axis line style=<->,
+       xlabel={$x$},
+       ylabel={$y$},
+       ]
+       \addplot[no marks,blue,<->] expression[domain=-pi:pi,samples=100]{sin(deg(x))} 
+                   node[pos=0.65,anchor=south west]{$y=\sin(x)$}; 
+   \end{axis}
+ \end{tikzpicture}\\ \hline
+%  \sin           & \reals        & [-1,1]  & \\
+%  \tan           & \reals \setminus \{(k-1/2) \uppi \mod k \in \integers \} & \\
+\end{tabular}
 
 \section{Trigonometry}
 
