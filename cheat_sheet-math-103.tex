@@ -388,7 +388,8 @@ opacity=.4](O,B,A)
 
 \section*{Graphs}
 
-\begin{tikzpicture}[>=stealth]
+\fbox{
+ \begin{tikzpicture}[>=stealth]
   \begin{axis}[
       xmin=-4,xmax=4,
       ymin=-1.5,ymax=1.5,
@@ -402,7 +403,7 @@ opacity=.4](O,B,A)
                   node[pos=0.65,anchor=south west]{$y=\cos(x)$}; 
   \end{axis}
 \end{tikzpicture}
-\hspace{0.1in}
+\fbox{
 \begin{tikzpicture}[>=stealth]
   \begin{axis}[
       xmin=-4,xmax=4,
@@ -416,8 +417,8 @@ opacity=.4](O,B,A)
       \addplot[no marks,blue,<->] expression[domain=-pi:pi,samples=100]{sin(deg(x))} 
                   node[pos=0.65,anchor=south west]{$y=\sin(x)$}; 
   \end{axis}
-\end{tikzpicture}
-\hspace{0.1in}
+\end{tikzpicture}}
+\fbox{
 \begin{tikzpicture}[>=stealth]
   \begin{axis}[
       xmin=-4,xmax=4,
@@ -431,7 +432,7 @@ opacity=.4](O,B,A)
       \addplot[no marks,blue,<->] expression[domain=-pi:pi,samples=100]{tan(deg(x))} 
                   node[pos=0.15,anchor=south west]{$y=\tan(x)$}; 
   \end{axis}
-\end{tikzpicture}
+\end{tikzpicture}}
 
 
 
