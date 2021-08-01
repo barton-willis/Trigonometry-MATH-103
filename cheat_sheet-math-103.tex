@@ -18,7 +18,7 @@
 \usepackage{array}   % for \newcolumntype macro
 %\usepackage{fourier}
 \usepackage{graphicx,nicefrac}
-\usepackage{isomath,upgreek,xcolor,comment,fourier}
+\usepackage{isomath,upgreek,comment,fourier}
 \usepackage{pdfpages}
 \usepackage{tkz-euclide}
 %\usetkzobj{all}
@@ -359,7 +359,7 @@ opacity=.4](O,B,A)
 
 
 \section*{Solution of equations}
-
+\vspace{-0.2in}
 \subsubsection*{Algebraic}
 \vspace{-0.2in}
 \begin{minipage}[c]{0.1666666666667\textwidth}
@@ -372,21 +372,29 @@ opacity=.4](O,B,A)
 &\big [ \sqrt{a}  = b \big ] \equiv \big [a = b^2 \mbox{ \textbf{and}  } b \ge 0 \big ] \\
 \end{align*}
 \end{minipage}
-
+\vspace{-0.2in}
 \subsubsection*{Trig}
 \vspace{-0.2in}
 \begin{minipage}[c]{0.1666666666667\textwidth}
 \begin{align*}
 &\big [\cos(a) = 0 \big ]  \equiv  \big [a =  (k - 1/2)  \uppi, k \in \integers \big ]\\
 &\big [\sin(a) = 0 \big ]  \equiv  \big [ a = k \uppi, k \in \integers \big ] \\
-&\big [\tan(a) = 0 \big ]  \equiv  \big [ a = k \uppi, k \in \integers \big ]
+&\big [\tan(a) = 0 \big ]  \equiv  \big [ a = k \uppi, k \in \integers \big ] \\
+%&\big [\sin(a) = b  \big] \equiv \big [a = \sin^{-1}(b) + 2 k \uppi  \mbox{ \textbf{or} } [a = \sin^{-1}(b) + 2 k \uppi \big ]
 \end{align*}
 \end{minipage}
 
 \end{multicols*}
 
+
 \newpage
 
+\begin{comment}
+\subsubsection*{Trig (continued)}
+
+$\big [\sin(a) = b  \big] \equiv \begin{cases} a = \sin^{-1}(b) + 2 k \uppi  \mbox{ \textbf{or} } a = -\sin^{-1}(b) + (2 k + 1) \uppi \big ] &\mbox{ if } b \in [-1,1] \\
+  \varnothing  & \mbox{ if } b \notin [-1,1] \end{cases}$
+\end{comment}
 
 \section*{Graphs}
 \vspace{-0.2in}
