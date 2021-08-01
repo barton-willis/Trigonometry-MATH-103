@@ -3,7 +3,11 @@
 \documentclass[letterpaper,9pt,fleqn]{extarticle}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{graphicx}
+
+\usepackage[]{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
 \usepackage{xcolor}
 \usepackage{tikz}
 \usepackage{pgfplots}
@@ -384,10 +388,102 @@ opacity=.4](O,B,A)
 \newpage
 
 
-\begin{multicols*}{1}
-
 \section*{Graphs}
+\vspace{-0.2in}
+\subsubsection*{Cosine, sine, and tangent}
+\vspace{-0.2in}
+\begin{figure}[h]
+\centering
+\begin{minipage}{.333\textwidth}
+  \centering
+  \includegraphics[width=.25\linewidth]{desmos-graph-cos}
+  \captionof{figure}{Graph of $y = \cos(x)$ on $[0, 2\uppi]$.}
+  \label{fig:test1}
+\end{minipage}%
+\begin{minipage}{.333\textwidth}
+  \centering
+  \includegraphics[width=.25\linewidth]{desmos-graph-sine}
+  \captionof{figure}{Graph of $y = \sin(x)$ on $[0, 2\uppi]$.}
+  \label{fig:test2}
+\end{minipage}%
+\begin{minipage}{.333\textwidth}
+  \centering
+  \includegraphics[width=.25\linewidth]{desmos-graph-tan}
+  \captionof{figure}{Graph of $y = \tan(x)$ on $[0, 2\uppi]$.}
+  \label{fig:test2}
+\end{minipage}
+\end{figure}
+\vspace{-0.2in}
+\subsubsection*{Arccosine, arcsine, and arctangent}
+\vspace{-0.2in}
+\begin{figure}[h]
+\centering
+\begin{minipage}{.333\textwidth}
+  \centering
+  \includegraphics[width=.25\linewidth]{desmos-graph-invcos}
+  \captionof{figure}{Graph of $y = \arccos(x)$ on $[-1,1]$.}
+  \label{fig:test1}
+\end{minipage}%
+\begin{minipage}{.333\textwidth}
+  \centering
+  \includegraphics[width=.25\linewidth]{desmos-graph-invsin}
+  \captionof{figure}{Graph of $y = \arcsin(x)$ on $[-1,1]$.}
+  \label{fig:test2}
+\end{minipage}%
+\begin{minipage}{.333\textwidth}
+  \centering
+  \includegraphics[width=.25\linewidth]{desmos-graph-invtan}
+  \captionof{figure}{Graph of $y = \arctan(x)$ on $[-10,10]$.}
+  \label{fig:test2}
+\end{minipage}
+\end{figure}
+\begin{comment}
 
+\begin{figure}[h]
+\centering
+\begin{minipage}{.333\textwidth}
+  \centering
+  \includegraphics[width=.333\linewidth]{desmos-graph-sine}
+  \captionof{figure}{Graph of $y = \sin(x)$ on $[0, 2\uppi]$.}
+  \label{fig:test1}
+\end{minipage}%
+\begin{minipage}{.333\textwidth}
+  \centering
+  \includegraphics[width=.3\linewidth]{desmos-graph-cos}
+  \captionof{figure}{Graph of $y = \cos(x)$ on $[0, 2\uppi]$.}
+  \label{fig:test2}
+\end{minipage}%
+\begin{minipage}{.333\textwidth}
+  \centering
+  \includegraphics[width=.3\linewidth]{desmos-graph-tan}
+  \captionof{figure}{Graph of $y = \tan(x)$ on $[0, 2\uppi]$.}
+  \label{fig:test2}
+\end{minipage}
+\end{figure}
+\begin{figure}[h]
+\centering
+\begin{minipage}{.333\textwidth}
+  \centering
+  \includegraphics[width=.333\linewidth]{desmos-graph-invsin}
+  \captionof{figure}{Graph of $y = \sin(x)$ on $[0, 2\uppi]$.}
+  \label{fig:test1}
+\end{minipage}%
+\begin{minipage}{.333\textwidth}
+  \centering
+  \includegraphics[width=.3\linewidth]{desmos-graph-cos}
+  \captionof{figure}{Graph of $y = \cos(x)$ on $[0, 2\uppi]$.}
+  \label{fig:test2}
+\end{minipage}%
+\begin{minipage}{.333\textwidth}
+  \centering
+  \includegraphics[width=.3\linewidth]{desmos-graph-tan}
+  \captionof{figure}{Graph of $y = \tan(x)$ on $[0, 2\uppi]$.}
+  \label{fig:test2}
+\end{minipage}
+\end{figure}
+\end{comment}
+
+\begin{comment}
 \fbox{
  \begin{tikzpicture}[>=stealth]
   \begin{axis}[
@@ -402,7 +498,8 @@ opacity=.4](O,B,A)
       \addplot[no marks,blue,<->] expression[domain=-pi:pi,samples=100]{cos(deg(x))} 
                   node[pos=0.65,anchor=south west]{$y=\cos(x)$}; 
   \end{axis}
-\end{tikzpicture}
+\end{tikzpicture}}
+
 \fbox{
 \begin{tikzpicture}[>=stealth]
   \begin{axis}[
@@ -434,7 +531,7 @@ opacity=.4](O,B,A)
   \end{axis}
 \end{tikzpicture}}
 
-
+\end{comment}
 
 \section*{Unit Circle}
 
@@ -514,7 +611,6 @@ opacity=.4](O,B,A)
 licensed under CC0 1.0. 
 %To view a copy of this license, visit \url{https://creativecommons.org/publicdomain/zero/1.0 }
 
-\end{multicols*}
   
 \end{document}
 \begin{tabular}{|l|l|l|l|l|}
