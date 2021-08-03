@@ -12,7 +12,7 @@
 \usepackage{tikz}
 \usepackage{pgfplots}
 \pgfplotsset{width=5cm,compat=1.9}
-\usepackage{url}
+\usepackage{hyperref}
 \usetikzlibrary{shapes.geometric}
 \usetikzlibrary{calc}
 \usepackage{array}   % for \newcolumntype macro
@@ -136,7 +136,7 @@
 \mathrm{theta}  & \theta  \mbox{ or } \vartheta & \mbox{angle, constant}\\ 
 %\mathrm{lambda} & \lambda & \mbox{Lagrange multiplier} \\
 \mathrm{pi} & \pi \mbox{ or } \uppi & \mbox{circular constant} \\
-\mathrm{phi} & \phi \mbox{ or } \varphi  & \mbox{angle,constant} \\
+\mathrm{phi} & \phi \mbox{ or } \varphi  & \mbox{angle, constant} \\
 
 \hline
 \end{tabular}
@@ -222,7 +222,7 @@ a^{-m} &= \nicefrac{1}{a^m}\\
 \left(\nicefrac{a}{b}\right)^m &= \nicefrac{a^m}{b^m}
 \end{align*}
 
-\section*{Right triangle trigonometry}
+\section*{Right triangle Trigonometry}
 \begin{tikzpicture}[scale=5]
    \draw[thick,color=black] (0,0) -- node[below] {$b$} (1,0);
    \draw[thick,color=black] (1,0) -- node[right] {$a$} (1,0.57735);
@@ -239,7 +239,7 @@ a^{-m} &= \nicefrac{1}{a^m}\\
    $\csc(\alpha) = \nicefrac{c}{a}$ & $\sec(\alpha) = \nicefrac{c}{b}$ & $\cot(\alpha) = \nicefrac{b}{a}$  \\
    \end{tabular}
 
-\section*{Trigonometric identities}
+\section*{Trigonometric Identities}
 \vspace{-0.05in}
 \begin{minipage}[c]{2.0in}
 
@@ -341,7 +341,7 @@ opacity=.4](O,B,A)
 
 \end{tikzpicture}
 
-\subsection*{Law of cosine}
+\subsection*{Law of cosines}
 \[
     C^2 = A^2 + B^2 - 2 A B \cos(\gamma) 
 \]
@@ -366,8 +366,8 @@ opacity=.4](O,B,A)
 \begin{align*}
 & \big [a b = 0 \big ] \equiv \big [ a = 0 \mbox{ \textbf{or} } b = 0 \big ]\\
 & \big [ a^2 = b^2 \big ] \equiv \big [ a = b \mbox{ \textbf{or} } a = -b \big ]\\
-&\big [ \frac{a}{b} = 0 \big ] \equiv \big [ a = 0 \mbox{ \textbf{and} } b \neq 0 \big ] \\
-&\big [\frac{a}{b} = \frac{c}{d}  \big ] \equiv \big [ad  = bc \mbox{ \textbf{and}  } b \neq 0  \mbox{ \textbf{and}  }  d \neq 0 \big ] \\
+&\left [ \frac{a}{b} = 0 \right ] \equiv \big [ a = 0 \mbox{ \textbf{and} } b \neq 0 \big ] \\
+&\left [\frac{a}{b} = \frac{c}{d}  \right ] \equiv \big [ad  = bc \mbox{ \textbf{and}  } b \neq 0  \mbox{ \textbf{and}  }  d \neq 0 \big ] \\
 &\big [|a| = |b|  \big ] \equiv \big [a =b \mbox{ \textbf{or} } a = -b \big ]\\
 &\big [ \sqrt{a}  = b \big ] \equiv \big [a = b^2 \mbox{ \textbf{and}  } b \ge 0 \big ] \\
 \intertext{For \(a \neq 0\),}
@@ -617,8 +617,10 @@ $\big [\sin(a) = b  \big] \equiv \begin{cases} a = \sin^{-1}(b) + 2 k \uppi  \mb
 
 \vfill
 %\tiny
+\noindent For a comprehensive list of trigonometric function facts, see \url{https://dlmf.nist.gov/4.14}.
+
 \noindent Barton Willis is the author of this work. It 
-licensed under CC0 1.0; visit \url{https://creativecommons.org/publicdomain/zero/1.0 }.
+licensed under CC0 1.0 (\url{https://creativecommons.org/publicdomain/zero/1.0 }).
 
   
 \end{document}
