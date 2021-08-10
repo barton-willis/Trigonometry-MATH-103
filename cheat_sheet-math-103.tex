@@ -408,19 +408,19 @@ $\big [\sin(a) = b  \big] \equiv \begin{cases} a = \sin^{-1}(b) + 2 k \uppi  \mb
   \centering
   \includegraphics[width=.25\linewidth]{desmos-graph-cos}
   \captionof{figure}{Graph of $y = \cos(x)$ on $[0, 2\uppi]$.}
-  \label{fig:test1}
+  %\label{fig:test1}
 \end{minipage}%
 \begin{minipage}{.333\textwidth}
   \centering
   \includegraphics[width=.25\linewidth]{desmos-graph-sine}
   \captionof{figure}{Graph of $y = \sin(x)$ on $[0, 2\uppi]$.}
-  \label{fig:test2}
+  %\label{fig:test2}
 \end{minipage}%
 \begin{minipage}{.333\textwidth}
   \centering
   \includegraphics[width=.25\linewidth]{desmos-graph-tan}
   \captionof{figure}{Graph of $y = \tan(x)$ on $[0, 2\uppi]$.}
-  \label{fig:test2}
+  %\label{fig:test2}
 \end{minipage}
 \end{figure}
 \vspace{-0.2in}
@@ -432,19 +432,19 @@ $\big [\sin(a) = b  \big] \equiv \begin{cases} a = \sin^{-1}(b) + 2 k \uppi  \mb
   \centering
   \includegraphics[width=.25\linewidth]{desmos-graph-invcos}
   \captionof{figure}{Graph of $y = \arccos(x)$ on $[-1,1]$.}
-  \label{fig:test1}
+  %\label{fig:test1}
 \end{minipage}%
 \begin{minipage}{.333\textwidth}
   \centering
   \includegraphics[width=.25\linewidth]{desmos-graph-invsin}
   \captionof{figure}{Graph of $y = \arcsin(x)$ on $[-1,1]$.}
-  \label{fig:test2}
+  %\label{fig:test2}
 \end{minipage}%
 \begin{minipage}{.333\textwidth}
   \centering
   \includegraphics[width=.25\linewidth]{desmos-graph-invtan}
   \captionof{figure}{Graph of $y = \arctan(x)$ on $[-10,10]$.}
-  \label{fig:test2}
+  %\label{fig:test2}
 \end{minipage}
 \end{figure}
 \begin{comment}
@@ -455,19 +455,19 @@ $\big [\sin(a) = b  \big] \equiv \begin{cases} a = \sin^{-1}(b) + 2 k \uppi  \mb
   \centering
   \includegraphics[width=.333\linewidth]{desmos-graph-sine}
   \captionof{figure}{Graph of $y = \sin(x)$ on $[0, 2\uppi]$.}
-  \label{fig:test1}
+  %\label{fig:test1}
 \end{minipage}%
 \begin{minipage}{.333\textwidth}
   \centering
   \includegraphics[width=.3\linewidth]{desmos-graph-cos}
   \captionof{figure}{Graph of $y = \cos(x)$ on $[0, 2\uppi]$.}
-  \label{fig:test2}
+  %\label{fig:test2}
 \end{minipage}%
 \begin{minipage}{.333\textwidth}
   \centering
   \includegraphics[width=.3\linewidth]{desmos-graph-tan}
   \captionof{figure}{Graph of $y = \tan(x)$ on $[0, 2\uppi]$.}
-  \label{fig:test2}
+  %\label{fig:test2}
 \end{minipage}
 \end{figure}
 \begin{figure}[h]
@@ -476,19 +476,19 @@ $\big [\sin(a) = b  \big] \equiv \begin{cases} a = \sin^{-1}(b) + 2 k \uppi  \mb
   \centering
   \includegraphics[width=.333\linewidth]{desmos-graph-invsin}
   \captionof{figure}{Graph of $y = \sin(x)$ on $[0, 2\uppi]$.}
-  \label{fig:test1}
+  %\label{fig:test1}
 \end{minipage}%
 \begin{minipage}{.333\textwidth}
   \centering
   \includegraphics[width=.3\linewidth]{desmos-graph-cos}
   \captionof{figure}{Graph of $y = \cos(x)$ on $[0, 2\uppi]$.}
-  \label{fig:test2}
+  %\label{fig:test2}
 \end{minipage}%
 \begin{minipage}{.333\textwidth}
   \centering
   \includegraphics[width=.3\linewidth]{desmos-graph-tan}
   \captionof{figure}{Graph of $y = \tan(x)$ on $[0, 2\uppi]$.}
-  \label{fig:test2}
+  %\label{fig:test2}
 \end{minipage}
 \end{figure}
 \end{comment}
@@ -617,123 +617,10 @@ $\big [\sin(a) = b  \big] \equiv \begin{cases} a = \sin^{-1}(b) + 2 k \uppi  \mb
 
 \vfill
 %\tiny
-\noindent For a comprehensive list of trigonometric function facts, see \url{https://dlmf.nist.gov/4.14}.
+\noindent For an extensive list of trigonometric function facts, see \url{https://dlmf.nist.gov/4.14}.
 
-\noindent Barton Willis is the author of this work. It 
+\noindent Revised 8 August 2021. Barton Willis is the author of this work. It 
 licensed under CC0 1.0 (\url{https://creativecommons.org/publicdomain/zero/1.0 }).
 
   
 \end{document}
-\begin{tabular}{|l|l|l|l|l|}
-  \hline
-  \textbf{Function} & \textbf{Domain} & \textbf{ Range } & \textbf{Zeros} & \textbf{Graph} \\ \hline \hline
-  $\cos$           & $\reals$       & $[-1,1] $ &   $\{ (k-1/2) \,  \uppi \mid k \in \integers \} $     &  \begin{tikzpicture}[>=stealth]
-   \begin{axis}[
-       xmin=-4,xmax=4,
-       ymin=-1.5,ymax=1.5,
-       axis x line=middle,
-       axis y line=middle,
-       axis line style=<->,
-       xlabel={$x$},
-       ylabel={$y$},
-       ]
-       \addplot[no marks,blue,<->] expression[domain=-pi:pi,samples=100]{sin(deg(x))} 
-                   node[pos=0.65,anchor=south west]{$y=\sin(x)$}; 
-   \end{axis}
- \end{tikzpicture}\\ \hline
-%  \sin           & \reals        & [-1,1]  & \\
-%  \tan           & \reals \setminus \{(k-1/2) \uppi \mod k \in \integers \} & \\
-\end{tabular}
-
-\section{Trigonometry}
-
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-
-\begin{tikzpicture}[scale=5]
-\draw[thick,color=green] (0,0) -- node[below] {$b$} (1,0);
-\draw[thick,color=red] (1,0) -- node[right] {$a$} (1,0.57735);
-\draw[thick,color=black] (1,0.57735) -- node[above] {$c$} (0,0);
-\filldraw[fill=blue!20!white,draw=blue] (0,0) -- (0.3,0) arc (0:30:0.3); 
-\node[color=blue] at (0.33,0.1) {$\alpha$};
-\draw (0.95,0) -- (0.95,0.05) -- (1,0.05);
-\end{tikzpicture}
-
-\medskip
-
-\begin{tabular}{ll}
-$\sin\alpha = \nicefrac{a}{c}$ & $\cos\alpha = \nicefrac{b}{c}$ \\[1ex]
-$\tan\alpha = \nicefrac{a}{b}$ & $\cot\alpha = \nicefrac{b}{a}$ \\
-\end{tabular}
-
-\section{Algebra (some very very very very very long title)}
-
-\begin{tabular}{lll}
-$a^n a^m = a^{n+m}$ & $\nicefrac{a^n}{a^m} = a^{n-m}$ & $(a^n)^m = a^{n \cdot m}$\\
-$a^n a^m = a^{n+m}$ & $\nicefrac{a^n}{a^m} = a^{n-m}$ & $(a^n)^m = a^{n \cdot m}$\\
-$a^n a^m = a^{n+m}$ & $\nicefrac{a^n}{a^m} = a^{n-m}$ & $(a^n)^m = a^{n \cdot m}$\\
-$a^n a^m = a^{n+m}$ & $\nicefrac{a^n}{a^m} = a^{n-m}$ & $(a^n)^m = a^{n \cdot m}$\\
-$a^n a^m = a^{n+m}$ & $\nicefrac{a^n}{a^m} = a^{n-m}$ & $(a^n)^m = a^{n \cdot m}$\\
-$a^n a^m = a^{n+m}$ & $\nicefrac{a^n}{a^m} = a^{n-m}$ & $(a^n)^m = a^{n \cdot m}$
-\end{tabular}
-
-
-\section{Trigonometry}
-
-\begin{tikzpicture}[scale=5]
-\draw[thick,color=green] (0,0) -- node[below] {$b$} (1,0);
-\draw[thick,color=red] (1,0) -- node[right] {$a$} (1,0.57735);
-\draw[thick,color=black] (1,0.57735) -- node[above] {$c$} (0,0);
-\filldraw[fill=blue!20!white,draw=blue] (0,0) -- (0.3,0) arc (0:30:0.3); 
-\node[color=blue] at (0.33,0.1) {$\alpha$};
-\draw (0.95,0) -- (0.95,0.05) -- (1,0.05);
-\end{tikzpicture}
-
-\medskip
-
-\begin{tabular}{ll}
-$\sin\alpha = \nicefrac{a}{c}$ & $\cos\alpha = \nicefrac{b}{c}$ \\[1ex]
-$\tan\alpha = \nicefrac{a}{b}$ & $\cot\alpha = \nicefrac{b}{a}$ \\
-\end{tabular}
-
-
-\section{Algebra}
-
-\begin{tabular}{lll}
-$a^n a^m = a^{n+m}$ & $\nicefrac{a^n}{a^m} = a^{n-m}$ & $(a^n)^m = a^{n \cdot m}$\\
-$a^n a^m = a^{n+m}$ & $\nicefrac{a^n}{a^m} = a^{n-m}$ & $(a^n)^m = a^{n \cdot m}$\\
-$a^n a^m = a^{n+m}$ & $\nicefrac{a^n}{a^m} = a^{n-m}$ & $(a^n)^m = a^{n \cdot m}$\\
-$a^n a^m = a^{n+m}$ & $\nicefrac{a^n}{a^m} = a^{n-m}$ & $(a^n)^m = a^{n \cdot m}$\\
-$a^n a^m = a^{n+m}$ & $\nicefrac{a^n}{a^m} = a^{n-m}$ & $(a^n)^m = a^{n \cdot m}$\\
-$a^n a^m = a^{n+m}$ & $\nicefrac{a^n}{a^m} = a^{n-m}$ & $(a^n)^m = a^{n \cdot m}$
-\end{tabular}
-
-
-\section{Trigonometry}
-
-\begin{tikzpicture}[scale=5]
-\draw[thick,color=green] (0,0) -- node[below] {$b$} (1,0);
-\draw[thick,color=red] (1,0) -- node[right] {$a$} (1,0.57735);
-\draw[thick,color=black] (1,0.57735) -- node[above] {$c$} (0,0);
-\filldraw[fill=blue!20!white,draw=blue] (0,0) -- (0.3,0) arc (0:30:0.3); 
-\node[color=blue] at (0.33,0.1) {$\alpha$};
-\draw (0.95,0) -- (0.95,0.05) -- (1,0.05);
-\end{tikzpicture}
-
-\medskip
-
-\begin{tabular}{ll}
-$\sin\alpha = \nicefrac{a}{c}$ & $\cos\alpha = \nicefrac{b}{c}$ \\[1ex]
-$\tan\alpha = \nicefrac{a}{b}$ & $\cot\alpha = \nicefrac{b}{a}$ \\
-\end{tabular}
-
-
-\section{The End}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-
-\end{multicols*}
-
-\end{document}
-
