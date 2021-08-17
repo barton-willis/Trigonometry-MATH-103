@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+
+\usepackage{xcolor}
+\usepackage[UKenglish]{isodate}% http://ctan.org/pkg/isodate
+\usepackage[paperwidth=8.5in,paperheight=11in,margin=0.75in]{geometry} 
+\usepackage[USenglish]{babel}
+\usepackage{hyperref}
+\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
+
+\usepackage[T1]{fontenc} 
+\usepackage{fourier}
+
+\usepackage{enumerate}
+\usepackage{graphicx}
+
+\newenvironment{alphalist}{
+  \begin{enumerate}[(a)]
+    \addtolength{\itemsep}{-0.5\itemsep}}
+  {\end{enumerate}}
+  \cleanlookdateon% Remove ordinal day reference
+  \newcommand{\RomanNumeralCaps}[1]
+      {\MakeUppercase{\romannumeral #1}}
+
+
+      \usepackage{amstext} % for \text macro
+      \usepackage{array}   % for \newcolumntype macro
+      \newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
+      
+      \newcommand{\dom}{\mathrm{dom}} 
+      \newcommand{\range}{\mathrm{range}} 
+      \newcommand{\zero}{\mathrm{zero}} 
+      \newcommand{\reals}{\mathbf{R}} 
+      \newcommand{\integers}{\mathbf{Z}} 
+      \newcommand{\ssep}{\mid}
+      \newcommand{\arcsec}{\mathrm{arcsec}}
+      \newcommand{\arccsc}{\mathrm{arccsc}}
+      \newcommand{\arccot}{\mathrm{arccot}}
+\begin{document}
+\section*{Functions}
+
+\begin{tabular}{|L | L |} \hline 
+  \mbox{\textbf{Notation}} & \mbox{\textbf{Meaning}} \\ \hline
+  \dom(F)  & \mbox{the domain of a function } F \mbox{ ; thus the set of the inputs} \\ 
+  \range(F)  &  \mbox{the \emph{range} of a function } F  \mbox{  ; thus the set of outputs} \\ 
+   x \in A \mapsto F(x)  & \mbox{defines a function whose domain is the set } A \mbox{ and formula is }  F(x) \\ 
+   C_A & \mbox{the set of functions that are continuous on the set } A  \\ 
+ C_A^1 & \mbox{the set of functions that are continuous on the set } A  \\ 
+
+\end{tabular}
+
+
+\end{document}
