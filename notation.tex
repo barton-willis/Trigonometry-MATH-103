@@ -2,7 +2,7 @@
 
 \usepackage{xcolor}
 \usepackage[UKenglish]{isodate}% http://ctan.org/pkg/isodate
-\usepackage[paperwidth=8.5in,paperheight=11in,margin=0.5in]{geometry} 
+\usepackage[paperwidth=8.5in,paperheight=11in,margin=0.35in]{geometry} 
 \usepackage[USenglish]{babel}
 \usepackage{hyperref}
 \usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
@@ -41,24 +41,20 @@
       \newcommand{\arccsc}{\mathrm{arccsc}}
       \newcommand{\arccot}{\mathrm{arccot}}
 \begin{document}
-\subsubsection*{Functions}
+\subsection*{Notation}
 
-We'll use some notation that isn't in our book. This notation is
-standard and it allows us to express facts with fewer words.  For additional 
-standard notation, see \url{https://en.wikipedia.org/wiki/ISO_31-11}.
+We'll use some standard notation that isn't in our book.   
 
 \vspace{0.1in}
 
 \begin{tabular}{|l | l |} \hline 
 \textbf{Notation}& \textbf{Meaning} \\ \hline
-    $\dom(F)$  &  The \emph{domain} of a function $F$;   thus $\dom(F)$  is the set of all \emph{inputs} to \\
-                         & the function $F$. \\  \hline
+    $\dom(F)$  &  The \emph{domain} of a function $F$;   thus $\dom(F)$  is the set of all \emph{inputs} to $F$\\ \hline
     
-    $\range(F)$  & The \emph{range} of a function   $F$ is the set $\range(F)$; thus  $\range(F) $ is  \\
-                          & the set of all \emph{outputs} to the function $F$.\\ \hline
+    $\range(F)$  & The \emph{range} of a function   $F$ is the set $\range(F)$; thus  $\range(F) $ is 
+                           the set of all \emph{outputs} to $F$.\\ \hline
                           
-   $F : A \to B$ & This means that $F$ is a function whose domain is   the set $A$ and whose range is a \\
-                           & \emph{subset} of the set $B$. \\ \hline        
+   $F : A \to B$ & This means that (i) $F$ is a function, (ii) $\dom(F) = A$, and $\range(F) \subset B$. \\ \hline        
                            
  %  $F(S)$     & When $F$ is a function and $S$ is a subset of its domain, we define \\
  %                   &   \( F(S) = \{F(x) \, | \, x \in \dom(F) \}  \).\\ \hline                                    
@@ -70,8 +66,8 @@ $  C_A $ &  The set of functions that are continuous on the set $A$. \\  \hline
 %$ C_A^1$  &  The set of functions that are continuous whose first derivatives \\ 
 %                   &       are continuous on the set $A$. \\  \hline
 
-$ C_A^n$  &  The set of functions $F$ such that that are continuous whose first   through  \\
-                   & $n^{\mbox{th}}$  derivatives are continuous on the set $A$. \\  \hline        
+$ C_A^n$  &  The set of functions $F$ whose zeroth through  
+                    $n^{\mbox{th}}$  derivatives are continuous on the set $A$. \\  \hline        
                    
 
 %$ C_A^\infty$  &  The set of functions that are continuous whose derivatives of all  \\
@@ -109,6 +105,7 @@ with its formula.
 %\item Since the sine function is infinitely differentiable on  \(\reals\), we have $\sin \in C_\reals^\infty$.
 
 \item Since the sine function is continuous on \([0,2 \uppi]\), we have \(\sin \in C_{[0,2 \uppi]}\).
+Notice that the zeroth derivative of a function is itself.
 
 \item $F \in C_{[-1,1]}^2$ is equivalent to  $F \in C_{[-1,1]}$ and $F^\prime \in C_{[-1,1]}$.
 
@@ -132,6 +129,9 @@ In words, this says that the product of  functions that are continuous on an
 interval $[a,b]$ is  continuous on the interval $[a,b]$.
 
 \end{alphalist}
+%\vfill
+%\tiny
 
+\noindent Revised 23 August 2021. 
 
 \end{document}
