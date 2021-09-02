@@ -42,6 +42,9 @@
       \newcommand{\arccsc}{\mathrm{arccsc}}
       \newcommand{\arccot}{\mathrm{arccot}}
       
+
+
+\newcommand\showdiv[1]{\overline{\smash{)}#1}}
       
       \title{How do you want me to simplify this?}
 \begin{document}
@@ -52,20 +55,57 @@
 \end{quote}
 \normalsize 
 
-Professor Thomson's goes on to  illustrates his point by asking the question, which is simpler \( \frac{532672}{1000000} \) or 
+Professor Thomson's  illustrates his answer by asking the question, which is simpler \( \frac{532672}{1000000} \) or 
 the equivalent, but reduced,  fraction \(\frac {8323}{15625} \)?  If needed, we can immediately convert the first fraction to a
 decimal form, but converting the second is more work.  Our base-ten minds might say that \(\frac{532672}{1000000} \) is the simplest, but likely you've had a math teacher who would have counted the answer \( \frac{532672}{1000000} \) as wrong.  
 
 For professor Thomson's insightful answer to the question what does simplification mean, see \url{https://www.quora.com/What-does-it-mean-to-simplify-an-expression?share=1}. These examples, plus many similar ones, illustrate that simplification is context dependent. For the context of your homework and earning the grade that you deserve, as Professor Thomson says,  is sadly is  matter of mind-reading.  On-line homework systems, with their overly strict ways of deciding correctness have made the question of simplification more important and have extended mind-reading to guessing about the algorithm used by the automated homework system.
 
-\subsection*{Accuracy} 
-
-\begin{equation}
-    T  = \frac{1}{2} m v^2
-\end{equation}
+Likely you have been taught that to simplify a quotient with a radical in the demonontator such as $\frac{1}{\sqrt{2}}$, you need to multiply by a well chosen representation of one; for example
+\[
+   \frac{1}{\sqrt{2}} = \frac{1}{\sqrt{2}} \times \frac{\sqrt{2}}{\sqrt{2}}  = \frac{\sqrt{2}}{2}.
+\]
+And you were told that \(\frac{\sqrt{2}}{2}\) is a simplification of \(\frac{1}{\sqrt{2}} \). 
+Long ago, before when calculators were exotic, doing the long division of \(1 \div 1.414213562373095\dots\) was tedious, but
+the equivalent calcuatoin of \(1.414213562373095 \dots \div 2\) is easy.
+\[
+   1.414213562373095 \showdiv{1.000000000000000000}
+\]
+but the long division
+\[
+     2 \showdiv{1.414213562373095 \dots} 
+\]
+is easy.
+\[
+56 \showdiv{3678}
+\]
 
 \[
-    T =  m c^2 \left (\frac{1}{\sqrt{1- v^2/c^2}} - 1\right)
+\frac{1}{\sqrt{3}+\sqrt{5} + \sqrt{7}} = \frac{\sqrt{7}+ 5 \sqrt{3} +\sqrt{243} - 2 \sqrt{105}}{59}
+\]
+\subsection*{Ideally}
+
+From a teacher's perspective,  we'd like to make paper grading as fast as possible. And one way to sped that task is for all correct answer to look exactly alike, and for all wrong answers to not look exactly like the correct answer.  If we stick to answers that are polynomials with coefficients that are explicit 
+rational numbers, we can achieve this by requiring that all answers be fully expanded with coefficients expressed as improver rational numbers in reduced form and arranged from low to high power.  And example of a simplified expression would be
+\[
+     3 + 5 x - \frac{107}{46} x^2.
+\] 
+Under these rules this answer is correct and no other answer, including the algebraically equivalent \( - \frac{107}{46} x^2 + 5 x + 3\) is wrong. Imposing this
+
+\subsection*{Efficiency}
+
+(Horner's method)
+
+\subsection*{Accuracy} 
+
+
+And if  you have studied a bit more physics and learned about Einstien's  special theory of relativity, you might remember that the kenetic energy is given by 
+\[
+    T  =  m c^2 \left (\frac{1}{\sqrt{1- v^2/c^2}} - 1\right),
+\]
+where $c$ is the speed of light.  Let's find $T$ given $m = 1, c =  299792458$ and $v= 10^{-8} c$.  Pasting in these values into a calculator that uses about 15 decimal digits, we get
+\[
+   T =  299792458^2 \left(\frac{1}{1 - \sqrt{1-10^{-16}}} -1 \right) = 299792458^2 \times 2.220446049250313 {{10}^{-16}} = 19.95637385869426.
 \]
 
 
