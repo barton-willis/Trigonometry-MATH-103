@@ -2,7 +2,7 @@
 
 \usepackage{xcolor}
 \usepackage[UKenglish]{isodate}% http://ctan.org/pkg/isodate
-\usepackage[letterpaper,paperwidth=8.5in,paperheight=11in,margin=0.35in]{geometry} 
+\usepackage[paperwidth=8.5in,paperheight=11in,margin=0.35in]{geometry} 
 \usepackage[USenglish]{babel}
 \usepackage{hyperref}
 \usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
@@ -15,7 +15,7 @@
 \usepackage{enumerate,isomath,hyperref}
 \usepackage{upgreek,comment}
 \usepackage{graphicx}
-%\usepackage[super]{nth}
+\usepackage[super]{nth}
 \usepackage{amsmath}
 
 \newenvironment{alphalist}{
@@ -43,20 +43,18 @@
 \begin{document}
 \subsection*{Notation}
 
-We'll use some notation that isn't in our book. This notation is
-standard and it allows us to express facts with fewer words.  
+We'll use some standard notation that isn't in our book.   
 
 \vspace{0.1in}
 
 \begin{tabular}{|l | l |} \hline 
 \textbf{Notation}& \textbf{Meaning} \\ \hline
-    $\dom(F)$  &  The \emph{domain} of a function $F$;   thus $\dom(F)$  is the set of all \emph{inputs} to 
-                          the function $F$. \\  \hline
+    $\dom(F)$  &  The \emph{domain} of a function $F$;   thus $\dom(F)$  is the set of all \emph{inputs} to $F$\\ \hline
     
-    $\range(F)$  & The \emph{range} of a function   $F$; thus  $\range(F) $ is  
-                           the set of all \emph{outputs} to the function $F$.\\ \hline
+    $\range(F)$  & The \emph{range} of a function   $F$ is the set $\range(F)$; thus  $\range(F) $ is 
+                           the set of all \emph{outputs} to $F$.\\ \hline
                           
-   $F : A \to B$ & This means: (i) $F$ is a function, (ii) $\dom(F) = A$, and (iii)  $\range(F) \subset B$. \\ \hline                        
+   $F : A \to B$ & This means that (i) $F$ is a function, (ii) $\dom(F) = A$, and $\range(F) \subset B$. \\ \hline        
                            
  %  $F(S)$     & When $F$ is a function and $S$ is a subset of its domain, we define \\
  %                   &   \( F(S) = \{F(x) \, | \, x \in \dom(F) \}  \).\\ \hline                                    
@@ -68,8 +66,8 @@ $  C_A $ &  The set of functions that are continuous on the set $A$. \\  \hline
 %$ C_A^1$  &  The set of functions that are continuous whose first derivatives \\ 
 %                   &       are continuous on the set $A$. \\  \hline
 
-$ C_A^n$  &  The set of functions that are continuous on $A$ and whose first through $n^{\mbox{th}}$ derivatives \\
-                   &    are also continuous on $A$. \\  \hline        
+$ C_A^n$  &  The set of functions $F$ whose zeroth through  
+                    $n^{\mbox{th}}$  derivatives are continuous on the set $A$. \\  \hline        
                    
 
 %$ C_A^\infty$  &  The set of functions that are continuous whose derivatives of all  \\
@@ -77,17 +75,6 @@ $ C_A^n$  &  The set of functions that are continuous on $A$ and whose first thr
                    
 \end{tabular}
 
-\subsubsection*{Notes}
-
-\begin{alphalist}
-  \item The notation $F : A \to B$ tells us that every output of $F$ is
-  a member of the set $B$, but it doesn't necessarily tell us its range. 
-
-    \item The notation $x \in [-1,1] \mapsto x^2$ defines a function without
-    giving it a name. If you need to give it a name, use
-    $ F = x \in [-1,1] \mapsto x^2$.
-  
-\end{alphalist}
 \subsubsection*{Examples}
 
 \begin{alphalist}
@@ -97,24 +84,28 @@ $ C_A^n$  &  The set of functions that are continuous on $A$ and whose first thr
 
 \item The domain of the sine function is $\reals$ and every output of sine is in $\reals$; thus $\sin : \reals \to \reals$.
 
-\item The domain of the sine function is $\reals$ and every output of sine is in $[-1,1]$; thus $\sin : \reals \to [-1,1]$.
-Notice that $\range(\sin) = [-1,1]$.
-
 \item The domain of the natural logarithm $\ln$ is the interval $(0,\infty)$ and every output of \(\ln\) is a real number; thus
 $\ln : (0,\infty) \to \reals$.
 
-
+\item The domain of the sine function is $\reals$ and every output of sine is in $[-1,1]$; thus $\sin : \reals \to [-1,1]$.
+It's somewhat confusing that both $\sin : \reals \to \reals$ and $\sin : \reals \to [-1,1]$, but remember that the notation
+$F : A \to B$ means that $B \subset \range(F)$. Specifically,
+the notation $F : A \to B$ tells us the domain of $F$, but it doesn't 
+tell us the range of $F$ or its formula.
 
 %\item  We have $\sqrt{[0,4] } = [0,2]$. And $\sin([0,\uppi]) = [0,1]$
 
 \item $x \in [-1,1] \mapsto x^2$ defines a function whose domain is the set $[-1,1]$ and whose output is the square of
-the input. 
+the input. This notation allows us to define a function without giving 
+it a name. It also gives a way to combine defining the domain of the function 
+with its formula.
 
 \item Since the sine function is continuous on \(\reals\), we have $\sin \in C_\reals$.
 
 %\item Since the sine function is infinitely differentiable on  \(\reals\), we have $\sin \in C_\reals^\infty$.
 
 \item Since the sine function is continuous on \([0,2 \uppi]\), we have \(\sin \in C_{[0,2 \uppi]}\).
+Notice that the zeroth derivative of a function is itself.
 
 \item $F \in C_{[-1,1]}^2$ is equivalent to  $F \in C_{[-1,1]}$ and $F^\prime \in C_{[-1,1]}$.
 
@@ -122,7 +113,7 @@ the input.
 \(\sqrt{\phantom{x}} \in C_{[0,\infty)} \) and  \(\sqrt{\phantom{x}} \notin C_{[0,\infty)}^1 \) .
 \end{alphalist}
 
-\subsubsection*{Usage examples}
+\subsubsection*{Theorems}
 
 \begin{alphalist}  
 
@@ -138,6 +129,9 @@ In words, this says that the product of  functions that are continuous on an
 interval $[a,b]$ is  continuous on the interval $[a,b]$.
 
 \end{alphalist}
+%\vfill
+%\tiny
 
+\noindent Revised 23 August 2021. 
 
 \end{document}
