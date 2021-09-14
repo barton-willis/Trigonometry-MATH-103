@@ -57,10 +57,85 @@
 \end{quote}
 
 
-Undoubtedly, you have had a math teacher tell you that you must simply your answers.  And if you asked your teacher exactly what it means to be simplified that means, it's unlikely that you got a clear and complete answer.   You needn't be overly cynical to speculate that your teacher wants all answers to be simplified so that all correct answers are exactly the same to make the papers easier to grade.  
+Undoubtedly, a math teacher has told you that you \emph{must} simply 
+your answers. And maybe you have been frustrated by not earning full
+credit for an answer that was correct, but not expressed in \emph{exactly}
+the form required by the teacher, making math exams a 
+perverse game without clear rules.
+
+If you asked your teacher \emph{exactly} what it 
+means to be simplified that means, it's unlikely that you got a clear 
+answer. You needn't be especially cynical to speculate that the only
+reason for the requirement of simplified answers is to reduce the 
+teacher's burden of grading papers--it is much easier to simply mark 
+any answer that isn't visually identical to the answer key as wrong.
+
+Some simplification rules, such as eliminating radicals in the 
+denominator seem arbitrary, turning the process of simplification 
+into a silly game. Why is $\sqrt{2}/2$ a simplification of 
+of $1/\sqrt{2}$? Certainly if you need a decimal approximation, entering
+$1/\sqrt{2}$ into a calculator takes no more effort than does $\sqrt{2}/2$. Although
+that's true today, it wasn't true before the era of electronic calculators. Long
+ago doing the long division problem 
+\[
+   1.414213562373095\cdots \, \, \showdiv{\, \, 1.000000000000000000}
+\]
+by hand was odious, but doing the algebraically identical calculation 
+(\(\frac{\sqrt{2}}{2} \))
+\[
+   2.0000000000000\cdots \,\, \showdiv{\, \, 1.414213562373095\cdots}
+ \]
+ was a snap. That fact tipped the scale, so it's standard that promoting
+ radicals from the denominator to the numerator results in a simplified
+ expression.
+
+ Promoting a single factor of a radical in a denominator to the numerator
+ is arguably a nice skill to learn, but what about a sum of two or more
+ radicals? Possibly you were taught the process for a sum of two radicals; for
+ example,
+ \begin{equation}
+   \frac{1}{\sqrt{3}+\sqrt{2}} = \sqrt{3}-\sqrt{2}.
+ \end{equation}
+But what about a sum of three radicals? What is the simplification of
+\begin{equation}
+   \frac{1}{\sqrt{7}+\sqrt{5}+\sqrt{3}+\sqrt{2}} \mbox{?}
+\end{equation}
+\begin{equation}
+   \frac{22 \sqrt{105}- 34 \sqrt{70}- 50 \sqrt{42}+62 \sqrt{30}+135 \sqrt{7}- 133 \sqrt{5}-145 \sqrt{3}+185 \sqrt{2}}{215}.
+\end{equation}
 
 
-Actually, there is no clear and complete answer to the question. What it means to be simplified can be context dependent. But there are some simplifications that nearly everybody agrees should generally be done. These are:
+ Even for the question if a polynomial should simplified by expanding
+ or factoring is unclear. If the goal of simplification is reduce the
+ number of terms in an expression, it seems that we should favor 
+ factoring over expanding. Indeed, factoring ${{x}^{3}}-8 {{x}^{2}}+21 x-18$
+ yields ${{\left( x-3\right) }^{2}} \left( x-2\right)$, which has fewer
+ terms and is arguably simpler. 
+
+But if the goal of of simplification is to make all algebraically
+identical expressions (also known as semanatically equal) to be syntactically the same, it's a fool's 
+errand. To illustrate, although
+\begin{equation}
+    (a-b) \sin(a-b) = (b-a) \sin(b-a)
+\end{equation}
+is an identity, it's hard to argue that one expression is more simple than
+the other. Sure, we could so devise an rule (similar to alphabetizing) that
+would determine that \((a-b) \sin(a-b)\) is more simple than \((b-a) \sin(b-a)\),
+but it hardly seems worth the effort. Similarly, we would need to decide
+if \(1+x+x^2\) is more simple than \(x^2 + x + 1\). Again, rules for
+such things hardly seems worth the effort.
+
+Actually, its more than a fool's errand. Richardson's theorem tells us
+that once we allow expressions to involve trigonometric and exponential 
+functions, the absolute value function, rational numbers, and constants form by apply the logarithm
+to a number, there is no algorithm that can prove always
+
+\url{https://en.wikipedia.org/wiki/Richardson%27s_theorem}
+
+
+What it means to be 
+simplified can be context dependent. But there are some simplifications that nearly 
+everybody agrees should generally be done. These are:
 
 \begin{tcolorbox}
 \begin{alphalist}
