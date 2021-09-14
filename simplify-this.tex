@@ -2,11 +2,13 @@
 
 \usepackage{xcolor}
 \usepackage{fleqn}
-\usepackage[UKenglish]{isodate}% http://ctan.org/pkg/isodate
-\usepackage[letterpaper,paperwidth=8.5in,paperheight=11in,margin=0.5in]{geometry} 
+\usepackage[USenglish]{isodate}% http://ctan.org/pkg/isodate
+\usepackage[letterpaper,paperwidth=8.5in,paperheight=11in,margin=0.75in]{geometry} 
 \usepackage[USenglish]{babel}
 \usepackage{hyperref}
 \usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
+\usepackage{tcolorbox}
+
 
 \pagestyle{empty}
 \usepackage{multirow}
@@ -51,15 +53,144 @@
 
 \maketitle
 \begin{quote}
-\emph{My (admittedly perverse) answer is that ``to simplify''  means to write an equivalent expression that the instructor/marker likely wants or expects as an answer. It is an exercise in mind-reading.}  \\  \phantom{xxxxx} \hfill   {\mbox{\sc B.\ S.\ Thomson}}
+\emph{My (admittedly perverse) answer is that ``to simplify''  means to write an equivalent expression that the instructor/marker likely wants or expects as an answer. It is an exercise in mind-reading.} \\  \phantom{xxxxx} \hfill   {\mbox{\sc B.\ S.\ Thomson}\footnote{\tiny Professor Emeritus at Simon Fraser University;  see  \url{https://www.quora.com/What-does-it-mean-to-simplify-an-expression?share=1}} }
 \end{quote}
-\normalsize 
 
-Professor Thomson's  illustrates his answer by asking the question, which is simpler \( \frac{532672}{1000000} \) or 
-the equivalent, but reduced,  fraction \(\frac {8323}{15625} \)?  If needed, we can immediately convert the first fraction to a
-decimal form, but converting the second is more work.  Our base-ten minds might say that \(\frac{532672}{1000000} \) is the simplest, but likely you've had a math teacher who would have counted the answer \( \frac{532672}{1000000} \) as wrong.  
 
-For professor Thomson's insightful answer to the question what does simplification mean, see \url{https://www.quora.com/What-does-it-mean-to-simplify-an-expression?share=1}. These examples, plus many similar ones, illustrate that simplification is context dependent. For the context of your homework and earning the grade that you deserve, as Professor Thomson says,  is sadly is  matter of mind-reading.  On-line homework systems, with their overly strict ways of deciding correctness have made the question of simplification more important and have extended mind-reading to guessing about the algorithm used by the automated homework system.
+Undoubtedly, you have had a math teacher tell you that you must simply your answers.  And if you asked your teacher exactly what it means to be simplified that means, it's unlikely that you got a clear and complete answer.   You needn't be overly cynical to speculate that your teacher wants all answers to be simplified so that all correct answers are exactly the same to make the papers easier to grade.  
+
+
+Actually, there is no clear and complete answer to the question. What it means to be simplified can be context dependent. But there are some simplifications that nearly everybody agrees should generally be done. These are:
+
+\begin{tcolorbox}
+\begin{alphalist}
+
+\item  Reduce all rational numbers to lowest terms.
+
+\item All arithmetic in sums, products, and exponents should be done.
+
+\item All common additive and multiplicative terms should be combined.
+
+\item For any real valued expression, use the identities  $1 \times x   = x ,  0  x = 0, 1^x = 1$ and  $x^1 =x$ to replace the left side by the right side.
+
+\item Provided $x$ is a nonzero and real valued expression,  use the identities $\frac{x}{x} = 1, x^0 = 1$ to replace the left side by the right side.
+
+\item Provided $x$ is a nonnegative and real valued expression, use the identity $\left(x^a\right)^b = x^{a b}$  to replace the left side by the right side.
+
+\item Use the well known values of the trigonometric functions at the integer multiplies of $\uppi/6$ and $\uppi/4$ to simplify these values.
+
+\item For any odd function $O$, replace $O(x) + O(-x)$ by zero. For any odd function $E$, replace $E(x) - E(-x)$ by zero.
+
+\item Use the well known values of the logarithms to simplify these values.
+
+\item For a positive integer $n$, replace $\frac{1}{\sqrt{n}}$ by $\frac{\sqrt{n}}{n}$.
+
+\item For a positive integers $m$ and $n$, replace $\sqrt{m n^2}$ by $n \sqrt{m}$. 
+
+\end{alphalist}
+\end{tcolorbox}
+
+\noindent In all of these rules, $x$ can match any expression or any subexpression, not just an explicit match to the variable $x$.  And sometimes, we may need to use factoring some other identities to find a match.  Thus our guideline is a guideline, not an algorithm.  
+
+
+
+
+\begin{itemize}
+\item The subexpressions of the quotient  $\displaystyle \frac{x (x^2+1)}{x^2 + 1}$ are $x (x^2+1)$ and $x^2 + 1$, but
+$\frac{x^2+1}{x^2 + 1}$ isn't a subexpression.  But rearranging the quotient $\displaystyle \frac{x (x^2+1)}{x^2 + 1}$ to the product $\displaystyle x \frac{x^2+1}{x^2 + 1}$, we now have $ \frac{x^2+1}{x^2 + 1}$ as a subexpression of the product, and this subexpression 
+explicitly matches rule `e.' So we simplify $\displaystyle \frac{x (x^2+1)}{x^2 + 1}$ to $x$.
+
+\item Although there are no common additive terms in $ 6 |x| - |28 x|$, there are if we use the identity $|x y| = |x| |y|$  Applying this identity
+first yields
+\[
+    6 |x| - |28 x| = 6 |x| - |28| |x| = 6 |x| - 28 |x| = -22 |x|.
+\]
+
+\item The expression $\sqrt{50}$ doesn't match any of these rules.  But it does match the last rule if we use the factorization $50 = 2 \times 5^2$.
+
+\end{itemize}
+
+
+
+\noindent 
+
+\paragraph{Examples} 
+
+\begin{alphalist}
+
+\item Using rules 	`a' through `d,' we would simplify
+\[
+   \frac{2}{3} +  6^3 + (x+1)^1 + 0 \times x^2  + 1^{10^9}  + z - 107 z = \frac{656}{3} + x - 106 z.
+\]
+The ordering of the terms in the sum $\frac{656}{3} + x - 106 z$ is a detail that few teachers would require.
+
+\item Using rule `e,' we would simplify
+\[
+    \frac{46 (x^2+1)}{x^2 + 1} + (|x| + 1)^0 = 46 + 1 = 47.
+\]
+Here both $x^2 + 1$ and $|x| + 1$ are nonzero and real valued.   When it's not certain that $x$ matches with a nonzero expression and we use
+these simplications, we should make a note of the assumptions; for example:
+\[
+     28 \frac{x + 1}{x+ 1}  = 28, \mbox{ provided } x+ 1 \neq 0.
+\]
+And
+\(
+     0^{x - 216} = 1,  \mbox{ provided } x - 216 \neq 0.
+\)
+Actually, the question of whether or not $0^0$ is undefined or if it is equal to $1$ is controversial. 
+
+\item Using rule `f,' we would simplify
+\[
+    \sqrt{x^2+1}^2 =  \left( (x^2 + 1)^{1/2} \right)^2 = x^2 + 1.
+\]
+Again, if it's not certain that $x$ matches with a nonnegative real valued expression, our work should note the assumption; for example:
+\(    \sqrt{x}^2 = x, \mbox{ provided } x  \geq 0\).  
+
+\item Using rules `g' and `h,' we have
+\[
+   \cos(5 \uppi/3) + \log_{10}(100) = \frac{5}{2}.
+\]
+
+\item Using rule `i,' we have
+\[
+    \frac{107}{\sqrt{5}} = \frac{107 \sqrt{5}}{5}.
+\]
+\end{alphalist}
+
+Please be careful with rule `f.'  Using this rule without adhering to the condition yields rubbish:
+\[
+   \left( (-1)^2 \right)^{1/2} = 1^{1/2} = 1.
+\]
+But 
+\[
+   (-1)^{2 \times \frac{1}{2}} = (-1)^1 = -1.
+\]
+So the proviso isn't optional.  
+
+\paragraph{Non Examples} 
+
+\begin{alphalist}
+
+\item Our simplification guidelines say nothing about expanding or factoring a polynomial. So by our standard, both $(x-1)(x+1)$ and $x^2 - 1$ are simplified.
+
+\item Our simplification guide also says that both $|x y|$ and $|x| |y|$ are simplified. But maybe we should append a rule for this case.
+
+\item Although \(\sin(-x) = - \sin(x)\), our simplification guide says that both $\sin(x)$ and $\sin(-x)$ are simplified.  Similarly both
+$\sin(x-x^2)$ and $-\sin(x^2-x)$ are simplified, but algebraically equivalent. But we do have a rule that requires
+that we simplify $\sin(x) + \sin(-x)$ to zero.
+
+
+
+
+\item 
+\end{alphalist}
+
+
+
+
+
+
+
 
 Likely you have been taught that to simplify a quotient with a radical in the demonontator such as $\frac{1}{\sqrt{2}}$, you need to multiply by a well chosen representation of one; for example
 \[
@@ -111,3 +242,5 @@ where $c$ is the speed of light.  Let's find $T$ given $m = 1, c =  299792458$ a
 
 
 \end{document}
+
+%If we were to append a rule for this (and many similar cases of an odd function), we would need to decide if $\sin(x-x^2)$ should be simplified to $-%\sin(x^2-x)$, for example.  We won't do that.\footnote{The Maxima computer algebra system has a rule for simplifying odd functions. To do this, compares the expressions $x - x^2$ and $x^2-x$ in a way that is similar to alphabetizing.} Similarly, for an even function such as $\cos$, we could have a rule that decides if $\cos(x-x^2)$ simplifies to $\cos(x^2-x)$, for example.
