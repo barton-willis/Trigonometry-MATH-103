@@ -1,22 +1,21 @@
 \documentclass[12pt,fleqn]{article}
-
+\usepackage{array}
 \usepackage{xcolor}
 \usepackage{fleqn}
 \usepackage[USenglish]{isodate}% http://ctan.org/pkg/isodate
-\usepackage[letterpaper,paperwidth=8.5in,paperheight=11in,margin=0.5in]{geometry} 
+\usepackage[letterpaper,paperwidth=8.5in,paperheight=11in,margin=0.75in]{geometry} 
 \usepackage[USenglish]{babel}
 \usepackage{hyperref}
 \usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
 \usepackage{tcolorbox}
 
-
-\pagestyle{empty}
 \usepackage{multirow}
 \usepackage[T1]{fontenc} 
 \usepackage{fourier}
 
 \usepackage{enumerate,isomath,hyperref}
 \usepackage{upgreek,comment}
+
 \usepackage{graphicx}
 %\usepackage[super]{nth}
 \usepackage{amsmath}
@@ -39,6 +38,7 @@
       \newcommand{\zero}{\mathrm{zero}} 
       \newcommand{\reals}{\mathbf{R}} 
       \newcommand{\integers}{\mathbf{Z}} 
+       \newcommand{\rationals}{\mathbf{Q}} 
       \newcommand{\ssep}{\mid}
       \newcommand{\arcsec}{\mathrm{arcsec}}
       \newcommand{\arccsc}{\mathrm{arccsc}}
@@ -57,19 +57,101 @@
 \end{quote}
 
 
-Undoubtedly, a math teacher has told you that you \emph{must} simply 
+Undoubtedly, at least one math teacher has told you that you \emph{must} simply 
 your answers. And maybe you have been frustrated by not earning full
 credit for an answer that was correct, but not expressed in \emph{exactly}
-the form required by the teacher, making math exams a 
-perverse game without clear rules.
-
-If you asked your teacher \emph{exactly} what it 
+the form required by the teacher. If you asked your teacher \emph{exactly} what it 
 means to be simplified that means, it's unlikely that you got a clear 
-answer. You needn't be especially cynical to speculate that the only
+answer. 
+
+We'll attempt to give a guide to what it means to be simplified, but we'll
+also explain some of goals of simplification and in doing so uncover
+the reasons why your teacher may have not given you a particularly good
+answer to the reasonable question ``How do you want me to simplify this?''
+
+\subsection*{Canonical simplification}
+
+Ideally, every pair of expressions that are algebraically the same would simplify to exactly the same expression. That way, visually we could
+tell if two expressions are equal. With such a scheme, to determine if two expressions are algebraically the same, we need only to simplify them 
+and visually compare them. If their simplified forms are identical, the unsimplified expressions are algebraically the same. From the viewpoint
+of a paper grader, such a simplification scheme is ideal--visually it's possible to decide if an answer is correct or not.
+
+Expressions that are algebraically the same are also known as \emph{semantically identical}, and expressions that are visually the same are \emph{syntactically identical}.  If a simplification scheme converts all semantically identical expressions into syntatically identical expressions,
+we say the simplified form of an expression is called its \emph{canonical form}.  In this context, the word ``canonical'' is fancy word that means ``standard.''
+
+\paragraph{Rational numbers} One the set of rational numbers, a (not the) possible canonical representation  is to write every rational number as either an integer or as an improper
+rational number.  Thus in this scheme, the canonical representation of $\frac{1812}{32}$ is  $\frac{453}{8}$. The process reducing a rational
+number to its reduced rational  form is algorithmic--there is no guessing or luck required, only a finite number of steps that  involve only arithmetic are needed.
+
+The reduced rational form isn't the only canonical form, there are others. For example, until the 21st century, stock prices in the US were listed as mixed fractions; for example, $10 \frac{2}{3}$ dollars per share. And food recipes still use this scheme as well ($2 \frac{1}{3}$ cups of butter). This scheme 
+breaks the  convention that juxtaposition means multiplication, so its use in algebra problematic, so its use outside of cookbooks and stock tables is rare. But
+nevertheless the representation is canonical.
+
+All this is not as tidy as described. We've claimed that the reduced rational form is a canonical. That much is true. We've also claimed that the 
+process for finding the canonical form is algorithmic. Without additional conditions, that's false.  It's a famous fact that 
+$\sum_{k=1}^\infty \frac{1}{k^2}  = \frac{\uppi}{6}$. So we have
+\begin{equation}
+\frac{1}{\uppi^2} \sum_{k=1}^\infty \frac{1}{k^2}  \in \rationals
+\end{equation}
+Although the canonical representation of $\frac{1}{\uppi^2} \sum_{k=1}^\infty \frac{1}{k^2}  $ is 6, the process of discovering this isn't a matter of 
+using an algorithm to find a greatest common divisor.  So as a practical matter, although the reduced rational form is a canonical representation for the
+set of rational numbers, we don't have an algorithm that can find it.  To distinguish such things, we say that a number such as $\frac{1812}{32}$  is
+an explicit representation of a rational number, but $\frac{1}{\uppi^2} \sum_{k=1}^\infty \frac{1}{k^2}  $ is an \emph{implicit} representation of
+a rational number.
+
+\paragraph{Algebraic  numbers} A number is algebraic if it is root of a nonzero polynomial with integer coefficients. Every rational number, for example 
+$p/q$, where $p$ and $q$ are integers and $q$ is nonzero is an algebraic number; since $1/\sqrt{2}$ is a zero of the polynomial $2 x^2 - 1$, it
+follows that $1/\sqrt{2}$ is an algebraic number.
+
+
+Moving from rational numbers to to polynomials in one variable with coefficients that are rational numbers,  a possible canonical representation is to 
+require that
+\begin{alphalist}
+  \item The polynomials is fully expanded.
+  \item The terms of the polynomial are be ordered from high to low power with each power of the variable appearing at most one time.
+  \item All coefficients must be expressed in reduced rational form
+  \item In each term, the coefficient is before the variable term.
+\end{alphalist}
+Algorithmically, given any polynomial with constant terms that are explicitly rational numbers, with sufficient patience we can find its canonical representation. Here we show some polynomials and their canonical representations: 
+
+\begin{figure}[h]
+\center
+\begin{tabular}{|m{5.18cm}|m{7.18cm}|@{}m{0pt}@{}} \hline 
+\textbf{Polynomial}  & \textbf{Canonical form} \\[7pt]  \hline
+$  1 +  x \frac{1812}{32}$   &  $  \frac{453}{8} x + 1 $ \\[7pt]  \hline 
+$ 15 - 8 x$  & $-8 x + 15$ \\[7pt]  \hline 
+$\left( x-5\right) \, \left( x-3\right) -{{x}^{2}} $  & $-8 x + 15$  \\[7pt]  \hline 
+$   (x+1)(x+2) $ &  $ x^2 + 3 x + 2$  \\[7pt]  \hline 
+$   {{\left( x-1\right) }^{6}}-1  $  & ${{x}^{6}}-6 {{x}^{5}}+15 {{x}^{4}}-20 {{x}^{3}}+15 {{x}^{2}}-6 x $ \\[7pt]  \hline
+\end{tabular}
+\caption{Polynomials and their canonical representations}
+\end{figure}
+Although ${{x}^{6}}-6 {{x}^{5}}+15 {{x}^{4}}-20 {{x}^{3}}+15 {{x}^{2}}-6 x $ is the canonical representation of ${{\left( x-1\right) }^{6}}-1$, it's
+hard to argue that for this case that the canonical representation is \emph{simpler} than ${{\left( x-1\right) }^{6}}-1$. For example, if your ultimate goal is to  numerically evaluate the polynomial  ${{\left( x-1\right) }^{6}}-1$, the entering the partial factored expression into a calculator is far easier
+than using the canonical representation.  Similarly, if the goal is to solve an equation, solving
+\begin{equation*}
+  {{\left( x-1\right) }^{6}}-1 = 0
+\end{equation*}
+is a far easier problem than is solving
+\begin{equation*}
+  {{x}^{6}}-6 {{x}^{5}}+15 {{x}^{4}}-20 {{x}^{3}}+15 {{x}^{2}}-6 x  = 0.
+\end{equation*}
+Even if you got lucky and were able to factor the left side, namely
+\begin{equation*}
+\left( x-2\right)  x\, \left( {{x}^{2}}-3 x+3\right) \, \left( {{x}^{2}}-x+1\right)  = 0
+\end{equation*}
+you are still stuck solving two quadractic equations. 
+
+
+As nice as it might be to make all semantically equal polynomials syntatically equal, it's not always what we really want to do.  Nobody
+really wants to see all 101 terms of the fully expanded version of $(2  x-1)^100$.
+
+\begin{comment}
+You needn't be especially cynical to speculate that the only
 reason for the requirement of simplified answers is to reduce the 
 teacher's burden of grading papers--it is much easier to simply mark 
 any answer that isn't visually identical to the answer key as wrong.
-
+\end{comment}
 Compounding the frustration is that some simplification rules, such as eliminating radicals in the 
 denominator might seem arbitrary, turning the process of simplification 
 into a silly game. Why is $\sqrt{2}/2$ a simplification of 
