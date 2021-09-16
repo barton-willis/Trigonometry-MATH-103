@@ -69,9 +69,10 @@ also explain some of goals of simplification and in doing so uncover
 the reasons why your teacher may have not given you a particularly good
 answer to the reasonable question ``How do you want me to simplify this?''
 
-\subsection*{Canonical simplification}
+\subsection*{Goals of simplification}
 
-Ideally, every pair of expressions that are algebraically the same would simplify to exactly the same expression. That way, visually we could
+Algebraic equality is such an important concept in mathematics, it would be nice to be able to easily decide if any two expressions are algebraically
+the  same. Ideally, every pair of expressions that are algebraically the same would simplify to exactly the same expression. That way, visually we could
 tell if two expressions are equal. With such a scheme, to determine if two expressions are algebraically the same, we need only to simplify them 
 and visually compare them. If their simplified forms are identical, the unsimplified expressions are algebraically the same. From the viewpoint
 of a paper grader, such a simplification scheme is ideal--visually it's possible to decide if an answer is correct or not.
@@ -79,12 +80,26 @@ of a paper grader, such a simplification scheme is ideal--visually it's possible
 Expressions that are algebraically the same are also known as \emph{semantically identical}, and expressions that are visually the same are \emph{syntactically identical}.  If a simplification scheme converts all semantically identical expressions into syntatically identical expressions,
 we say the simplified form of an expression is called its \emph{canonical form}.  In this context, the word ``canonical'' is fancy word that means ``standard.''
 
+Assuming that the canonical representation of zero is itself, it follows that every expression that is algebraically equivalent to zero will
+simplify to zero. And knowning that an expression is nonvanishig keeps us from making errors such as
+\begin{equation}
+  \left(\frac{1}{\sqrt{2}} - \frac{\sqrt{2}}{2} \right) x = 1  \implies  x = \frac{1}{\frac{1}{\sqrt{2}} - \frac{\sqrt{2}}{2}}.
+\end{equation}
+For any canonical representation of \(\frac{1}{\sqrt{2}} - \frac{\sqrt{2}}{2} \) would simplify to zero and the simplified version of the equation
+is \( 0 x  = 1\) has an empty solution set.
+
+A related, but not identical notion of simplification requires that every expression that is algebraically equivalent to zero must simplify to zero. Such a representation is called \emph{normal}.  A normal representation of $ x+y+1$ could be any one of $1+x+y$ or $x + 1 + y$. So a normal representation needn't be a canonical represenation. 
+
+\subsection*{Canonical simplification}
+
+
+
 \paragraph{Rational numbers} One the set of rational numbers, a (not the) possible canonical representation  is to write every rational number as either an integer or as an improper
 rational number.  Thus in this scheme, the canonical representation of $\frac{1812}{32}$ is  $\frac{453}{8}$. The process reducing a rational
 number to its reduced rational  form is algorithmic--there is no guessing or luck required, only a finite number of steps that  involve only arithmetic are needed.
 
 The reduced rational form isn't the only canonical form, there are others. For example, until the 21st century, stock prices in the US were listed as mixed fractions; for example, $10 \frac{2}{3}$ dollars per share. And food recipes still use this scheme as well ($2 \frac{1}{3}$ cups of butter). This scheme 
-breaks the  convention that juxtaposition means multiplication, so its use in algebra problematic, so its use outside of cookbooks and stock tables is rare. But
+breaks the  convention that in algebra juxtaposition means multiplication, so its use in algebra problematic, so its use outside of cookbooks and stock tables is rare. But
 nevertheless the representation is canonical.
 
 All this is not as tidy as described. We've claimed that the reduced rational form is a canonical. That much is true. We've also claimed that the 
