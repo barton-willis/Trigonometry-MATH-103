@@ -99,12 +99,22 @@ set of rational numbers, we don't have an algorithm that can find it.  To distin
 an explicit representation of a rational number, but $\frac{1}{\uppi^2} \sum_{k=1}^\infty \frac{1}{k^2}  $ is an \emph{implicit} representation of
 a rational number.
 
-\paragraph{Algebraic  numbers} A number is algebraic if it is root of a nonzero polynomial with integer coefficients. Every rational number, for example 
+\paragraph{Algebraic  numbers} A number is \emph{algebraic} if it is root of a nonzero polynomial with integer coefficients. Every rational number, for example 
 $p/q$, where $p$ and $q$ are integers and $q$ is nonzero is an algebraic number; since $1/\sqrt{2}$ is a zero of the polynomial $2 x^2 - 1$, it
-follows that $1/\sqrt{2}$ is an algebraic number.
+follows that $1/\sqrt{2}$ is an algebraic number. 
+
+Some, but not all algebraic numbers, have a \emph{closed form} that only involves finite sums, products, and quotients along with integer roots. For example, the roots of 
+$x^2 - 10 x + 23$, specifically the numbers $5-\sqrt{2}$ and $\sqrt{2}+5$, are both algebraic numbers that are in closed form.  As far as I know, there is no known
+algorithm 
+
+ The number $\frac{1}{\sqrt{2} + \sqrt{3}$ is in closed form. To show that it's an algebraic number, we need
+to find a polynomial with integer coefficn
+\begin{equation}
+  5 + \sqrt{2}, \quad \sqrt{5 + \sqrt{2}}, \quad \frac{1}{\sqrt{2} + \sqrt{3} + \sqrt{5}}.
+\end{equation}
 
 
-Moving from rational numbers to to polynomials in one variable with coefficients that are rational numbers,  a possible canonical representation is to 
+\paragraph{Polynomials} Moving from rational numbers to to polynomials in one variable with coefficients that are rational numbers,  a possible canonical representation is to 
 require that
 \begin{alphalist}
   \item The polynomials is fully expanded.
