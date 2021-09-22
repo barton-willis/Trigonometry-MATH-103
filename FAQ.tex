@@ -148,7 +148,7 @@ undefined when \(x=0\). But in the context of a sum of powers of a variable, we 
  \item \textbf{Question} What do you mean by an identity?
 
 \textbf{Answer} An equation is an identity provided its solution set is
-``everything.'' For equations from algebra, ``everything'' generally means
+``everything.'' For equations involving one real variable, ``everything'' generally means
 the set of all real numbers. For example, the solution set to 
 \( 0 x= 0 \) is \(\reals\), so \(0 x = 0 \)
 is an identity. But the solution set to \(\displaystyle \frac{x}{x} = 1\)
@@ -157,26 +157,28 @@ isn't an identity.
 
 \quad A more relaxed notion of an identity is an equation whose
 solution set is the same as its natural domain. For that meaning, \(\displaystyle \frac{x}{x} = 1\)
-is an identity because both its solution and its natural domain are \(\reals_{\neq 0}\).
+is an identity because both its solution set and its natural domain are \(\reals_{\neq 0}\).
 
 \item \textbf{Question} To prove that an equation is an identity, I was
  told that to ``only work with one side at a time.'' Why is that?
 
- \textbf{Answer} The requirement to ``only work with one side at a time''
- is an effort to disallow doing things like this: Suppose you were asked To
- show that \(x = 1\) is an identity. Working with both sides, you might do
-\begin{align*}
-    \left [ x = 1 \right] &\implies [0 x = 0 \times 1], & \mbox {(multiply both sides by zero)},\\
-                          &\equiv [0 x = 0], & \mbox{ (algebra)} \\
-                          &\equiv [ 0 = 0],  & \mbox{ (algebra)} \\
-                          & \mbox{True} & \mbox{ (number equality)}
-\end{align*}
-This work is perfect, but we need to understand what we just proved.
-We've shown that if \(x=1\) then \(0 = 0\). This is a conditional 
-statement with a conclusion that is manifestly true. The rules of
-Boolean logic say that a conditional statement with a true conclusion
-has a truth value of true regardless of the truth value of the hypothisi.
+ \textbf{Answer} First of all, to prove that an equation is an identity,
+ we need to (i) solve the equation and (ii) show that its solution
+ set is the same as its natural domain. During the process of solving,
+ we can't do anything that enlarges the solution set, but doing anything
+ that maintains the solution set is allowed.
+ 
+ \quad The requirement to ``only work with one side at a time''
+ is an effort to disallow doing things that enlarge the solution set of
+ the given equation. One  such example is multiplying both sides of an equation by zero. Another
+ example is squaring both sides of an equation. Indeed multiplying
+ both sides of \(x = 1\) by zero enlarges the solution set from \(\{1\}\)
+to \(\reals\). And that's a huge enlargement.  Another example is squaring both sides of 
+\(x=1\) enlarges the solution set from \(\{1\}\) to \(\{-1,1\}\).
 
+\quad Instead of the adage to ``only work with one side at a time,'' 
+students would be much better served if we gave guidence that was firmly
+rooted in logic than to ``only work with one side at a time.'' 
 
 \item  \textbf{Question} Why is \(0! = 1\)?
 
