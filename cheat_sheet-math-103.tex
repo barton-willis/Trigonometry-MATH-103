@@ -208,9 +208,9 @@ For numbers \(a\) and \(b\), we define the intervals:
 
 
 \section*{Exponents}
-\vspace{-0.25in}
+\vspace{-0.5in}
+\begin{minipage}[c]{2.0in}
 For \(a,b > 0\) and \(m,n\) real:
-\vspace{-0.05in}
 \begin{align*}
 a^0 &= 1 \\
 0^a &= 0\\
@@ -221,8 +221,24 @@ a^n a^m &= a^{n+m}  \\
 a^{-m} &= \nicefrac{1}{a^m}\\
 \left(\nicefrac{a}{b}\right)^m &= \nicefrac{a^m}{b^m}
 \end{align*}
-
-\section*{Right triangle Trigonometry}
+\end{minipage}
+\vspace{-0.45in}
+\section*{Polar to Cartesian}
+\vspace{-0.5in}
+\begin{minipage}[c]{2.0in}
+\begin{align*}
+x &= r \cos(\theta) \\
+y &= r \sin(\theta)
+\end{align*}
+\begin{align*}
+r &= \sqrt{x^2 + y^2} \\
+\theta &= \begin{cases} \arccos(x/r)  & \mbox{ if } y \geq 0 \\
+                                 2 \uppi - \arccos(x/r)  & \mbox{ if } y < 0 
+             \end{cases}                                 
+\end{align*}
+\end{minipage}
+\vspace{-0.15in}
+\section*{Right Triangle Trigonometry}
 \begin{tikzpicture}[scale=5]
    \draw[thick,color=black] (0,0) -- node[below] {$b$} (1,0);
    \draw[thick,color=black] (1,0) -- node[right] {$a$} (1,0.57735);
@@ -619,7 +635,7 @@ $\big [\sin(a) = b  \big] \equiv \begin{cases} a = \sin^{-1}(b) + 2 k \uppi  \mb
 %\tiny
 %\noindent For an extensive list of trigonometric function facts, see \url{https://dlmf.nist.gov/4.14}.
 
-\noindent Revised 18 September 2021. Barton Willis is the author of this work. It 
+\noindent Revised 18 November 2021. Barton Willis is the author of this work. It 
 licensed under Attribution 4.0 International (CC BY 4.0) \,  \qrcode[height=0.2in]{https://creativecommons.org/licenses/by/4.0/}. For the current version of
 this document, visit \, \qrcode[height=0.2in]{https://github.com/barton-willis/Math-100-200-level}
   
