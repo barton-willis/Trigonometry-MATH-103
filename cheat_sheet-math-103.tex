@@ -80,6 +80,7 @@
 
 % custom section
 \usepackage[explicit]{titlesec}
+\titlespacing{\section}{0pt}{\parskip}{-\parskip}
 \newcommand*\sectionlabel{}
 \titleformat{\section}
   {\gdef\sectionlabel{}
@@ -208,19 +209,16 @@ For numbers \(a\) and \(b\), we define the intervals:
 
 
 \section*{Exponents}
-\vspace{-0.5in}
+\vspace{-0.15in}
 \begin{minipage}[c]{2.0in}
+\vspace{-0.25in}
 For \(a,b > 0\) and \(m,n\) real:
-\begin{align*}
-a^0 &= 1 \\
-0^a &= 0\\
-1^a &= 1\\   
-a^n a^m &= a^{n+m}  \\
-\nicefrac{a^n}{a^m} &= a^{n-m} \\
-(a^n)^m &= a^{n \cdot m} \\
-a^{-m} &= \nicefrac{1}{a^m}\\
-\left(\nicefrac{a}{b}\right)^m &= \nicefrac{a^m}{b^m}
-\end{align*}
+\begin{alignat*}{1}
+&a^0 = 1,  \quad \quad 0^a = 0\\
+&1^a = 1, \quad \quad  a^n a^m = a^{n+m}  \\
+&\nicefrac{a^n}{a^m} = a^{n-m}, \quad \quad (a^n)^m = a^{n \cdot m} \\
+&a^{-m} = \nicefrac{1}{a^m}, \quad \quad \left(\nicefrac{a}{b}\right)^m = \nicefrac{a^m}{b^m} 
+\end{alignat*}
 \end{minipage}
 \vspace{-0.45in}
 \section*{Polar to Cartesian}
