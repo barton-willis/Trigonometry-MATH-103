@@ -47,7 +47,7 @@
 
 
 \usepackage{geometry}
-\geometry{a4paper,left=10mm,right=10mm,top=10mm,bottom=10mm}
+\geometry{letterpaper,left=10mm,right=10mm,top=10mm,bottom=10mm}
 
 \linespread{1.3}
 
@@ -105,7 +105,7 @@
 
 
 
-
+\raggedbottom 
 \begin{document}
 
 %\maketitle
@@ -127,11 +127,10 @@
 \mathrm{gamma} & \gamma & \mbox{angle, constant} \\
 \mathrm{delta} & \delta  & \mbox{ limit definition}\\
 \mathrm{epsilon} & \epsilon  \mbox{ or } \varepsilon & \mbox{limit definition} \\
-\mathrm{theta}  & \theta  \mbox{ or } \vartheta 
-&\mbox{ angle}\\ 
-\mathrm{lambda} & \lambda & \mbox{Lagrange multiplier} \\
+\mathrm{theta}  & \theta  \mbox{ or } \vartheta &\mbox{ angle}\\ 
+%\mathrm{lambda} & \lambda & \mbox{Lagrange multiplier} \\
 \mathrm{pi} & \pi \mbox{ or } \uppi & \mbox{circular constant} \\
-\mathrm{phi} & \phi \mbox{ or } \varphi  & \mbox{ angle} \\
+\mathrm{phi} & \phi \mbox{ or } \varphi  & \mbox{ angle, constant} \\
 
 \hline
 \end{tabular}
@@ -145,10 +144,10 @@
 \mathrm{empty\,\, set} & \varnothing \\ 
  \mathrm{real\,\, numbers} & \mathbf{R} \\
   \mathrm{ordered \, \, pairs }  & \mathbf{R}^2 \\
- \mathrm{ordered \, \, triples }  & \mathbf{R}^3 \\
+ %\mathrm{ordered \, \, triples }  & \mathbf{R}^3 \\
   \mathrm{integers } & \mathbf{Z} \\
   \mathrm{positive \,\,  integers } & \mathbf{Z}_{>0} \\ 
-  \mathrm{positive \,\, real \,\,  numbers} & \mathbf{R}_{>0} \\ 
+  \mathrm{positive \,\, real \,\,  numbers} & \mathbf{R}_{>0} \\
   \hline
   \end{tabular}
 
@@ -200,10 +199,9 @@ For numbers \(a\) and \(b\), we define the intervals:
 \mbox{there exists} & \exists \\ \hline
 \end{tabular}
 
-
-
 \section*{Exponents}
-\vspace{-0.25in}
+\vspace{-0.45in}
+\begin{minipage}[c]{0.333\textwidth}
 For \(a,b > 0\) and \(m,n\) real:
 \vspace{-0.05in}
 \begin{align*}
@@ -213,102 +211,66 @@ a^n a^m &= a^{n+m}  \\
 a^{-m} &= \nicefrac{1}{a^m}\\
 \left(\nicefrac{a}{b}\right)^m &= \nicefrac{a^m}{b^m}
 \end{align*}
-
-
-
-\section*{Trigonometric Functions}
-\vspace{-0.45in}
-\subsubsection*{Special values of trig functions}
-\begin{tabular}{|L | L L L|}
-\hline 
-x & \cos(x) &  \sin(x) & \tan(x) \\ \hline 
-0 & 1 & 0 & 0\\
-\nicefrac{\ensuremath{\uppi} }{6} & \nicefrac{\sqrt{3}}{2} & \nicefrac{1}{2} & \nicefrac{1}{\sqrt{3}}\\
-\nicefrac{\ensuremath{\uppi} }{4} & \nicefrac{1}{\sqrt{2}} & \nicefrac{1}{\sqrt{2}} & 1 \\
-\nicefrac{\ensuremath{\uppi} }{3} & \nicefrac{1}{2} & \nicefrac{\sqrt{3}}{2} & \sqrt{3}\\
-\nicefrac{\ensuremath{\uppi} }{2} & 0 & 1 & \mathrm{dne}\\
-\nicefrac{2 \ensuremath{\uppi} }{3} & -\nicefrac{1}{2} & \nicefrac{\sqrt{3}}{2} & -\sqrt{3}\\
-\nicefrac{3 \ensuremath{\uppi} }{4} & -\nicefrac{1}{\sqrt{2}} & \nicefrac{1}{\sqrt{2}} & -1 \\
-\nicefrac{5 \ensuremath{\uppi} }{6} & -\nicefrac{\sqrt{3}}{2} & \nicefrac{1}{2} & -\nicefrac{1}{\sqrt{3}}\\
-\ensuremath{\uppi}  & -1 & 0 & 0\\
-\nicefrac{7 \ensuremath{\uppi} }{6} & -\nicefrac{\sqrt{3}}{2} & -\nicefrac{1}{2} & \nicefrac{1}{\sqrt{3}}\\
-\nicefrac{5 \ensuremath{\uppi} }{4} & -\nicefrac{1}{\sqrt{2}} & -\nicefrac{1}{\sqrt{2}} & 1 \\
-\nicefrac{4 \ensuremath{\uppi} }{3} & -\nicefrac{1}{2} & -\nicefrac{\sqrt{3}}{2} & \sqrt{3}\\
-\nicefrac{3 \ensuremath{\uppi} }{2} & 0 & -1 & \mathrm{dne}\\
-\nicefrac{5 \ensuremath{\uppi} }{3} & \nicefrac{1}{2} & -\nicefrac{\sqrt{3}}{2} & -\sqrt{3}\\
-\nicefrac{7 \ensuremath{\uppi} }{4} & \nicefrac{1}{\sqrt{2}} & -\nicefrac{1}{\sqrt{2}} & -1\\
-\nicefrac{11 \ensuremath{\uppi} }{6} & \nicefrac{\sqrt{3}}{2} & -\nicefrac{1}{2} & -\nicefrac{1}{\sqrt{3}}  \\ \hline 
-\end{tabular}
-
-\subsubsection*{Special values of inverse trig}
-
-%\vspace{0.2cm}
-\begin{tabular}{|L |  L L |}  \hline
-x  & \arccos(x)  & \arcsin(x) \\ \hline
--1 & \uppi & -\nicefrac{\uppi}{2}\\
--\nicefrac{\sqrt{3}}{2} & \nicefrac{5 \uppi}{6} & -\nicefrac{\uppi}{3}\\
--\nicefrac{1}{2} & \nicefrac{2 \uppi}{3} & -\nicefrac{\uppi}{6}\\
-0 & \nicefrac{\uppi}{2} & 0\\
-\nicefrac{1}{2} & \nicefrac{\uppi}{3} & \nicefrac{\uppi}{6}\\
-\nicefrac{\sqrt{3}}{2}  & \nicefrac{\uppi}{6} & \nicefrac{\uppi}{3}\\
-1 & 0 & \nicefrac{\uppi}{2}  \\ \hline
-\end{tabular}
-
-
-\subsubsection*{Special values arctan and arccotan}
-
-\vspace{-0.05cm}
-
-\begin{tabular}{|L |  L L |}
-\hline
-x  & \arctan(x)  & \mathrm{arccot}(x) \\ \hline
--\sqrt{3} & -\nicefrac{\uppi}{3} & -\nicefrac{\uppi}{6}\\
--1        & -\nicefrac{\uppi}{4} & -\nicefrac{\uppi}{4}\\
--\nicefrac{1}{\sqrt{3}} & -\nicefrac{\uppi}{6} & -\nicefrac{\uppi}{3}\\
-0 & 0 & \nicefrac{\uppi}{2}\\
-\nicefrac{1}{\sqrt{3}} & \nicefrac{\uppi}{6} & \nicefrac{\uppi}{3}\\
-1        & \nicefrac{\uppi}{4} & -\nicefrac{\uppi}{4}\\
-\sqrt{3} & \nicefrac{\uppi}{3} & \nicefrac{\uppi}{6} \\
-\hline
-\end{tabular}
-
-\vspace{-0.05in}
-\begin{minipage}[c]{1.50in}
-\subsubsection*{Trigonometric identities}
-\vspace{-0.135in}
+\vspace{-0.5in}
+\end{minipage}
+\section*{Trigonometric Identities}
+\vspace{-0.5in}
+\begin{minipage}[c]{0.333\textwidth}
 \begin{align*}
 &\sin(x)^2 + \cos(x)^2 =1 \\
-&\cos(x)^2 =  \frac{1}{2} \left(1 + \cos(2 x) \right)\\
-&\sin(x)^2 = \frac{1}{2} \left(1 - \cos(2 x) \right)\\
+&2 \cos(x)^2 =  1 + \cos(2 x) \\
+&2 \sin(x)^2 = 1 - \cos(2 x) \\
  &\sin\left(x +  y\right) =\sin (x) \cos (y) + \cos (x) \sin (y) \\
-&\cos\left(x+y\right)=\cos (x) \cos (y) - \sin (x) \sin (y)    
+&\cos\left(x+y\right)=\cos (x) \cos (y) - \sin (x) \sin (y)    \\
+&\arccos(x) = \uppi/2 - \arcsin(x) \\
+&\arccot(x) = \uppi/2 - \arctan(x) \\
+&\arccsc(x) = \uppi/2 - \arcsec(x) \\
 \end{align*}
 \end{minipage}
-
-
-\begin{minipage}[c]{2.0in}
+\begin{minipage}[c]{0.333\textwidth}
 \section*{Limits}
-\vspace{-0.35in}
+\vspace{-0.4in}
 \begin{align*}
- &\lim_{x \to 0}   \frac{\sin(x)}{x} = 1 \\
- &\lim_{x \to 0}   \frac{1-\cos(x)}{x} = 0 \\
- &\lim_{x \to \infty} \mathrm{e}^x = \infty\\
-  &\lim_{x \to -\infty} \mathrm{e}^x = 0\\
-  &\lim_{x \to \infty} \ln(x)  = \infty\\
-  &\lim_{x \to 0^{+}} \ln(x)  = -\infty\\
-   &\lim_{x \to 0} (1+x)^{1/x}  = \mathrm{e} \\
-  \end{align*}
+ &\lim_{x \to 0}   \frac{\sin(x)}{x} = 1  & \lim_{x \to 0}   \frac{1-\cos(x)}{x} = 0 \\
+ &\lim_{x \to \infty} \mathrm{e}^x = \infty & \lim_{x \to -\infty} \mathrm{e}^x = 0\\
+  &\lim_{x \to \infty} \ln(x)  = \infty & \lim_{x \to 0^{+}} \ln(x)  = -\infty
+ \end{align*}
 \end{minipage}  
-
-
-
-       
-\vspace{-0.3in}
+ \vspace{-0.2in}
 \section*{\textbf{Derivatives}}
 \vspace{-0.35in}
+\subsection*{Specific cases}
+%\vspace{0.4cm}
 
+\begin{tabular}{| L | L | L|}
+\hline
+F(x)  & F^\prime(x) \\ \hline 
+\cos(x)  &  -\sin(x)    \\
+\sin(x)  &  \cos(x)   \\
+\tan(x)  & \sec(x)^2  \\  
+\sec(x)  &  \sec(x) \tan(x) \\
+\csc(x)  & -\cot(x) \csc(x) \\
+\cot(x)  &  -\csc(x)^2 \\
+\arccos(x)  & -\nicefrac{1}{\sqrt{1-{{x}^{2}}}}   \\
+\arcsin(x)  & \nicefrac{1}{\sqrt{1-{{x}^{2}}}}\\
+\arctan(x) &  \nicefrac{1}{\big (x^2+1 \big )}  \\  
+%\arcsec(x) & \nicefrac{1}{ \big (\sqrt{{{x}^{2}}-1}\, \left| x\right| \big )} \\
+%\arccsc(x)   & -\nicefrac{1}{ \big (\sqrt{{{x}^{2}}-1}\, \left| x\right| \big ) } \\
+%\arccot(x)   & -\nicefrac{1}{ \big (x^2+1 \big )} \\ 
+%\cosh(x)  &  \sinh(x)    \\
+%\sinh(x)  &  \cosh(x)   \\
+%\tanh(x)  & 1/\cosh(x)^2  \\ 
+%\mathrm{arccosh}(x)  & \nicefrac{1}{\sqrt{x^2-1}}   \\
+%\mathrm{arcsinh}(x)  & \nicefrac{1}{\sqrt{1+{{x}^{2}}}}\\
+%\mathrm{arctanh}(x) &  \nicefrac{1}{{(1-{x}^{2}})}  \\
+\exp(x) & \exp(x)    \\
+\ln(x)  & 1/x    \\ \hline
+%\log_a(x) & \nicefrac{1}{x \ln(a)}, \,\,\,a \in \reals_{>0} \\
+%|x|       &  \begin{cases} -1 & x < 0 \\ 1 & x > 0   \end{cases} \\ 
+%x^a       & a x^{a-1}   \\ \hline
+\end{tabular}
 \subsection*{General Cases}
-%\vspace{-0.35in}
+\vspace{-0.15in}
 \begin{minipage}[c]{0.333\textwidth}
 \begin{tabular}{| L | L |}
 \hline
@@ -325,44 +287,10 @@ f^{-1 \prime}(x) & \nicefrac{1}{f^\prime (f^{-1}(x))} \\ \hline
 \vspace{-0.4cm}
 
 
-\subsection*{Specific cases}
-%\vspace{0.4cm}
-
-\begin{tabular}{| L | L | L|}
-\hline
-F(x)  & F^\prime(x) \\ \hline 
-\cos(x)  &  -\sin(x)    \\
-\sin(x)  &  \cos(x)   \\
-\tan(x)  & \sec(x)^2  \\  
-\sec(x)  &  \sec(x) \tan(x) \\
-\csc(x)  & -\cot(x) \csc(x) \\
-\cot(x)  &  -\csc(x)^2 \\
-\arccos(x)  & -\nicefrac{1}{\sqrt{1-{{x}^{2}}}}   \\
-\arcsin(x)  & \nicefrac{1}{\sqrt{1-{{x}^{2}}}}\\
-\arctan(x) &  \nicefrac{1}{\big (x^2+1 \big )}  \\  
-\arcsec(x) & \nicefrac{1}{ \big (\sqrt{{{x}^{2}}-1}\, \left| x\right| \big )} \\
-\arccsc(x)   & -\nicefrac{1}{ \big (\sqrt{{{x}^{2}}-1}\, \left| x\right| \big ) } \\
-\arccot(x)   & -\nicefrac{1}{ \big (x^2+1 \big )} \\ 
-\cosh(x)  &  \sinh(x)    \\
-\sinh(x)  &  \cosh(x)   \\
-\tanh(x)  & 1/\cosh(x)^2  \\ 
-\mathrm{arccosh}(x)  & \nicefrac{1}{\sqrt{x^2-1}}   \\
-\mathrm{arcsinh}(x)  & \nicefrac{1}{\sqrt{1+{{x}^{2}}}}\\
-\mathrm{arctanh}(x) &  \nicefrac{1}{{(1-{x}^{2}})}  \\
-\exp(x) & \exp(x)    \\
-\ln(x)  & 1/x    \\ \hline
-%\log_a(x) & \nicefrac{1}{x \ln(a)}, \,\,\,a \in \reals_{>0} \\
-%|x|       &  \begin{cases} -1 & x < 0 \\ 1 & x > 0   \end{cases} \\ 
-%x^a       & a x^{a-1}   \\ \hline
-\end{tabular}
 
 
-
-\vfill
-\newpage
-
-\section*{Antiderivatives\footnote{Valid on any interval on which the antiderivative is continuous.}}
-\vspace{-0.75in}
+\section*{Antiderivatives}
+\vspace{-0.5in}
 \begin{minipage}{0.33333333333333\textwidth}
 \begin{align*}
 &\int a   \, \mathrm{d} x  = a x \\
@@ -381,17 +309,18 @@ F(x)  & F^\prime(x) \\ \hline
 
 \section*{Sums}
 \vspace{-0.35in}
-For \(k, m,n\in \mathbf{Z}_{>0}\) and \(\alpha,\beta \in \mathbf{R}\)
+For \(k, m,n\in \mathbf{Z}_{>0}\) 
 %\vspace{-0.15in}
 \begin{align*}
     \sum_{k=0}^{n-1}1 &= n \\
-   \sum_{k=0}^{n-1}{\left. k\right.}&=\frac{\left( n-1\right)  n}{2}\\
-   \sum_{k=0}^{n-1}{\left. {{k}^{2}}\right.}&=\frac{\left( n-1\right)  n\, \left( 2 n-1\right) }{6}\\
-   \sum_{k=m}^n a_k &= \sum_{k=0}^{n-m} a_{k+m}\\
-   \sum_{k=0}^{n-1} x^k &= \frac{1-x^n}{1-x}, \quad x \neq 1\\
-   \sum_{k=0}^{\infty} x^k &= \frac{1}{1-x}, \quad x \in (-1,1) \\
-  \sum_{k=m}^n \alpha a_k + \beta b_k &=  
-  \alpha \sum_{k=m}^n a_k + \beta \sum_{k=m}^n b_k
+     \sum_{k=0}^{n-1}{\left. k\right.} &=\frac{\left( n-1\right)  n}{2}\\
+    \sum_{k=0}^{n-1}{\left. {{k}^{2}}\right.} &=\frac{\left( n-1\right)  n\, \left( 2 n-1\right) }{6}\\
+    \sum_{k=0}^{n-1} x^k &= \frac{1-x^n}{1-x},  x \neq 1
+  % \sum_{k=m}^n a_k &= \sum_{k=0}^{n-m} a_{k+m}\\
+  % \sum_{k=0}^{n-1} x^k &= \frac{1-x^n}{1-x}, \quad x \neq 1\\
+  % \sum_{k=0}^{\infty} x^k &= \frac{1}{1-x}, \quad x \in (-1,1) \\
+  %\sum_{k=m}^n \alpha a_k + \beta b_k &=  
+ % \alpha \sum_{k=m}^n a_k + \beta \sum_{k=m}^n b_k
  \end{align*}
 \begin{comment}
 (c) Inverse trig
@@ -420,9 +349,16 @@ For \(k, m,n\in \mathbf{Z}_{>0}\) and \(\alpha,\beta \in \mathbf{R}\)
 
 
 \end{minipage}
-
+%\vfill
 %\newpage
+  \section*{Logarithms}
+  \vspace{-0.25in}
+     \begin{equation*}
+    \log_a(x) = \frac{1}{\ln(a)} \ln(x)
+       \end{equation*}
+       \vspace{-0.35in}
 
+%\vspace{-0.60in}
 \section*{Famous Triangles}
 
 \subsection*{The 30-60-90 triangle}
@@ -452,7 +388,9 @@ opacity=.4](O,B,A)
 
 
 \end{tikzpicture}
-
+\end{multicols*}
+%\newpage
+\begin{multicols*}{2}
 \subsection*{The 45-45-90 triangle}
 
 
@@ -569,7 +507,7 @@ opacity=.4](O,B,A)
   \draw [<->] ([yshift=-5pt]a.bottom) -- ([yshift=-5pt]a.bottom -| a.before bottom) node [midway, below] {$r$};
 \end{tikzpicture}
 \end{minipage}
-\begin{minipage}[l]{0.1666666666667\textwidth}
+\begin{minipage}[l]{0.25\textwidth}
 Volume
 \[
     \mbox{V} = \uppi r^2 h
@@ -583,7 +521,7 @@ Volume
 
 
 \subsection*{Cone} 
-  \begin{minipage}[c]{0.1666666666667\textwidth}
+  \begin{minipage}[c]{0.25\textwidth}
    \begin{tikzpicture}[thick, scale=0.5]
       \begin{scope}
      \clip (-2,0) rectangle (2,1cm);
@@ -609,6 +547,73 @@ Volume
    \mbox{A} =  \uppi r  \left (r + \sqrt{r^2+h^2} \right)
 \]
 \end{minipage}
+
+
+\section*{Unit Circle}
+
+\begin{tikzpicture}[scale=3.2,cap=round,>=latex]
+    % draw the coordinates
+    \draw[->] (-1.5cm,0cm) -- (1.5cm,0cm) node[right,fill=white] {$x$};
+    \draw[->] (0cm,-1.5cm) -- (0cm,1.5cm) node[above,fill=white] {$y$};
+
+    % draw the unit circle
+    \draw[thick] (0cm,0cm) circle(1cm);
+
+    \foreach \x in {0,30,...,360} {
+            % lines from center to point
+            \draw[gray] (0cm,0cm) -- (\x:1cm);
+            % dots at each point
+            \filldraw[black] (\x:1cm) circle(0.4pt);
+            % draw each angle in degrees
+            \draw (\x:0.6cm) node[fill=white] {$\x^\circ$};
+    }
+
+    % draw each angle in radians
+    \foreach \x/\xtext in {
+        30/\nicefrac{\uppi}{6},
+        45/\nicefrac{\uppi}{4},
+        60/\nicefrac{\uppi}{3},
+        90/\nicefrac{\uppi}{2},
+        120/\nicefrac{2\uppi}{3},
+        135/\nicefrac{3\uppi}{4},
+        150/\nicefrac{5\uppi}{6},
+        180/\uppi,
+        210/\nicefrac{7\uppi}{6},
+        225/\nicefrac{5\uppi}{4},
+        240/\nicefrac{4\uppi}{3},
+        270/\nicefrac{3\uppi}{2},
+        300/\nicefrac{5\uppi}{3},
+        315/\nicefrac{7\uppi}{4},
+        330/\nicefrac{11\uppi}{6},
+        360/2\uppi}
+            \draw (\x:0.85cm) node[fill=white] {$\xtext$};
+
+    \foreach \x/\xtext/\y in {
+        % the coordinates for the first quadrant
+        30/\nicefrac{\sqrt{3}}{2}/\nicefrac{1}{2},
+        45/\nicefrac{\sqrt{2}}{2}/\nicefrac{\sqrt{2}}{2},
+        60/\nicefrac{1}{2}/\nicefrac{\sqrt{3}}{2},
+        % the coordinates for the second quadrant
+        150/-\nicefrac{\sqrt{3}}{2}/\nicefrac{1}{2},
+        135/-\nicefrac{\sqrt{2}}{2}/\nicefrac{\sqrt{2}}{2},
+        120/-\nicefrac{1}{2}/\nicefrac{\sqrt{3}}{2},
+        % the coordinates for the third quadrant
+        210/-\nicefrac{\sqrt{3}}{2}/-\nicefrac{1}{2},
+        225/-\nicefrac{\sqrt{2}}{2}/-\nicefrac{\sqrt{2}}{2},
+        240/-\nicefrac{1}{2}/-\nicefrac{\sqrt{3}}{2},
+        % the coordinates for the fourth quadrant
+        330/\nicefrac{\sqrt{3}}{2}/-\nicefrac{1}{2},
+        315/\nicefrac{\sqrt{2}}{2}/-\nicefrac{\sqrt{2}}{2},
+        300/\nicefrac{1}{2}/-\nicefrac{\sqrt{3}}{2}}
+            \draw (\x:1.25cm) node[fill=white] {$\left(\xtext,\y\right)$};
+
+    % draw the horizontal and vertical coordinates
+    % the placement is better this way
+    \draw (-1.25cm,0cm) node[above=1pt] {$(-1,0)$}
+          (1.25cm,0cm)  node[above=1pt] {$(1,0)$}
+          (0cm,-1.25cm) node[fill=white] {$(0,-1)$}
+          (0cm,1.25cm)  node[fill=white] {$(0,1)$};
+\end{tikzpicture}
 \section*{Applications}
 Arclength of curve \(y = F(x)\) with \(a \leq x \leq b\)
 \[
@@ -635,6 +640,7 @@ Centroid
     \mbox{Area}(Q) \times \overline{x} &=  \int_a^b x \left(g(x) - f(x) \right) \, \mathrm{d} x, \\
      \mbox{Area}(Q) \times \overline{y} &=  \frac{1}{2} \int_a^b  \left (g(x)^2  - f(x)^2 \right) \, \mathrm{d} x.
 \end{align*}
+\begin{comment}
 For the region described by
 \[
    Q = \{(x,y) \mid f(y) \leq x \leq g(y) \land a \leq y \leq b \},
@@ -657,184 +663,18 @@ Centroid
     \mbox{Area}(Q) \times \overline{y} &=  \int_a^b y \left(g(y) - f(y) \right) \, \mathrm{d} y \\
      \mbox{Area}(Q) \times \overline{x} &=  \frac{1}{2} \int_a^b  \left (g(y)^2  - f(y)^2 \right) \, \mathrm{d} y
 \end{align*}
-
-\vspace{-0.25in}
-
-  \section*{Logarithms}
-  \vspace{-0.25in}
-     \begin{equation*}
-    \log_a(x) = \frac{1}{\ln(a)} \ln(x)
-       \end{equation*}
-       \vspace{-0.35in}
-
-%\vspace{-0.60in}
-\begin{comment}
-\section*{Unit Circle}
-
-\begin{tikzpicture}[scale=5.3,cap=round,>=latex]
-    % draw the coordinates
-    \draw[->] (-1.5cm,0cm) -- (1.5cm,0cm) node[right,fill=white] {$x$};
-    \draw[->] (0cm,-1.5cm) -- (0cm,1.5cm) node[above,fill=white] {$y$};
-
-    % draw the unit circle
-    \draw[thick] (0cm,0cm) circle(1cm);
-
-    \foreach \x in {0,30,...,360} {
-            % lines from center to point
-            \draw[gray] (0cm,0cm) -- (\x:1cm);
-            % dots at each point
-            \filldraw[black] (\x:1cm) circle(0.4pt);
-            % draw each angle in degrees
-            \draw (\x:0.6cm) node[fill=white] {$\x^\circ$};
-    }
-
-    % draw each angle in radians
-    \foreach \x/\xtext in {
-        30/\frac{\uppi}{6},
-        45/\frac{\uppi}{4},
-        60/\frac{\uppi}{3},
-        90/\frac{\uppi}{2},
-        120/\frac{2\uppi}{3},
-        135/\frac{3\uppi}{4},
-        150/\frac{5\uppi}{6},
-        180/\uppi,
-        210/\frac{7\uppi}{6},
-        225/\frac{5\uppi}{4},
-        240/\frac{4\uppi}{3},
-        270/\frac{3\uppi}{2},
-        300/\frac{5\uppi}{3},
-        315/\frac{7\uppi}{4},
-        330/\frac{11\uppi}{6},
-        360/2\uppi}
-            \draw (\x:0.85cm) node[fill=white] {$\xtext$};
-
-    \foreach \x/\xtext/\y in {
-        % the coordinates for the first quadrant
-        30/\frac{\sqrt{3}}{2}/\frac{1}{2},
-        45/\frac{\sqrt{2}}{2}/\frac{\sqrt{2}}{2},
-        60/\frac{1}{2}/\frac{\sqrt{3}}{2},
-        % the coordinates for the second quadrant
-        150/-\frac{\sqrt{3}}{2}/\frac{1}{2},
-        135/-\frac{\sqrt{2}}{2}/\frac{\sqrt{2}}{2},
-        120/-\frac{1}{2}/\frac{\sqrt{3}}{2},
-        % the coordinates for the third quadrant
-        210/-\frac{\sqrt{3}}{2}/-\frac{1}{2},
-        225/-\frac{\sqrt{2}}{2}/-\frac{\sqrt{2}}{2},
-        240/-\frac{1}{2}/-\frac{\sqrt{3}}{2},
-        % the coordinates for the fourth quadrant
-        330/\frac{\sqrt{3}}{2}/-\frac{1}{2},
-        315/\frac{\sqrt{2}}{2}/-\frac{\sqrt{2}}{2},
-        300/\frac{1}{2}/-\frac{\sqrt{3}}{2}}
-            \draw (\x:1.25cm) node[fill=white] {$\left(\xtext,\y\right)$};
-
-    % draw the horizontal and vertical coordinates
-    % the placement is better this way
-    \draw (-1.25cm,0cm) node[above=1pt] {$(-1,0)$}
-          (1.25cm,0cm)  node[above=1pt] {$(1,0)$}
-          (0cm,-1.25cm) node[fill=white] {$(0,-1)$}
-          (0cm,1.25cm)  node[fill=white] {$(0,1)$};
-\end{tikzpicture}
-\vfill 
-%To view a copy of this license, visit \url{https://creativecommons.org/publicdomain/zero/1.0 }
 \end{comment}
+\vfill 
+
+%To view a copy of this license, visit \url{https://creativecommons.org/publicdomain/zero/1.0 }
 \vspace{0.25in}
-\tiny
-\noindent Revised 10 Decemember 2021. Barton Willis is the author of this work. It 
-licensed under Attribution 4.0 International (CC BY 4.0) \,  \qrcode[height=0.12in]{https://creativecommons.org/licenses/by/4.0/}. For the current version of
-this document, visit \, \qrcode[height=0.12in]{https://github.com/barton-willis/Math-100-200-level} 
-\end{multicols*}
-\tiny  
-
-\end{document}
-
-\section{Trigonometry}
-
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-
-\begin{tikzpicture}[scale=5]
-\draw[thick,color=green] (0,0) -- node[below] {$b$} (1,0);
-\draw[thick,color=red] (1,0) -- node[right] {$a$} (1,0.57735);
-\draw[thick,color=black] (1,0.57735) -- node[above] {$c$} (0,0);
-\filldraw[fill=blue!20!white,draw=blue] (0,0) -- (0.3,0) arc (0:30:0.3); 
-\node[color=blue] at (0.33,0.1) {$\alpha$};
-\draw (0.95,0) -- (0.95,0.05) -- (1,0.05);
-\end{tikzpicture}
-
-\medskip
-
-\begin{tabular}{ll}
-$\sin\alpha = \nicefrac{a}{c}$ & $\cos\alpha = \nicefrac{b}{c}$ \\[1ex]
-$\tan\alpha = \nicefrac{a}{b}$ & $\cot\alpha = \nicefrac{b}{a}$ \\
-\end{tabular}
-
-\section{Algebra (some very very very very very long title)}
-
-\begin{tabular}{lll}
-$a^n a^m = a^{n+m}$ & $\nicefrac{a^n}{a^m} = a^{n-m}$ & $(a^n)^m = a^{n \cdot m}$\\
-$a^n a^m = a^{n+m}$ & $\nicefrac{a^n}{a^m} = a^{n-m}$ & $(a^n)^m = a^{n \cdot m}$\\
-$a^n a^m = a^{n+m}$ & $\nicefrac{a^n}{a^m} = a^{n-m}$ & $(a^n)^m = a^{n \cdot m}$\\
-$a^n a^m = a^{n+m}$ & $\nicefrac{a^n}{a^m} = a^{n-m}$ & $(a^n)^m = a^{n \cdot m}$\\
-$a^n a^m = a^{n+m}$ & $\nicefrac{a^n}{a^m} = a^{n-m}$ & $(a^n)^m = a^{n \cdot m}$\\
-$a^n a^m = a^{n+m}$ & $\nicefrac{a^n}{a^m} = a^{n-m}$ & $(a^n)^m = a^{n \cdot m}$
-\end{tabular}
-
-
-\section{Trigonometry}
-
-\begin{tikzpicture}[scale=5]
-\draw[thick,color=green] (0,0) -- node[below] {$b$} (1,0);
-\draw[thick,color=red] (1,0) -- node[right] {$a$} (1,0.57735);
-\draw[thick,color=black] (1,0.57735) -- node[above] {$c$} (0,0);
-\filldraw[fill=blue!20!white,draw=blue] (0,0) -- (0.3,0) arc (0:30:0.3); 
-\node[color=blue] at (0.33,0.1) {$\alpha$};
-\draw (0.95,0) -- (0.95,0.05) -- (1,0.05);
-\end{tikzpicture}
-
-\medskip
-
-\begin{tabular}{ll}
-$\sin\alpha = \nicefrac{a}{c}$ & $\cos\alpha = \nicefrac{b}{c}$ \\[1ex]
-$\tan\alpha = \nicefrac{a}{b}$ & $\cot\alpha = \nicefrac{b}{a}$ \\
-\end{tabular}
-
-
-\section{Algebra}
-
-\begin{tabular}{lll}
-$a^n a^m = a^{n+m}$ & $\nicefrac{a^n}{a^m} = a^{n-m}$ & $(a^n)^m = a^{n \cdot m}$\\
-$a^n a^m = a^{n+m}$ & $\nicefrac{a^n}{a^m} = a^{n-m}$ & $(a^n)^m = a^{n \cdot m}$\\
-$a^n a^m = a^{n+m}$ & $\nicefrac{a^n}{a^m} = a^{n-m}$ & $(a^n)^m = a^{n \cdot m}$\\
-$a^n a^m = a^{n+m}$ & $\nicefrac{a^n}{a^m} = a^{n-m}$ & $(a^n)^m = a^{n \cdot m}$\\
-$a^n a^m = a^{n+m}$ & $\nicefrac{a^n}{a^m} = a^{n-m}$ & $(a^n)^m = a^{n \cdot m}$\\
-$a^n a^m = a^{n+m}$ & $\nicefrac{a^n}{a^m} = a^{n-m}$ & $(a^n)^m = a^{n \cdot m}$
-\end{tabular}
-
-
-\section{Trigonometry}
-
-\begin{tikzpicture}[scale=5]
-\draw[thick,color=green] (0,0) -- node[below] {$b$} (1,0);
-\draw[thick,color=red] (1,0) -- node[right] {$a$} (1,0.57735);
-\draw[thick,color=black] (1,0.57735) -- node[above] {$c$} (0,0);
-\filldraw[fill=blue!20!white,draw=blue] (0,0) -- (0.3,0) arc (0:30:0.3); 
-\node[color=blue] at (0.33,0.1) {$\alpha$};
-\draw (0.95,0) -- (0.95,0.05) -- (1,0.05);
-\end{tikzpicture}
-
-\medskip
-
-\begin{tabular}{ll}
-$\sin\alpha = \nicefrac{a}{c}$ & $\cos\alpha = \nicefrac{b}{c}$ \\[1ex]
-$\tan\alpha = \nicefrac{a}{b}$ & $\cot\alpha = \nicefrac{b}{a}$ \\
-\end{tabular}
-
-
-\section{The End}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
+%\tiny
+\noindent Revised \today. Barton Willis is the author of this work. It 
+licensed under Attribution 4.0 International (CC BY 4.0) \,  \qrcode[height=0.2in]{https://creativecommons.org/licenses/by/4.0/}. For the current version of
+this document, visit \, \qrcode[height=0.2in]{https://github.com/barton-willis/Math-100-200-level} 
 
 \end{multicols*}
 
 \end{document}
+
+\
