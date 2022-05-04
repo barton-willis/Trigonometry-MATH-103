@@ -43,6 +43,9 @@
 \usepackage{amsmath,amssymb,textcomp}
 \everymath{\displaystyle}
 
+\raggedright
+\raggedbottom
+
 %\usepackage{times}
 %\renewcommand\familydefault{\sfdefault}
 %\usepackage{tgheros}
@@ -168,7 +171,7 @@
 \mathrm{subset}       & \subset \\
 \mathrm{intersection} & \cap \\
 \mathrm{union} & \cup  \\ 
-\mathrm{set \,\,  minus}  & \setminus \\ \hline
+%\mathrm{set \,\,  minus}  & \setminus \\ \hline
 \end{tabular}
 
 %\vspace{0.1in}
@@ -184,10 +187,10 @@ For numbers \(a\) and \(b\), we define the intervals:
   [a,b) &= \{x  \in \reals  \ssep a \leq  x < b \} \\
    (a,b] &= \{x  \in \reals \ssep a <  x \leq  b \} \\
     [a,b]  &= \{x  \in \reals \ssep a \leq  x \leq  b \} \\
-    (-\infty, a) &= \{x \mid x < a \} \\
-    (-\infty, a] &= \{x \mid x \leq  a \} \\
-  (a, \infty)  &= \{x \mid a < x  \} \\
-   [a, \infty)  &= \{x \mid a \leq  x  \} \\
+%    (-\infty, a) &= \{x \mid x < a \} \\
+%    (-\infty, a] &= \{x \mid x \leq  a \} \\
+%  (a, \infty)  &= \{x \mid a < x  \} \\
+%   [a, \infty)  &= \{x \mid a \leq  x  \} \\
 \end{align*}  
 \end{minipage}
 \vspace{-0.35in}
@@ -272,7 +275,7 @@ r &= \sqrt{x^2 + y^2} \\
 
 
 \section*{Famous Triangles}
-
+\vspace{-0.3in}
 \subsection*{The 30-60-90 triangle}
 
 \begin{tikzpicture}[thick]
@@ -360,19 +363,14 @@ opacity=.4](O,B,A)
 \[
     C^2 = A^2 + B^2 - 2 A B \cos(\gamma) 
 \]
-
 \subsection*{Law of sines}
 \[
     \frac{\sin{\alpha}}{A} =  \frac{\sin{\beta}}{B} =  \frac{\sin{\gamma}}{C}
 \]
-
 \subsection*{Area}
-
 \[
     \mbox{Area} = h B / 2=  A B \sin(\gamma) /2
 \]
-
-
 \section*{Solution of Equations}
 \vspace{-0.2in}
 \subsubsection*{Algebraic}
@@ -403,8 +401,24 @@ opacity=.4](O,B,A)
 \end{align*}
 \end{minipage}
 
+\section*{Vectors}
+\vspace{-0.3in}
+Dot product
+\[
+    \langle x_1, y_1 \rangle \cdot 
+    \langle x_2, y_2 \rangle = x_1 x_2 + y_1 y_2.
+\]
+Length
+\[
+  \|  \langle x, y \rangle \| = \sqrt{x^2+ y^2}
+\]
+Unit Vectors
+\[
+    \mathbf{i} = \langle 1,0 \rangle, \quad
+    \mathbf{j} = \langle 0,1 \rangle,
+\]
 \end{multicols*}
-
+\vfill
 
 \newpage
 
