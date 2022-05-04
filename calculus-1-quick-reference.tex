@@ -200,9 +200,9 @@ For numbers \(a\) and \(b\), we define the intervals:
 \end{tabular}
 
 \section*{Exponents}
-\vspace{-0.45in}
-\begin{minipage}[c]{0.333\textwidth}
-  \vspace{-0.25in}
+\vspace{-0.3in}
+\begin{minipage}[c]{0.333333\textwidth}
+  \vspace{-0.12in}
   For \(a,b > 0\) and \(m,n\) real:
   \begin{alignat*}{1}
   &a^0 = 1,  \quad \quad 0^a = 0\\
@@ -221,9 +221,9 @@ For numbers \(a\) and \(b\), we define the intervals:
 &2 \sin(x)^2 = 1 - \cos(2 x) \\
  &\sin\left(x +  y\right) =\sin (x) \cos (y) + \cos (x) \sin (y) \\
 &\cos\left(x+y\right)=\cos (x) \cos (y) - \sin (x) \sin (y)    \\
-&\arccos(x) = \uppi/2 - \arcsin(x) \\
-&\arccot(x) = \uppi/2 - \arctan(x) \\
-&\arccsc(x) = \uppi/2 - \arcsec(x) \\
+&\arccot(x) = \arctan \left(\nicefrac{1}{x} \right) \\
+&\arccsc(x) = \arcsin \left (\nicefrac{1}{x} \right) \\
+&\arcsec(x) = \arccos \left (\nicefrac{1}{x} \right) 
 \end{align*}
 \end{minipage}
 \begin{minipage}[c]{0.333\textwidth}
@@ -314,7 +314,7 @@ For \(k, m,n\in \mathbf{Z}_{>0}\)
     \sum_{k=0}^{n-1}1 &= n \\
      \sum_{k=0}^{n-1}{\left. k\right.} &=\frac{\left( n-1\right)  n}{2}\\
     \sum_{k=0}^{n-1}{\left. {{k}^{2}}\right.} &=\frac{\left( n-1\right)  n\, \left( 2 n-1\right) }{6}\\
-    \sum_{k=0}^{n-1} x^k &= \frac{1-x^n}{1-x},  x \neq 1
+    \sum_{k=0}^{n-1} x^k &= \frac{1-x^n}{1-x}, \quad  x \neq 1
   % \sum_{k=m}^n a_k &= \sum_{k=0}^{n-m} a_{k+m}\\
   % \sum_{k=0}^{n-1} x^k &= \frac{1-x^n}{1-x}, \quad x \neq 1\\
   % \sum_{k=0}^{\infty} x^k &= \frac{1}{1-x}, \quad x \in (-1,1) \\
@@ -455,7 +455,7 @@ opacity=.4](O,B,A)
     \frac{\sin{\alpha}}{A} =  \frac{\sin{\beta}}{B} =  \frac{\sin{\gamma}}{C}
 \]
 
-\subsection*{Areas and volumes}
+\subsection*{Area}
 
 \[
     \mbox{Area} = \frac{1}{2} hB =   \frac{1}{2} A B \sin(\gamma)
@@ -630,21 +630,23 @@ Assuming \(0 \leq f(x)\) and rotating about the \mbox{x-axis}
 \[
   \mbox{Vol}(Q) = \uppi \int_a^b g(x)^2 - f(x)^2 \, \mathrm{d} x
 \]
-Assuming \(a \geq 0\) and rotating about the y-axis
+Assuming \(0 \leq a < b\) and rotating about the y-axis
 \[
   \mbox{Vol}(Q) = 2 \uppi \int_a^b x (g(x)  - f(x)) \, \mathrm{d} x
 \]
 Centroid
 \begin{align*}
-    \mbox{Area}(Q) \times \overline{x} &=  \int_a^b x \left(g(x) - f(x) \right) \, \mathrm{d} x, \\
-     \mbox{Area}(Q) \times \overline{y} &=  \frac{1}{2} \int_a^b  \left (g(x)^2  - f(x)^2 \right) \, \mathrm{d} x.
+    \mbox{Area}(Q) \times \overline{x} &=  \int_a^b x \left(g(x) - f(x) \right) \, \mathrm{d} x \\
+     \mbox{Area}(Q) \times \overline{y} &=  \frac{1}{2} \int_a^b  \left (g(x)^2  - f(x)^2 \right) \, \mathrm{d} x
 \end{align*}
-\begin{comment}
-For the region described by
+For the region \(Q\) of the xy plane given by
 \[
    Q = \{(x,y) \mid f(y) \leq x \leq g(y) \land a \leq y \leq b \},
 \]
-interchange \(x\) and \(y\) in all the previous formulas. Specifically
+interchange \(x\) and \(y\) in \emph{all} the previous formulas. 
+\begin{comment}
+
+Specifically
 we have
 \[
   \mbox{Area}(Q) = \int_a^b g(y) - f(y) \, \mathrm{d} y
@@ -666,11 +668,11 @@ Centroid
 \vfill 
 
 %To view a copy of this license, visit \url{https://creativecommons.org/publicdomain/zero/1.0 }
-\vspace{0.25in}
+%\vspace{0.25in}
 %\tiny
 \noindent Revised \today. Barton Willis is the author of this work. It 
-licensed under Attribution 4.0 International (CC BY 4.0) \,  \qrcode[height=0.2in]{https://creativecommons.org/licenses/by/4.0/}. For the current version of
-this document, visit \, \qrcode[height=0.2in]{https://github.com/barton-willis/Math-100-200-level} 
+licensed under Attribution 4.0 International (CC BY 4.0) \,  \qrcode[height=0.15in]{https://creativecommons.org/licenses/by/4.0/}. For the current version of
+this document, visit \, \qrcode[height=0.15in]{https://github.com/barton-willis/Math-100-200-level} 
 
 \end{multicols*}
 
