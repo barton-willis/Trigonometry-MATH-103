@@ -97,15 +97,8 @@
 \renewcommand{\footrulewidth}{0pt}
 \makeatother
 
-\newcommand{\term}{ Fall }
-
-\newcommand{\myclass}{ MATH 115}
-\title{\myclass, \term \the\year}
-%\author{Barton Willis, PhD, Professor of Mathematics}
-
-
-
 \raggedbottom 
+\usepackage{tikz-3dplot}
 \begin{document}
 
 %\maketitle
@@ -274,11 +267,11 @@ F(x)  & F^\prime(x) \\ \hline
 \begin{tabular}{| L | L |}
 \hline
 F(x)  &  F^\prime(x)  \\\hline
-a f(x) + b g(x)  & a f'(x) + b g'(x) \\
-f(x) g(x) & f'(x) g(x) + f(x) g'(x) \\
-\nicefrac{1}{g(x)}  & -g'(x) / g(x)^2 \\
-\nicefrac{f(x)}{g(x)}   & \nicefrac{(g(x) f'(x) - f(x) g'(x))}{ g(x)^2} \\
-f(g(x)) & g'(x) f'(g(x)) \\ 
+a f(x) + b g(x)  & a f^\prime(x) + b g^\prime(x) \\
+f(x) g(x) & f^\prime(x) g(x) + f(x) g^\prime(x) \\
+\nicefrac{1}{g(x)}  & -g^\prime (x) / g(x)^2 \\
+\nicefrac{f(x)}{g(x)}   & \nicefrac{\left (g(x) f^\prime (x) - f(x) g^\prime(x) \right)}{ g(x)^2} \\
+f(g(x)) & g^\prime(x) f^\prime \left (g(x) \right) \\ 
 f^{-1 \prime}(x) & \nicefrac{1}{f^\prime (f^{-1}(x))} \\ \hline
 \end{tabular}
 \end{minipage}
@@ -445,21 +438,20 @@ opacity=.4](O,B,A)
 
 \end{tikzpicture}
 
-\subsection*{Law of cosine}
-\[
+\textbf{Law of cosine:} \,
+\(
     C^2 = A^2 + B^2 - 2 A B \cos(\gamma) 
-\]
+\)
 
-\subsection*{Law of sines}
-\[
+\textbf{Law of sines:} \,
+\(
     \frac{\sin{\alpha}}{A} =  \frac{\sin{\beta}}{B} =  \frac{\sin{\gamma}}{C}
-\]
+\)
 
-\subsection*{Area}
-
-\[
+\textbf{Area:} \,
+\(
     \mbox{Area} = \frac{1}{2} hB =   \frac{1}{2} A B \sin(\gamma)
-\]
+\)
 
 
 \section*{Volumes}
@@ -507,18 +499,16 @@ opacity=.4](O,B,A)
 \end{tikzpicture}
 \end{minipage}
 \begin{minipage}[l]{0.25\textwidth}
-Volume
-\[
+\noindent \textbf{Volume:} \,
+\(
     \mbox{V} = \uppi r^2 h
-\]
-\noindent Area, not including areas of circular ends
-\[
+\)
+
+\noindent \textbf{Area: }  (not including circular ends)\,
+\(
    \mbox{A} = 2 \uppi r  h
-\]
+\)
 \end{minipage}
-
-
-
 \subsection*{Cone} 
   \begin{minipage}[c]{0.25\textwidth}
    \begin{tikzpicture}[thick, scale=0.5]
@@ -537,16 +527,28 @@ Volume
   \end{tikzpicture}
   \end{minipage}
   \begin{minipage}[c]{0.25\textwidth}
-  Volume
-  \[
+  \noindent \textbf{Volume:} \,
+  \(
      \mbox{V} = \frac{1}{3} \uppi r^2 h
-  \]
-\noindent Area, not including area of circular base:
-\[
-   \mbox{A} =  \uppi r  \left (r + \sqrt{r^2+h^2} \right)
-\]
+  \)
+  
+\noindent \textbf{Area} (not including circular base) \, \\
+\(
+   \quad \mbox{A} =  \uppi r  \left (r + \sqrt{r^2+h^2} \right)
+\)
 \end{minipage}
 
+\subsection*{Sphere}
+\begin{minipage}[c]{0.25\textwidth}
+\(\phantom{xxx}\)
+\end{minipage}
+\begin{minipage}[c]{0.25\textwidth}
+\noindent  \textbf{Area:}   \(A = 4 \uppi   r^2 \)
+
+\noindent  \textbf{Volume:}   \(V = \frac{4 \uppi}{3} r^3 \)
+\end{minipage}
+
+\vfill
 
 \section*{Unit Circle}
 
