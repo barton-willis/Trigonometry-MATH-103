@@ -221,8 +221,8 @@ y &= r \sin(\theta)
 For $r > 0$ and $0 \leq \theta < 2 \uppi$
 \begin{align*}
 r &= \sqrt{x^2 + y^2} \\
-\theta &= \begin{cases} \arccos(\nicefrac{x}{r})  & \mbox{ if } y \geq 0 \\
-                                 2 \uppi - \arccos(\nicefrac{x}{r})  & \mbox{ if } y < 0 
+\theta &= \begin{cases} 2 \uppi - \arccos(\nicefrac{x}{r})  & \mbox{ if } y < 0  \\
+  \arccos(\nicefrac{x}{r})  & \mbox{ if } y \geq 0 
              \end{cases}                                 
 \end{align*}
 \end{minipage}
@@ -382,9 +382,10 @@ opacity=.4](O,B,A)
 &\big [\cos(a) = 0 \big ]  \equiv  \big [a =  (k - \nicefrac{1}{2}) \, \uppi, k \in \integers \big ]\\
 &\big [\sin(a) = 0 \big ]  \equiv  \big [ a = k \, \uppi, k \in \integers \big ] \\
 &\big [\tan(a) = 0 \big ]  \equiv  \big [ a = k \, \uppi, k \in \integers \big ] \\
-%&\big [\cos(a) = b  \big] \equiv \big [a = \pm \cos^{-1}(b) + 2 k \uppi \big ]\\
-%&\big [\sin(a) = b  \big] \equiv \big [a = \pm \cos^{-1}(b) + \nicefrac{\uppi}{2}  2 k \uppi \big ]\\
-%&\big [\tan(a) = b  \big] \equiv \big [a = \tan^{-1}(b) +  k \uppi \big ]
+&\big [\cos(a) = b  \big] \equiv \big [a = \pm \cos^{-1}(b) + 2 k \uppi, k \in \integers \big ]\\
+&\big [\sin(a) = b  \big] \equiv \big [a = \sin^{-1}(b) +  2 k \uppi,  \in \integers \mbox{ or } \\
+&\quad \quad \quad \quad \quad \quad  a = -\sin^{-1}(b) + (2k + 1)\uppi,    k \in \integers \big ] \\        
+&\big [\tan(a) = b  \big] \equiv \big [a = \tan^{-1}(b) +  k \uppi \big ]
 \end{align*}
 \end{minipage}
 
