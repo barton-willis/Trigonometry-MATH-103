@@ -8,7 +8,6 @@
 \usepackage{hyperref}
 \usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
 \usepackage{tcolorbox}
-
 \usepackage{multirow}
 \usepackage[T1]{fontenc} 
 \usepackage{fourier}
@@ -43,7 +42,7 @@
       \newcommand{\arcsec}{\mathrm{arcsec}}
       \newcommand{\arccsc}{\mathrm{arccsc}}
       \newcommand{\arccot}{\mathrm{arccot}}
-      
+  
 
 
 \newcommand\showdiv[1]{\overline{\smash{)}#1}}
@@ -53,40 +52,116 @@
 
 \maketitle
 \begin{quote}
-\emph{My (admittedly perverse) answer is that ``to simplify''  means to write an equivalent expression that the instructor/marker likely wants or expects as an answer. It is an exercise in mind-reading.} \\  \phantom{xxxxx} \hfill   {\mbox{\sc B.\ S.\ Thomson}\footnote{\tiny Professor Emeritus at Simon Fraser University;  see  \url{https://www.quora.com/What-does-it-mean-to-simplify-an-expression?share=1}} }
+\emph{My (admittedly perverse) answer is that ``to simplify''  means to write an 
+equivalent expression that the instructor/marker likely wants or expects as an answer. It is an exercise in mind-reading.} \\  \phantom{xxxxx} \hfill   {\mbox{\sc B.\ S.\ Thomson}\footnote{\tiny Professor Emeritus at Simon Fraser University;  see  \url{https://www.quora.com/What-does-it-mean-to-simplify-an-expression?share=1}} }
 \end{quote}
 
 
+\subsection*{Quick guide to simplifying}
+\begin{tcolorbox}
+   \begin{alphalist}
+   
+   \item  Reduce all rational numbers to lowest terms.
+   
+   \item All arithmetic in sums, products, and exponents should be done.
+   
+   \item All common additive and multiplicative terms should be combined.
+   
+   \item For any real valued expression, use the identities  $1 \times x   = x ,  0  x = 0, 1^x = 1$ and  $x^1 =x$ to replace the left side by the right side.
+   
+   \item Provided $x$ is a nonzero and real valued expression,  use the identities $\frac{x}{x} = 1, x^0 = 1$ to replace the left side by the right side.
+   
+   \item Provided $x$ is a nonnegative and real valued expression, use the identity $\left(x^a\right)^b = x^{a b}$  to replace the left side by the right side.
+   
+   \item Use the well known values of the trigonometric functions at the integer multiplies of $\uppi/6$ and $\uppi/4$ to simplify these values.
+   
+   \item For any odd function $O$, replace $O(x) + O(-x)$ by zero. For any odd function $E$, replace $E(x) - E(-x)$ by zero.
+   
+   \item Use the well known values of the logarithms to simplify these values.
+   
+   \item For a positive integer $n$, replace $\frac{1}{\sqrt{n}}$ by $\frac{\sqrt{n}}{n}$.
+   
+   \item For a positive integers $m$ and $n$, replace $\sqrt{m n^2}$ by $n \sqrt{m}$. 
+   
+   \end{alphalist}
+   \end{tcolorbox}
+\end{document}
+
 Undoubtedly, at least one math teacher has told you that you \emph{must} simply 
 your answers. And maybe you have been frustrated by not earning full
-credit for an answer that was correct, but not expressed in \emph{exactly}
-the form required by the teacher. If you asked your teacher \emph{exactly} what it 
-means to be simplified that means, it's unlikely that you got a clear 
-answer. 
+credit for an answer that was correct, but was not expressed in \emph{exactly}
+the form required by the teacher. 
+
+You needn't be especially cynical to speculate that the only
+reason for the requirement of simplified answers is to reduce the 
+teacher's burden of grading papers--it is much easier to simply mark 
+any answer that isn't visually identical to the answer key as wrong.
+
 
 We'll attempt to give a guide to what it means to be simplified, but we'll
 also explain some of goals of simplification and in doing so uncover
 the reasons why your teacher may have not given you a particularly good
 answer to the reasonable question ``How do you want me to simplify this?''
 
-\subsection*{Goals of simplification}
 
-Algebraic equality is such an important concept in mathematics, it would be nice to be able to easily decide if any two expressions are algebraically
-the  same. Ideally, every pair of expressions that are algebraically the same would simplify to exactly the same expression. That way, visually we could
-tell if two expressions are equal. With such a scheme, to determine if two expressions are algebraically the same, we need only to simplify them 
-and visually compare them. If their simplified forms are identical, the unsimplified expressions are algebraically the same. From the viewpoint
-of a paper grader, such a simplification scheme is ideal--visually it's possible to decide if an answer is correct or not.
 
-Expressions that are algebraically the same are also known as \emph{semantically identical}, and expressions that are visually the same are \emph{syntactically identical}.  If a simplification scheme converts all semantically identical expressions into syntatically identical expressions,
-we say the simplified form of an expression is called its \emph{canonical form}.  In this context, the word ``canonical'' is fancy word that means ``standard.''
+\subsection*{Why simplify?}
 
-Assuming that the canonical representation of zero is itself, it follows that every expression that is algebraically equivalent to zero will
-simplify to zero. And knowning that an expression is nonvanishig keeps us from making errors such as
+Let's put aside the cynical notion that what it means to be simplified depends on the
+whims of your teacher. And let's look at few of the goals of 
+simplification.
+
+Certainly one goal of simplification is to make expressions more 
+``tidy,'' but that's something that depends on the opinion of the
+reader. The expression 
+\[
+2028 {{\left( 2 {{3}^{\frac{5}{2}}}  i+35\right) }^{\frac{1}{3}}}-{{\left( 2 {{3}^{\frac{5}{2}}}  i+35\right) }^{\frac{2}{3}}}\, \left( 8 {{3}^{\frac{7}{2}}} i-420\right) +10140
+\]
+is untidy. It's not much fun to prove, but this untidy expression 
+simplifies to $24336$. It's uncontroversial that $24336$ is
+a simplification.
+
+Let's start with an example. Suppose we are asked to solve the equation
 \begin{equation}
-  \left(\frac{1}{\sqrt{2}} - \frac{\sqrt{2}}{2} \right) x = 1  \implies  x = \frac{1}{\frac{1}{\sqrt{2}} - \frac{\sqrt{2}}{2}}.
-\end{equation}
-For any canonical representation of \(\frac{1}{\sqrt{2}} - \frac{\sqrt{2}}{2} \) would simplify to zero and the simplified version of the equation
-is \( 0 x  = 1\) has an empty solution set.
+   \left(\frac{1}{\sqrt{2}} - \frac{\sqrt{2}}{2} \right) x = 1.
+ \end{equation}
+ If we failed to simplify \(\frac{1}{\sqrt{2}} - \frac{\sqrt{2}}{2} \) to 
+ zero, we might say the solution set is
+ \begin{equation}
+    \left \{x = \frac{1}{\frac{1}{\sqrt{2}} - \frac{\sqrt{2}}{2}} \right \}.
+ \end{equation}
+ Our answer is rubbish because it involves a division by zero. What
+ is a correct solution? Applying the rule to eliminate radicals from
+ denominators, we see that our original equation is algebraically 
+ equivalent to
+ \begin{equation}
+   0 x = 1.
+ \end{equation}
+ The solution set to this equation is actually the empty set. So as a
+ first answer to the question ``why simplify?'' is that can prevent us
+ from making mistakes, such as dividing by zero.
+
+
+Certainly algebraic equality such an important concept in mathematics, it 
+would be nice to be able to easily decide if any two expressions are algebraically
+the same. Ideally, every pair of expressions that are algebraically the same 
+would simplify to \emph{exactly} the same expression. That way, visually we could
+tell if two expressions are equal. With such a scheme, to determine if two 
+expressions are algebraically the same, we need only to simplify them 
+and visually compare them. If their simplified forms are identical, the 
+unsimplified expressions are algebraically the same. From the viewpoint
+of a paper grader, such a simplification scheme is ideal--visually it's 
+possible to decide if an answer is correct or not.
+
+Expressions that are algebraically the same are also known as 
+\emph{semantically identical}, and expressions that are visually the 
+same are \emph{syntactically identical}.  If a simplification scheme 
+converts all semantically identical expressions into syntactically 
+identical expressions,we say the simplified form of an expression is 
+called its \emph{canonical form}.  In this context, the 
+word ``canonical'' is fancy word that means ``standard.''
+
+
 
 A related, but not identical notion of simplification requires that every expression that is algebraically equivalent to zero must simplify to zero. Such a representation is called \emph{normal}.  A normal representation of $ x+y+1$ could be any one of $1+x+y$ or $x + 1 + y$. So a normal representation needn't be a canonical represenation. 
 
@@ -94,16 +169,26 @@ A related, but not identical notion of simplification requires that every expres
 
 
 
-\paragraph{Rational numbers} One the set of rational numbers, a (not the) possible canonical representation  is to write every rational number as either an integer or as an improper
-rational number.  Thus in this scheme, the canonical representation of $\frac{1812}{32}$ is  $\frac{453}{8}$. The process reducing a rational
-number to its reduced rational  form is algorithmic--there is no guessing or luck required, only a finite number of steps that  involve only arithmetic are needed.
+\paragraph{Rational numbers} One the set of rational numbers, a (not the) possible 
+canonical representation  is to write every rational number as either an integer or 
+as an improper rational number.  Thus in this scheme, the canonical representation 
+of $\frac{1812}{32}$ is  $\frac{453}{8}$. The process reducing a rational
+number to its reduced rational  form is algorithmic--there is no guessing 
+or luck required, only a finite number of steps that  involve only arithmetic 
+are needed.
 
-The reduced rational form isn't the only canonical form, there are others. For example, until the 21st century, stock prices in the US were listed as mixed fractions; for example, $10 \frac{2}{3}$ dollars per share. And food recipes still use this scheme as well ($2 \frac{1}{3}$ cups of butter). This scheme 
-breaks the  convention that in algebra juxtaposition means multiplication, so its use in algebra problematic, so its use outside of cookbooks and stock tables is rare. But
-nevertheless the representation is canonical.
+The reduced rational form isn't the only canonical form, there are others. 
+For example, until the 21st century, stock prices in the US were listed as 
+mixed fractions; for example, $10 \frac{2}{3}$ dollars per share. And food 
+recipes still use this scheme as well ($2 \frac{1}{3}$ cups of butter). 
+This scheme breaks the  convention that in algebra juxtaposition means 
+multiplication, so its use in algebra problematic, so its use outside of 
+cookbooks and stock tables is rare. But nevertheless the representation is canonical.
 
-All this is not as tidy as described. We've claimed that the reduced rational form is a canonical. That much is true. We've also claimed that the 
-process for finding the canonical form is algorithmic. Without additional conditions, that's false.  It's a famous fact that 
+All this is not as tidy as described. We've claimed that the reduced rational 
+form is a canonical. That much is true. We've also claimed that the 
+process for finding the canonical form is algorithmic. Without additional 
+conditions, that's false.  It's a famous fact that 
 $\sum_{k=1}^\infty \frac{1}{k^2}  = \frac{\uppi}{6}$. So we have
 \begin{equation}
 \frac{1}{\uppi^2} \sum_{k=1}^\infty \frac{1}{k^2}  \in \rationals
@@ -114,20 +199,11 @@ set of rational numbers, we don't have an algorithm that can find it.  To distin
 an explicit representation of a rational number, but $\frac{1}{\uppi^2} \sum_{k=1}^\infty \frac{1}{k^2}  $ is an \emph{implicit} representation of
 a rational number.
 
-\paragraph{Algebraic  numbers} A number is \emph{algebraic} if it is root of a nonzero polynomial with integer coefficients. Every rational number, for example 
-$p/q$, where $p$ and $q$ are integers and $q$ is nonzero is an algebraic number; since $1/\sqrt{2}$ is a zero of the polynomial $2 x^2 - 1$, it
+\paragraph{Algebraic  numbers} A number is \emph{algebraic} if it is root of a 
+nonzero polynomial with integer coefficients. Every rational number, for example 
+$p/q$, where $p$ and $q$ are integers and $q$ is nonzero is an algebraic number; 
+since $1/\sqrt{2}$ is a zero of the polynomial $2 x^2 - 1$, it
 follows that $1/\sqrt{2}$ is an algebraic number. 
-
-Some, but not all algebraic numbers, have a \emph{closed form} that only involves finite sums, products, and quotients along with integer roots. For example, the roots of 
-$x^2 - 10 x + 23$, specifically the numbers $5-\sqrt{2}$ and $\sqrt{2}+5$, are both algebraic numbers that are in closed form.  As far as I know, there is no known
-algorithm 
-
- The number $\frac{1}{\sqrt{2}} + \sqrt{3}$ is in closed form. To show that it's an algebraic number, we need
-to find a polynomial with integer coefficn
-\begin{equation}
-  5 + \sqrt{2}, \quad \sqrt{5 + \sqrt{2}}, \quad \frac{1}{\sqrt{2} + \sqrt{3} + \sqrt{5}}.
-\end{equation}
-
 
 \paragraph{Polynomials} Moving from rational numbers to to polynomials in one variable with coefficients that are rational numbers,  a possible canonical representation is to 
 require that
@@ -169,14 +245,9 @@ you are still stuck solving two quadractic equations.
 
 
 As nice as it might be to make all semantically equal polynomials syntatically equal, it's not always what we really want to do.  Nobody
-really wants to see all 101 terms of the fully expanded version of $(2  x-1)^100$.
+really wants to see all 101 terms of the fully expanded version of $(2  x-1)^{100}$.
 
-\begin{comment}
-You needn't be especially cynical to speculate that the only
-reason for the requirement of simplified answers is to reduce the 
-teacher's burden of grading papers--it is much easier to simply mark 
-any answer that isn't visually identical to the answer key as wrong.
-\end{comment}
+
 Compounding the frustration is that some simplification rules, such as eliminating radicals in the 
 denominator might seem arbitrary, turning the process of simplification 
 into a silly game. Why is $\sqrt{2}/2$ a simplification of 
@@ -226,7 +297,7 @@ errand. To illustrate, although
     (a-b) \sin(a-b) = (b-a) \sin(b-a)
 \end{equation}
 is an identity, it's hard to argue that one expression is more simple than
-the other. Sure, we could so devise an rule (similar to alphabetizing) that
+the other. Sure, we could so devise a rule (similar to alphabetizing) that
 would determine that \((a-b) \sin(a-b)\) is more simple than \((b-a) \sin(b-a)\),
 but it hardly seems worth the effort. Similarly, we would need to decide
 if \(1+x+x^2\) is more simple than \(x^2 + x + 1\). Again, rules for
@@ -244,33 +315,7 @@ What it means to be
 simplified can be context dependent. But there are some simplifications that nearly 
 everybody agrees should generally be done. These are:
 
-\begin{tcolorbox}
-\begin{alphalist}
 
-\item  Reduce all rational numbers to lowest terms.
-
-\item All arithmetic in sums, products, and exponents should be done.
-
-\item All common additive and multiplicative terms should be combined.
-
-\item For any real valued expression, use the identities  $1 \times x   = x ,  0  x = 0, 1^x = 1$ and  $x^1 =x$ to replace the left side by the right side.
-
-\item Provided $x$ is a nonzero and real valued expression,  use the identities $\frac{x}{x} = 1, x^0 = 1$ to replace the left side by the right side.
-
-\item Provided $x$ is a nonnegative and real valued expression, use the identity $\left(x^a\right)^b = x^{a b}$  to replace the left side by the right side.
-
-\item Use the well known values of the trigonometric functions at the integer multiplies of $\uppi/6$ and $\uppi/4$ to simplify these values.
-
-\item For any odd function $O$, replace $O(x) + O(-x)$ by zero. For any odd function $E$, replace $E(x) - E(-x)$ by zero.
-
-\item Use the well known values of the logarithms to simplify these values.
-
-\item For a positive integer $n$, replace $\frac{1}{\sqrt{n}}$ by $\frac{\sqrt{n}}{n}$.
-
-\item For a positive integers $m$ and $n$, replace $\sqrt{m n^2}$ by $n \sqrt{m}$. 
-
-\end{alphalist}
-\end{tcolorbox}
 
 \noindent In all of these rules, $x$ can match any expression or any subexpression, not just an explicit match to the variable $x$.  And sometimes, we may need to use factoring some other identities to find a match.  Thus our guideline is a guideline, not an algorithm.  
 
@@ -405,6 +450,7 @@ rational numbers, we can achieve this by requiring that all answers be fully exp
 \] 
 Under these rules this answer is correct and no other answer, including the algebraically equivalent \( - \frac{107}{46} x^2 + 5 x + 3\) is wrong. Imposing this
 
+\begin{comment}
 \subsection*{Efficiency}
 
 (Horner's method)
@@ -421,7 +467,7 @@ where $c$ is the speed of light.  Let's find $T$ given $m = 1, c =  299792458$ a
    T =  299792458^2 \left(\frac{1}{1 - \sqrt{1-10^{-16}}} -1 \right) = 299792458^2 \times 2.220446049250313 {{10}^{-16}} = 19.95637385869426.
 \]
 
-
+\end{comment}
 
 \end{document}
 
