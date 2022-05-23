@@ -53,31 +53,37 @@
 \maketitle
 \begin{quote}
 \emph{My (admittedly perverse) answer is that ``to simplify''  means to write an 
-equivalent expression that the instructor/marker likely wants or expects as an answer. It is an exercise in mind-reading.} \\  \phantom{xxxxx} \hfill   {\mbox{\sc B.\ S.\ Thomson}\footnote{\tiny Professor Emeritus at Simon Fraser University;  see  \url{https://www.quora.com/What-does-it-mean-to-simplify-an-expression?share=1}} }
+equivalent expression that the instructor/marker likely wants or expects as an answer. It is an exercise in mind-reading.} \\  \phantom{xxxxx} \hfill   {\mbox{\sc B.\ S.\ Thomson}}
 \end{quote}
 
 
 \subsection*{Quick guide to simplifying}
+
+In the following, $X$ matches any subexpression of the expression
+we are simplifying. The notation $X \to Y$  means to replace
+the subexpression $X$ by $Y$.
+
 \begin{tcolorbox}
    \begin{alphalist}
    
    \item  Reduce all rational numbers to lowest terms.
    
-   \item All arithmetic in sums, products, and exponents should be done.
+   \item All arithmetic sums, products, and exponents of numbers should be done.
    
    \item All common additive and multiplicative terms should be combined.
    
-   \item For any real valued expression, use the identities  $1 \times x   = x ,  0  x = 0, 1^x = 1$ and  $x^1 =x$ to replace the left side by the right side.
+   \item Apply identities  $1 \times X  \to  X,  0  X \to  0, 1^X \to  1$ and  $X^1  \to X$.
    
-   \item Provided $x$ is a nonzero and real valued expression,  use the identities $\frac{x}{x} = 1, x^0 = 1$ to replace the left side by the right side.
+   \item Provided $x$ is  nonzero,  apply identities $\frac{X}{X} \to  1$ and $X^0 = 1$.
    
-   \item Provided $x$ is a nonnegative and real valued expression, use the identity $\left(x^a\right)^b = x^{a b}$  to replace the left side by the right side.
+   \item Provided $X$ is  nonnegative, apply the identity $\left(X^a\right)^b \to  X^{a b}$.
    
    \item Use the well known values of the trigonometric functions at the integer multiplies of $\uppi/6$ and $\uppi/4$ to simplify these values.
    
-   \item For any odd function $O$, replace $O(x) + O(-x)$ by zero. For any odd function $E$, replace $E(x) - E(-x)$ by zero.
+   \item For any odd function $O$, replace $O(x) + O(-x)$ by zero. For any even function $E$, replace $E(x) - E(-x)$ by zero.
    
-   \item Use the well known values of the logarithms to simplify these values.
+   \item Use the identities $\log(10^X) = X$ and $\ln(\mathrm{e}^X) = X$ 
+   to replace the left side by the right side.
    
    \item For a positive integer $n$, replace $\frac{1}{\sqrt{n}}$ by $\frac{\sqrt{n}}{n}$.
    
@@ -85,6 +91,20 @@ equivalent expression that the instructor/marker likely wants or expects as an a
    
    \end{alphalist}
    \end{tcolorbox}
+
+   \subsection*{Examples:}
+
+   
+   \begin{figure}[htb]
+      \centering
+
+       \begin{tabular}{|l|l|l|} \hline
+         Rule & Replace  & By   \\ \hline 
+         a & $1/2 + 1/3$ & $5/6$ \\ \hline
+       \end{tabular}
+      \end{figure}
+    
+
 \end{document}
 
 Undoubtedly, at least one math teacher has told you that you \emph{must} simply 
