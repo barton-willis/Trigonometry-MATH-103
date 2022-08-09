@@ -577,7 +577,16 @@ $\big [\sin(a) = b  \big] \equiv \begin{cases} a = \sin^{-1}(b) + 2 k \uppi  \mb
     % draw the unit circle
     \draw[thick] (0cm,0cm) circle(1cm);
 
-    \foreach \x in {0,30,...,360} {
+    \foreach \x in {0,30,...,330} {
+            % lines from center to point
+            \draw[gray] (0cm,0cm) -- (\x:1cm);
+            % dots at each point
+            \filldraw[black] (\x:1cm) circle(0.4pt);
+            % draw each angle in degrees
+            \draw (\x:0.6cm) node[fill=white] {$\x^\circ$};
+    }
+
+    \foreach \x in {0,45,...,315} {
             % lines from center to point
             \draw[gray] (0cm,0cm) -- (\x:1cm);
             % dots at each point
@@ -602,8 +611,7 @@ $\big [\sin(a) = b  \big] \equiv \begin{cases} a = \sin^{-1}(b) + 2 k \uppi  \mb
         270/\frac{3\uppi}{2},
         300/\frac{5\uppi}{3},
         315/\frac{7\uppi}{4},
-        330/\frac{11\uppi}{6},
-        360/2\uppi}
+        330/\frac{11\uppi}{6}}
             \draw (\x:0.85cm) node[fill=white] {$\xtext$};
 
     \foreach \x/\xtext/\y in {
