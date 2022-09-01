@@ -1,0 +1,98 @@
+\documentclass[11pt,fleqn]{article}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{fleqn}
+\usepackage[USenglish]{isodate}% http://ctan.org/pkg/isodate
+\usepackage[letterpaper,paperwidth=8.5in,paperheight=11in,margin=0.75in]{geometry} 
+\usepackage[USenglish]{babel}
+\usepackage{hyperref}
+\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
+\usepackage{tcolorbox}
+\usepackage{multirow}
+\usepackage[T1]{fontenc} 
+\usepackage{fourier}
+
+\usepackage{enumerate,isomath,hyperref}
+\usepackage{upgreek,comment}
+\usepackage{amssymb}
+\usepackage{graphicx}
+%\usepackage[super]{nth}
+\usepackage{amsmath}
+\usepackage{multirow}
+\newcounter{eq}
+\setcounter{eq}{1} 
+
+
+\newenvironment{alphalist}{
+  \begin{enumerate}[(a)]
+    \addtolength{\itemsep}{-0.5\itemsep}}
+  {\end{enumerate}}
+  \cleanlookdateon% Remove ordinal day reference
+  \newcommand{\RomanNumeralCaps}[1]
+      {\MakeUppercase{\romannumeral #1}}
+
+
+      \usepackage{amstext} % for \text macro
+      \usepackage{array}   % for \newcolumntype macro
+      \newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
+      
+      \newcommand{\dom}{\mathrm{dom}} 
+      \newcommand{\range}{\mathrm{range}} 
+      \newcommand{\zero}{\mathrm{zero}} 
+      \newcommand{\reals}{\mathbf{R}} 
+      \newcommand{\integers}{\mathbf{Z}} 
+       \newcommand{\rationals}{\mathbf{Q}} 
+      \newcommand{\ssep}{\mid}
+      \newcommand{\arcsec}{\mathrm{arcsec}}
+      \newcommand{\arccsc}{\mathrm{arccsc}}
+      \newcommand{\arccot}{\mathrm{arccot}}
+  
+  \newcommand{\textor}{ \mbox{ \textbf{or} }}
+   \newcommand{\textand}{ \mbox{ \textbf{and} }}
+      \usepackage{calc}
+      \newcounter{erule}\setcounter{erule}{0}
+      \newcommand{\erule}{%\
+      \setcounter{erule}{\value{erule}+1}
+      \textbf{\theerule\,\,}}
+\newcommand\showdiv[1]{\overline{\smash{)}#1}}
+      
+      \title{Quick reference on solving equations}
+\begin{document}
+
+%\maketitle
+
+\noindent The following table gives some hints on how to solve an equation for a variable \(x\). The quantities
+\(X,Y,Z\), and \(W\) match with any expression that involves \(x\) and the quantities \(a\) and \(b\) match with 
+any number (or constant that doesn't depend on \(x\)).  Sometimes you'll need to do some algebra (divide both sides by a
+nonzero number, factor, or  other such things) to make the match.
+\[
+    \arraycolsep=1.4pt\def\arraystretch{2.0}
+\begin{array}{|c|c|c|c|}
+    \hline
+\mbox{\textbf{Rule}\phantom{xx}} & \mbox{\textbf{Replace}}  & \mbox{\textbf{With}} & \mbox{\textbf{Condition(s)}}\\ \hline
+\erule & a = b \textand a \neq b  & \varnothing  & \mbox{(none)}  \\ \hline
+\erule & 0 x = 1    & \varnothing  & \mbox{(none)}  \\ \hline
+\erule & 0 x = 0    & \reals  & \mbox{(none)}  \\ \hline
+\erule & a x = b \textand a \neq 0   \phantom{xxx}   & x = \dfrac{b}{a}  & \mbox{(none)}  \\ \hline
+\erule & a x^2 + b x + c = 0 \textand a \neq 0   \phantom{xxx}   & x = \dfrac{-b - \sqrt{b^2 - 4 a c}}{2 a} \textor
+ x = \dfrac{-b + \sqrt{b^2 - 4 a c}}{2 a}  & b^2 - 4 ac \geq 0  \\ \hline
+\erule & X Y = 0    &  X = 0   \textor  Y = 0  & \mbox{(none)}  \\ \hline
+\erule & \dfrac{X}{Y} = 0 &  X = 0  &  Y \neq 0 \\ \hline
+\erule & \dfrac{W}{X} = \dfrac{Y}{Z} &  WZ = XY & X \neq 0   \textand  X \neq 0 \phantom{xx}\\ \hline
+\erule & X^2  = Y  & X = -\sqrt{Y} \textor X = \sqrt{Y} &  Y \geq 0 \\ \hline
+\erule & |X| = Y  & X = Y \textor X = -Y & Y \geq 0 \\ \hline
+\erule & \sqrt{X} = Y & X = Y^2 & Y \geq 0 \\ \hline
+\erule & \exp(X) = a \phantom{xx} & X = \ln(a)  &  a > 0 \\ \hline
+\erule & a^X = b \textand a > 0 \textand a \neq 1 \textand b > 0  \phantom{xx} & X = \dfrac{\ln(b)}{\ln(a)}  &  \mbox{(none)}  \\ \hline
+\erule & \ln(X) = a & X = \exp(a)  & \\ \hline
+\erule & \cos(X) = a & X = 2 \uppi k + \cos^{-1}(a)  \textor X = 2 \uppi k - \cos^{-1}(a) 
+  & -1 \leq a \leq 1 \textand k \in \integers \\ \hline
+\erule & \sin(X) = a & X = 2 \uppi k + \sin^{-1}(a) \textor 
+    X = 2 \uppi k + \uppi - \sin^{-1}(a) & -1 \leq a \leq 1 \textand  k \in \integers  \phantom{xx} \\ \hline
+\end{array}
+\]
+%\end{tcolorbox}
+
+
+\end{document}
+
