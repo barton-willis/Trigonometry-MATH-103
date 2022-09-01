@@ -1,4 +1,4 @@
-\documentclass[11pt,fleqn]{article}
+\documentclass[12pt,fleqn]{article}
 \usepackage{array}
 \usepackage{xcolor}
 \usepackage{fleqn}
@@ -10,7 +10,7 @@
 \usepackage{tcolorbox}
 \usepackage{multirow}
 \usepackage[T1]{fontenc} 
-\usepackage{fourier}
+\usepackage[]{fourier}
 
 \usepackage{enumerate,isomath,hyperref}
 \usepackage{upgreek,comment}
@@ -70,26 +70,27 @@ nonzero number, factor, or  other such things) to make the match.
 \begin{array}{|c|c|c|c|}
     \hline
 \mbox{\textbf{Rule}\phantom{xx}} & \mbox{\textbf{Replace}}  & \mbox{\textbf{With}} & \mbox{\textbf{Condition(s)}}\\ \hline
-\erule & a = b \textand a \neq b  & \varnothing  & \mbox{(none)}  \\ \hline
-\erule & 0 x = 1    & \varnothing  & \mbox{(none)}  \\ \hline
-\erule & 0 x = 0    & \reals  & \mbox{(none)}  \\ \hline
-\erule & a x = b \textand a \neq 0   \phantom{xxx}   & x = \dfrac{b}{a}  & \mbox{(none)}  \\ \hline
-\erule & a x^2 + b x + c = 0 \textand a \neq 0   \phantom{xxx}   & x = \dfrac{-b - \sqrt{b^2 - 4 a c}}{2 a} \textor
- x = \dfrac{-b + \sqrt{b^2 - 4 a c}}{2 a}  & b^2 - 4 ac \geq 0  \\ \hline
+%\erule & 0 x = 1    & \varnothing  & \mbox{(none)}  \\ \hline
+%\erule & 0 x = 0    & \reals  & \mbox{(none)}  \\ \hline
+\erule & a x = b   \phantom{xxx}   & x = \dfrac{b}{a}  & a \neq 0  \\ \hline
+\erule & a x^2 + b x + c = 0  \phantom{xxx}   & x = \dfrac{-b - \sqrt{b^2 - 4 a c}}{2 a} \textor
+ x = \dfrac{-b + \sqrt{b^2 - 4 a c}}{2 a}  & ( a \neq 0 ) \textand  b^2 - 4 ac \geq 0  \\ \hline
 \erule & X Y = 0    &  X = 0   \textor  Y = 0  & \mbox{(none)}  \\ \hline
 \erule & \dfrac{X}{Y} = 0 &  X = 0  &  Y \neq 0 \\ \hline
-\erule & \dfrac{W}{X} = \dfrac{Y}{Z} &  WZ = XY & X \neq 0   \textand  X \neq 0 \phantom{xx}\\ \hline
+\erule & \dfrac{W}{X} = \dfrac{Y}{Z} &  WZ = XY & X \neq 0   \textand  Z \neq 0 \phantom{xx}\\ \hline
+\erule & X^2 = Y^2 &  X = -Y \textor X = Y & \mbox{(none)}\\ \hline
 \erule & X^2  = Y  & X = -\sqrt{Y} \textor X = \sqrt{Y} &  Y \geq 0 \\ \hline
 \erule & |X| = Y  & X = Y \textor X = -Y & Y \geq 0 \\ \hline
 \erule & \sqrt{X} = Y & X = Y^2 & Y \geq 0 \\ \hline
-\erule & \exp(X) = a \phantom{xx} & X = \ln(a)  &  a > 0 \\ \hline
-\erule & a^X = b \textand a > 0 \textand a \neq 1 \textand b > 0  \phantom{xx} & X = \dfrac{\ln(b)}{\ln(a)}  &  \mbox{(none)}  \\ \hline
+\erule & a^X = b \phantom{xx} & X = \dfrac{\ln(b)}{\ln(a)}  &  (0 < a < 1) \textor (1 < a) \textand (b > 0) \\ \hline
 \erule & \ln(X) = a & X = \exp(a)  & \\ \hline
+\erule & \ln(X) + \ln(Y) = a & X Y = \exp(a)  &  (X >0) \textand (Y > 0)\\ \hline
 \erule & \cos(X) = a & X = 2 \uppi k + \cos^{-1}(a)  \textor X = 2 \uppi k - \cos^{-1}(a) 
   & -1 \leq a \leq 1 \textand k \in \integers \\ \hline
 \erule & \sin(X) = a & X = 2 \uppi k + \sin^{-1}(a) \textor 
     X = 2 \uppi k + \uppi - \sin^{-1}(a) & -1 \leq a \leq 1 \textand  k \in \integers  \phantom{xx} \\ \hline
-\end{array}
+\erule & \tan(X) = a & X = 2 \uppi k + \tan^{-1}(a)   &  k \in \integers \\ \hline
+  \end{array}
 \]
 %\end{tcolorbox}
 
