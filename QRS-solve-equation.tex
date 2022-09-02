@@ -21,7 +21,9 @@
 \usepackage{multirow}
 \newcounter{eq}
 \setcounter{eq}{1} 
-
+\usepackage[nice]{nicefrac}
+\usepackage{amsmath}
+\usepackage{xfrac}
 
 \newenvironment{alphalist}{
   \begin{enumerate}[(a)]
@@ -61,22 +63,25 @@
 
 %\maketitle
 
+\noindent{\textbf{Quick reference on solving equations}}
+\vspace{0.25in}
+
 \noindent The following table gives some hints on how to solve an equation for a variable \(x\). The quantities
 \(X,Y,Z\), and \(W\) match with any expression that involves \(x\) and the quantities \(a\) and \(b\) match with 
 any number (or constant that doesn't depend on \(x\)).  Sometimes you'll need to do some algebra (divide both sides by a
 nonzero number, factor, or  other such things) to make the match.
 \[
     \arraycolsep=1.4pt\def\arraystretch{2.0}
-\begin{array}{|c|c|c|c|}
+\begin{array}{|l|l|l|l|}
     \hline
 \mbox{\textbf{Rule}\phantom{xx}} & \mbox{\textbf{Replace}}  & \mbox{\textbf{With}} & \mbox{\textbf{Condition(s)}}\\ \hline
-%\erule & 0 x = 1    & \varnothing  & \mbox{(none)}  \\ \hline
-%\erule & 0 x = 0    & \reals  & \mbox{(none)}  \\ \hline
-\erule & a x = b   \phantom{xxx}   & x = \dfrac{b}{a}  & a \neq 0  \\ \hline
-\erule & a x^2 + b x + c = 0  \phantom{xxx}   & x = \dfrac{-b - \sqrt{b^2 - 4 a c}}{2 a} \textor
- x = \dfrac{-b + \sqrt{b^2 - 4 a c}}{2 a}  & ( a \neq 0 ) \textand  b^2 - 4 ac \geq 0  \\ \hline
+\erule & 0  = 1    & \varnothing  & \mbox{(none)}  \\ \hline
+\erule & 0 = 0    & \reals  & \mbox{(none)}  \\ \hline
+\erule & a x = b   \phantom{xxx}   & \left\{ \dfrac{b}{a}   \right\} & a \neq 0  \\ \hline
+\erule & a x^2 + b x + c = 0  \phantom{xxx}   & x = \nicefrac{-b - \sqrt{b^2 - 4 a c}}{2 a} \textor
+ x = \nicefrac{-b + \sqrt{b^2 - 4 a c}}{2 a}  & ( a \neq 0 ) \textand  b^2 - 4 ac \geq 0  \\ \hline
 \erule & X Y = 0    &  X = 0   \textor  Y = 0  & \mbox{(none)}  \\ \hline
-\erule & \dfrac{X}{Y} = 0 &  X = 0  &  Y \neq 0 \\ \hline
+\erule & \dfrac{X}{Y} = 0 &  X = 0  &  Y \neq 0 \\ \hline \label{rm1}
 \erule & \dfrac{W}{X} = \dfrac{Y}{Z} &  WZ = XY & X \neq 0   \textand  Z \neq 0 \phantom{xx}\\ \hline
 \erule & X^2 = Y^2 &  X = -Y \textor X = Y & \mbox{(none)}\\ \hline
 \erule & X^2  = Y  & X = -\sqrt{Y} \textor X = \sqrt{Y} &  Y \geq 0 \\ \hline
@@ -94,6 +99,17 @@ nonzero number, factor, or  other such things) to make the match.
 \]
 %\end{tcolorbox}
 
-
+\begin{alphalist}
+\item \begin{align*}
+  \left[(x-5)(x-7) = 0 \right] &= 
+      \left[(x-5=0) \textor (x-7=0) \right], &\mbox{(Rule 3)} \\
+      &= \left[(x=5) \textor (x=7) \right], &\mbox{(Rule 1)} \\
+\end{align*}
+\item \begin{align*}
+  \left[\dfrac{6}{1+x^2} = 0 \right] &= 
+      \left[(6=0) \textand 1+x^2 \neq 0 \right], &\mbox{(Rule 4)} \\
+      &= \varnothing, &\mbox{(Rule 1)} \\
+\end{align*}
+\end{alphalist}
 \end{document}
 
